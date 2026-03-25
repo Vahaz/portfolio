@@ -1,0 +1,12 @@
+services:
+  dev:
+    build: .
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/portfolio
+      - /portfolio/node_modules
+    environment:
+      - WATCHPACK_POLLING=true
+      - NODE_OPTIONS=--max-old-space-size=1024
+    mem_limit: 1024m

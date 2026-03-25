@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@import "tailwindcss";
+@import "basecoat-css";
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+/* @import "tailwindcss/preflight.css" layer(base); */
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+    --font-google: "Google Sans", sans-serif;
+
+    --animate-blink: blink 1.2s steps(1) infinite;
+    @keyframes blink {
+        0% { opacity: 1; }
+        50% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+}
+
+.nav-a {
+    @apply cursor-pointer hover:bg-white hover:text-slate-900 rounded-2xl px-2 py-2 transition-colors duration-300 ease-in-out;
+}
