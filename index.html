@@ -5,11 +5,11 @@
         <meta charset="UTF-8">
         <link rel="icon" href="./image/picture.jpg" type="image/jpg" />
         <title>Portfolio - Acceuil</title>
-      <script type="module" crossorigin src="./assets/main-CmndcLnP.js"></script>
-      <link rel="stylesheet" crossorigin href="./assets/main-41eZXlGa.css">
+      <script type="module" crossorigin src="./assets/main-D6Mxe621.js"></script>
+      <link rel="stylesheet" crossorigin href="./assets/main-B3Aw7uaM.css">
     </head>
     <body class="bg-[#1d171e] h-screen max-w-screen font-google">
-        <nav class="fixed bottom-0 md:top-0 left-0 w-full z-10 pt-5">
+        <nav class="fixed bottom-0 md:top-0 left-0 w-full z-10 pt-5 pointer-events-none">
             <div class="hidden absolute left-0 gap-5 p-5 md:flex items-center w-26 hover:w-79 transition-all duration-300 ease-in-out  rounded-s-lg bg-[#28202d]/50 backdrop-blur-sm rounded-full border border-[#404051]">
                 <img class="rounded-full ring-2 ring-[#f4f6fb]" src="./image/picture.jpg" width="60px">
                 <p class="overflow-hidden text-white text-[1.25rem] font-bold">VALENTIN <br> HERNANDORENA </p>
@@ -32,7 +32,7 @@
         <div class="h-50 flex flex-col justify-center items-center text-5xl text-white">
             <p class="w-fit border-b border-amber-500 pb-3">Mon Porfolio</p>
         </div>
-        <main class="flex flex-col items-center my-10 h-screen text-white">
+        <main class="flex flex-col items-center my-10 h-fit gap-y-20 text-white">
             <section class="h-fit w-11/12 md:w-fit md:max-w-2xl rounded-2xl overflow-hidden border border-[#404051] bg-[#28202d]">
                 <div class="flex flex-row items-center gap-3 m-5 p-5 font-bold border-b">
                     <icon class="w-12 h-12" data-lucide="graduation-cap"></icon>
@@ -100,6 +100,38 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+            <section class="h-fit w-11/12 md:w-fit md:max-w-2xl rounded-2xl overflow-hidden border border-[#404051] bg-[#28202d]">
+                <div class="flex flex-row items-center gap-3 m-5 p-5 font-bold border-b">
+                    <icon class="w-12 h-12" data-lucide="terminal"></icon>
+                    <p class="text-3xl">Mes Projets</p>
+                </div>
+                <div class="h-fit mt-3 mx-5 p-5 rounded-2xl bg-[#1d171e]">
+                    <p class="text-4xl text-bold w-full text-center">WEBGL</p>
+                    <div class="flex flex-row my-5 py-5 items-center text-[#bebec0] border-t border-[#bebec0]">
+                        <p class="flex flex-row items-center text-center">
+                            Ce projet utilise l'API graphique WebGL pour afficher des modèles 3D customisés. <br>
+                            L'objectif est d'apprendre le fonctionnement de WebGL et les calcules mathématiques liés.
+                        </p>
+                    </div>
+                    <div class="bg-[#28202d] p-5 rounded-2xl mb-5 border border-[#404051]">
+                        <img class="bg-[#28202d]/50" src="./image/projet_webgl.png"></img>
+                        <span class="badge p-2 text-sm">
+                            TypeScript
+                        </span>
+                        <span class="badge p-2 text-sm">
+                            WebGL
+                        </span>
+                        <span class="badge p-2 text-sm">
+                            NodeJS
+                        </span>
+                    </div>
+                </div>
+                <div class="relative z-20 h-fit mb-5 mt-2 mx-5 p-3 rounded-2xl bg-[#1d171e] flex justify-center gap-3">
+                    <button class="w-4 h-4 rounded-full bg-amber-500 hover:bg-amber-400 cursor-pointer transition-all duration-300" aria-label="Afficher l'image 1"></button>
+                    <button class="w-4 h-4 rounded-full bg-[#404051] hover:bg-amber-500/50 cursor-pointer transition-all duration-300" aria-label="Afficher l'image 2"></button>
+                    <button class="w-4 h-4 rounded-full bg-[#404051] hover:bg-amber-500/50 cursor-pointer transition-all duration-300" aria-label="Afficher l'image 3"></button>
                 </div>
             </section>
         </main>
