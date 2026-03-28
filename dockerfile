@@ -4,7 +4,7 @@ WORKDIR /portfolio
 
 COPY package*.json ./
 
-RUN apt-get update &&
+RUN apt-get update && \
     apt-get upgrade -y && \
     npm install && \
     apt-get clean && \
