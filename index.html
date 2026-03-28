@@ -8,21 +8,21 @@
     </head>
     <body class="bg-[#1d171e] h-screen max-w-screen font-google">
         <nav class="fixed bottom-0 md:top-0 left-0 w-full z-10 pt-5 pointer-events-none">
-            <div class="hidden absolute left-0 gap-5 p-5 md:flex items-center w-26 hover:w-79 transition-all duration-300 ease-in-out  rounded-s-lg bg-[#28202d]/50 backdrop-blur-sm rounded-full border border-[#404051]">
+            <div class="pointer-events-auto hidden absolute left-0 gap-5 p-5 md:flex items-center w-26 hover:w-79 transition-all duration-300 ease-in-out  rounded-s-lg bg-[#28202d]/50 backdrop-blur-sm rounded-full border border-[#404051]">
                 <img class="rounded-full ring-2 ring-[#f4f6fb]" src="/image/picture.jpg" width="60px">
                 <p class="overflow-hidden text-white text-[1.25rem] font-bold">VALENTIN <br> HERNANDORENA </p>
             </div>
             <div class="flex fixed bottom-0 left-0 w-full justify-around md:absolute md:top-0 md:right-5 md:bottom-auto md:left-auto md:w-fit items-center gap-10 mt-5 p-5 rounded-none md:rounded-full text-white bg-[#28202d] md:bg-[#28202d]/50 backdrop-blur-sm border border-[#404051]">
-                <a href="#" class="nav-a" data-tooltip="Acceuil" data-side="bottom" data-align="center">
+                <a href="#" class="nav-a pointer-events-auto" data-tooltip="Acceuil" data-side="bottom" data-align="center">
                     <icon class="w-8 h-8" data-lucide="home"></icon>
                 </a>
-                <a href="#" class="nav-a" data-tooltip="Études" data-side="bottom" data-align="center">
+                <a href="#" class="nav-a pointer-events-auto" data-tooltip="Études" data-side="bottom" data-align="center">
                     <icon class="w-8 h-8" data-lucide="square-user"></icon>
                 </a>
-                <a href="#" class="nav-a" data-tooltip="Projets" data-side="bottom" data-align="center">
+                <a href="#" class="nav-a pointer-events-auto" data-tooltip="Projets" data-side="bottom" data-align="center">
                     <icon class="w-8 h-8" data-lucide="file-search-corner"></icon>
                 </a>
-                <a href="#" class="nav-a" data-tooltip="Veille Technologique" data-side="bottom" data-align="center">
+                <a href="#" class="nav-a pointer-events-auto" data-tooltip="Veille Technologique" data-side="bottom" data-align="center">
                     <icon class="w-8 h-8" data-lucide="book-marked"></icon>
                 </a>
             </div>
@@ -54,17 +54,17 @@
                             <div class="flex flex-col w-full md:w-[50%]">
                                 <p class="flex flex-row items-center">
                                     <i class="w-5 h-5 my-2 text-amber-500" data-lucide="chevron-right"></i>
-                                    Administration Windows
+                                    Administration & Permissions Windows
                                 </p>
                                 <p class="flex flex-row items-center">
                                     <i class="w-5 h-5 my-2 text-amber-500" data-lucide="chevron-right"></i>
-                                    Virtualisation (WS 2022)
+                                    Virtualisation (WS 2022 / Linux / Windows)
                                 </p>
                             </div>
                             <div class="flex flex-col w-full md:w-[50%]">
                                 <p class="flex flex-row items-center">
                                     <i class="w-5 h-5 my-2 text-amber-500" data-lucide="chevron-right"></i>
-                                    Administration Linux
+                                    Administration & Permissions Linux
                                 </p>
                                 <p class="flex flex-row items-center">
                                     <i class="w-5 h-5 my-2 text-amber-500" data-lucide="chevron-right"></i>
@@ -83,7 +83,7 @@
                                 </p>
                                 <p class="flex flex-row items-center">
                                     <i class="w-5 h-5 my-2 text-blue-500" data-lucide="chevron-right"></i>
-                                    Pare-feu
+                                    Pare-feu & VLAN
                                 </p>
                             </div>
                             <div class="flex flex-col w-full md:w-[50%]">
@@ -103,33 +103,148 @@
             <section class="h-fit w-11/12 md:w-fit md:max-w-2xl rounded-2xl overflow-hidden border border-[#404051] bg-[#28202d]">
                 <div class="flex flex-row items-center gap-3 m-5 p-5 font-bold border-b">
                     <icon class="w-12 h-12" data-lucide="terminal"></icon>
-                    <p class="text-3xl">Mes Projets</p>
+                    <p class="text-3xl">Mes Projets Personnels</p>
                 </div>
-                <div class="h-fit mt-3 mx-5 p-5 rounded-2xl bg-[#1d171e]">
-                    <p class="text-4xl text-bold w-full text-center">WEBGL</p>
-                    <div class="flex flex-row my-5 py-5 items-center text-[#bebec0] border-t border-[#bebec0]">
-                        <p class="flex flex-row items-center text-center">
-                            Ce projet utilise l'API graphique WebGL pour afficher des modèles 3D customisés. <br>
-                            L'objectif est d'apprendre le fonctionnement de WebGL et les calcules mathématiques liés.
-                        </p>
+                <div id="project-container" class="grid grid-cols-1 grid-rows-1 h-fit mt-3 mx-5 overflow-hidden rounded-2xl bg-[#1d171e]">
+                    <div class="project-card opacity-100! visible!">
+                        <p>WEBGL</p>
+                        <div class="project-card-description">
+                            <p class="text-center w-full">
+                                Ce projet personnel a été réalisé dans le but d'apprendre à utiliser l'API graphique <strong>WebGL</strong> avec <strong>TypeScript</strong>.
+                                De plus, le projet est compilé à l'aide de <strong>webpack</strong>. <br>
+                                Enfin, afin de maîtriser les concepts de vecteurs et de matrices, aucune bibliothèque publique n'a été utilisée.
+                                En effet, l'ensemble des classes mathématiques a été développé manuellement dans un objectif d'apprentissage.
+                            </p>
+                        </div>
+                        <div class="project-card-image">
+                            <a href="https://webgl.valentinhrnd.fr/" target="_blank" hreflang="en" data-tooltip="Voir le projet" data-side="top" data-align="center">
+                                <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview_webgl.png">
+                            </a>
+                            <div class="flex flex-wrap gap-2 justify-center">
+                                <span class="badge text-sm">TypeScript</span>
+                                <span class="badge text-sm">WebGL</span>
+                                <span class="badge text-sm">Node.js</span>
+                                <span class="badge text-sm">webpack</span>
+                                <span class="badge text-sm">Tweakpane</span>
+                                <span class="badge text-sm">HTML</span>
+                                <span class="badge text-sm">CSS</span>
+                                <span class="badge text-sm">Matrices & Vectors</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-[#28202d] p-5 rounded-2xl mb-5 border border-[#404051]">
-                        <img class="bg-[#28202d]/50" src="/image/projet_webgl.png"></img>
-                        <span class="badge p-2 text-sm">
-                            TypeScript
-                        </span>
-                        <span class="badge p-2 text-sm">
-                            WebGL
-                        </span>
-                        <span class="badge p-2 text-sm">
-                            NodeJS
-                        </span>
+                    <div class="project-card">
+                        <p>PORTFOLIO</p>
+                        <div class="project-card-description">
+                            <p class="text-center w-full">
+                                Ce projet a pour but de créer un <strong>portfolio personnel</strong>. <br>
+                                Il utilise pour son aspect visuel (Frontend) : <strong>Tailwind CSS</strong>, <strong>Basecoat</strong> et <strong>GSAP</strong>.
+                                Pour finir, <strong>Vite</strong> est utilisé pour construire les différents fichiers CSS et JavaScript.
+                            </p>
+                        </div>
+                        <div class="project-card-image">
+                            <a href="https://valentinhrnd.fr/" target="_blank" hreflang="en" data-tooltip="Voir le projet" data-side="top" data-align="center">
+                                <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview_portfolio.png">
+                            </a>
+                            <div class="flex flex-wrap gap-2 justify-center">
+                                <span class="badge text-sm">Tailwind CSS</span>
+                                <span class="badge text-sm">Basecoat</span>
+                                <span class="badge text-sm">HTML</span>
+                                <span class="badge text-sm">Javascript</span>
+                                <span class="badge text-sm">GSAP</span>
+                                <span class="badge text-sm">Vite</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <p>GENERATEUR A <br> CONGRUENT LINEAIRE</p>
+                        <div class="project-card-description">
+                            <p class="text-center w-full">
+                                Ce projet personnel a pour but de créer un <strong>visualiseur d'aléatoire</strong> basé sur les nombres générés par un <strong>Générateur à congruence linéaire</strong> (LCG).
+                                En effet, cet algorithme est très connu dans la génération de <strong>nombres pseudo-aléatoires</strong> et était présent dans certaines versions de <strong>PHP</strong>.
+                                Malheureusement, celui-ci n'est pas considéré comme sécurisé cryptographiquement étant donné qu'une de ses variables utilise la génération précédente.
+                            </p>
+                        </div>
+                        <div class="project-card-image">
+                            <a href="https://lcg.valentinhrnd.fr/" target="_blank" hreflang="en" data-tooltip="Voir le projet" data-side="top" data-align="center">
+                                <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview_lcg.png">
+                            </a>
+                            <div class="flex flex-wrap gap-2 justify-center">
+                                <span class="badge text-sm">LCG</span>
+                                <span class="badge text-sm">HTML</span>
+                                <span class="badge text-sm">Javascript</span>
+                                <span class="badge text-sm">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <p>GAME OF LIFE</p>
+                        <div class="project-card-description">
+                            <p class="text-center w-full">
+                                Ce projet personnel est une recréation du « Jeu de la vie », en <strong>JavaScript</strong>, en utilisant la bibliothèque graphique <strong>p5.js</strong>.
+                            </p>
+                        </div>
+                        <div class="project-card-image">
+                            <a href="https://gol.valentinhrnd.fr/" target="_blank" hreflang="en" data-tooltip="Voir le projet" data-side="top" data-align="center">
+                                <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview_gol.png">
+                            </a>
+                            <div class="flex flex-wrap gap-2 justify-center">
+                                <span class="badge text-sm">P5.js</span>
+                                <span class="badge text-sm">HTML</span>
+                                <span class="badge text-sm">Javascript</span>
+                                <span class="badge text-sm">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <p>ENTRAINEMENT DECOUPAGE IPV4</p>
+                        <div class="project-card-description">
+                            <p class="text-center w-full">
+                                Un petit site web pour s'entraîner au <strong>découpage d'adresses IPv4</strong>.
+                            </p>
+                        </div>
+                        <div class="project-card-image">
+                            <a href="https://ip.valentinhrnd.fr/" target="_blank" hreflang="en" data-tooltip="Voir le projet" data-side="top" data-align="center">
+                                <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview_ip.png">
+                            </a>
+                            <div class="flex flex-wrap gap-2 justify-center">
+                                <span class="badge text-sm">IPv4</span>
+                                <span class="badge text-sm">HTML</span>
+                                <span class="badge text-sm">Javascript</span>
+                                <span class="badge text-sm">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <p>MATCH LOGGER V2</p>
+                        <div class="project-card-description">
+                            <p class="text-center w-full">
+                                Ancien projet personnel dont l'objectif était de créer un bot <strong>Discord</strong> permettant d'afficher les statistiques d'un joueur sur sa dernière partie de <strong>League of Legends</strong>.
+                                Ce projet utilise l'<strong>API Riot Games</strong>, ainsi que <strong>JavaScript</strong> avec la bibliothèque <strong>discordjs</strong> pour l'envoi d'embeds sur <strong>Discord</strong>.
+                            </p>
+                        </div>
+                        <div class="project-card-image">
+                            <a href="https://github.com/Vahaz/Game_of_Life_P5.js" target="_blank" hreflang="en" data-tooltip="Ouvrir le projet sur Github" data-side="top" data-align="center">
+                                <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview_matchlogger.png">
+                            </a>
+                            <div class="flex flex-wrap gap-2 justify-center">
+                                <span class="badge text-sm">Javascript</span>
+                                <span class="badge text-sm">discordjs</span>
+                                <span class="badge text-sm">dotenv</span>
+                                <span class="badge text-sm">merge-images</span>
+                                <span class="badge text-sm">convert-base64-to-image</span>
+                                <span class="badge text-sm">Node.JS</span>
+                                <span class="badge text-sm">Riot Games API</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="relative z-20 h-fit mb-5 mt-2 mx-5 p-3 rounded-2xl bg-[#1d171e] flex justify-center gap-3">
-                    <button class="w-4 h-4 rounded-full bg-amber-500 hover:bg-amber-400 cursor-pointer transition-all duration-300" aria-label="Afficher l'image 1"></button>
-                    <button class="w-4 h-4 rounded-full bg-[#404051] hover:bg-amber-500/50 cursor-pointer transition-all duration-300" aria-label="Afficher l'image 2"></button>
-                    <button class="w-4 h-4 rounded-full bg-[#404051] hover:bg-amber-500/50 cursor-pointer transition-all duration-300" aria-label="Afficher l'image 3"></button>
+                <div id="project-pagination">
+                    <button class="project-dot bg-amber-500" data-index="0"></button>
+                    <button class="project-dot bg-[#404051]" data-index="1"></button>
+                    <button class="project-dot bg-[#404051]" data-index="2"></button>
+                    <button class="project-dot bg-[#404051]" data-index="3"></button>
+                    <button class="project-dot bg-[#404051]" data-index="4"></button>
+                    <button class="project-dot bg-[#404051]" data-index="5"></button>
                 </div>
             </section>
         </main>

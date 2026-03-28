@@ -3,7 +3,6 @@
 @import "basecoat-css";
 @layer theme, base, components, utilities;
 @import "tailwindcss/theme.css" layer(theme);
-/* @import "tailwindcss/preflight.css" layer(base); */
 @import "tailwindcss/utilities.css" layer(utilities);
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
@@ -21,4 +20,32 @@
 
 .nav-a {
     @apply cursor-pointer hover:bg-white hover:text-slate-900 rounded-2xl px-2 py-2 transition-colors duration-300 ease-in-out;
+}
+
+.project-card {
+    @apply col-start-1 row-start-1 p-5 opacity-0 invisible;
+}
+
+.project-card > p {
+    @apply text-4xl w-full text-center;
+}
+
+.project-card-description {
+    @apply flex flex-row my-5 py-5 items-center text-[#bebec0] border-t border-[#bebec0];
+}
+
+.project-card-image {
+    @apply bg-[#28202d] p-5 rounded-2xl border border-[#404051];
+}
+
+.project-card-image > a {
+    @apply relative block pointer-events-auto w-full h-full;
+}
+
+#project-pagination {
+    @apply relative z-20 h-fit mb-5 mt-2 mx-5 p-3 rounded-2xl bg-[#1d171e] flex justify-center gap-3;
+}
+
+.project-dot {
+    @apply w-4 h-4 rounded-full hover:bg-amber-300! pointer-events-auto cursor-pointer;
 }
