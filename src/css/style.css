@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import "tailwindcss";
 @import "basecoat-css";
 @layer theme, base, components, utilities;
@@ -8,7 +8,8 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
-    --font-google: "Google Sans", sans-serif;
+    --font-rubik: "Rubik", sans-serif;
+    --font-firacode: "Fira Code", monospace;
 
     --animate-blink: blink 1.2s steps(1) infinite;
     @keyframes blink {
@@ -22,11 +23,21 @@
     @apply cursor-pointer hover:bg-white hover:text-slate-900 rounded-2xl px-2 py-2 transition-colors duration-300 ease-in-out;
 }
 
+/* Project Card CSS */
+
+#projects {
+    @apply h-fit w-11/12 md:w-fit md:max-w-2xl rounded-2xl overflow-hidden border border-[#404051] bg-[#28202d];
+}
+
+#project-container {
+    @apply grid grid-cols-1 grid-rows-1 h-fit mt-3 mx-5 overflow-hidden rounded-2xl bg-[#1d171e];
+}
+
 .project-card {
     @apply col-start-1 row-start-1 p-5 opacity-0 invisible;
 }
 
-.project-card > p {
+.project-card-p {
     @apply text-4xl w-full text-center;
 }
 
@@ -34,8 +45,16 @@
     @apply flex flex-row my-5 py-5 items-center text-[#bebec0] border-t border-[#bebec0];
 }
 
+.project-card-description-p {
+    @apply text-center w-full;
+}
+
 .project-card-image {
     @apply bg-[#28202d] p-5 rounded-2xl border border-[#404051];
+}
+
+.project-card-image-div {
+    @apply flex flex-wrap gap-2 justify-center;
 }
 
 .project-card-image > a {
@@ -48,4 +67,34 @@
 
 .project-dot {
     @apply w-4 h-4 rounded-full hover:bg-amber-300! pointer-events-auto cursor-pointer;
+}
+
+.badge {
+    @apply font-firacode text-sm;
+}
+
+/* Bubble CSS */
+
+.bubble {
+    @apply bg-[#28202d] p-5 rounded-2xl mt-5 border border-[#404051];
+}
+
+.bubble-title {
+    @apply text-xl font-bold mb-3 w-fit border-b;
+}
+
+.bubble-container {
+    @apply flex flex-col md:flex-row text-[#bebec0] text-sm;
+}
+
+.bubble-content {
+    @apply flex flex-col w-full md:w-[50%] font-firacode;
+}
+
+.bubble-content-p {
+    @apply flex flex-row items-center;
+}
+
+.bubble-content-i {
+    @apply w-5 h-5 my-4;
 }
