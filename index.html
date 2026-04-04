@@ -42,17 +42,29 @@
                 <div class="h-fit m-5 p-5 rounded-2xl bg-[#1d171e]">
                     <div class="flex flex-row items-center">
                         <img class="hidden md:block w-23 h-22 rounded-md" src="/image/picture.jpg">
-                        <p class="text-xl ml-5 text-bold">Hernandorena Valentin <br> <span class="text-base italic font-firacode">Étudiant en Informatique</span></p>
+                        <p class="text-xl ml-5 text-bold">Hernandorena Valentin <br> <span class="text-base italic font-firacode">Étudiant en Informatique / Réseau</span></p>
                     </div>
                     <div class="flex flex-row my-5 py-5 items-center text-[#bebec0] border-t border-[#bebec0]">
-                        <p class="flex flex-row items-center">
-                            <i class="w-5 h-5 mr-3" data-lucide="map-pin"></i>
-                            Avignon, 84
-                        </p>
-                        <p class="ml-auto flex flex-row items-center">
-                            <time datetime="2004">21 ans</time>
-                            <i class="w-5 h-5 ml-3" data-lucide="cake"></i>
-                        </p>
+                        <div class="flex flex-col gap-3 w-[50%]">
+                            <p class="flex flex-row items-center">
+                                <i class="w-5 h-5 mr-3" data-lucide="map-pin"></i>
+                                Avignon (84)
+                            </p>
+                            <p class="flex flex-row items-center">
+                                <i class="w-5 h-5 mr-3" data-lucide="cake"></i>
+                                <time datetime="2004">21 ans</time>
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-3 w-[50%]">
+                            <p class="ml-auto flex flex-row items-center">
+                                <a href="https://github.com/vahaz" hreflang="fr">Github</a>
+                                <i class="w-5 h-5 ml-3" data-lucide="github"></i>
+                            </p>
+                            <p class="ml-auto flex flex-row items-center">
+                                FR / EN / ES
+                                <i class="w-5 h-5 ml-3" data-lucide="flag"></i>
+                            </p>
+                        </div>
                     </div>
                     <p class="ml-auto flex flex-row items-center">
                         Étudiant, de 21 ans, en première année de BTS SIO, option SISR.
@@ -91,6 +103,10 @@
                             <span class="badge">Linux - Debian</span>
                         </div>
                     </div>
+                    <button class="btn font-bold mt-5 w-full rounded-2xl! border border-[#404051]">
+                            Télécharger mon CV
+                            <icon data-lucide="download"></icon>
+                    </button>
                 </div>
             </section>
             <section id="studies" class="h-fit w-11/12 md:w-fit md:max-w-2xl rounded-2xl overflow-hidden border border-[#404051] bg-[#28202d]">
