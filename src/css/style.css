@@ -5,11 +5,19 @@
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities);
 
+/* Color palette source: https://www.color-hex.com/color-palette/74453 */
+
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
     --font-rubik: "Rubik", sans-serif;
     --font-firacode: "Fira Code", monospace;
+
+    --color-base-900: #181716;  /* Background */
+    --color-base-800: #2a2727;  /* Container  */
+    --color-base-700: #393433;  /* Card       */
+    --color-base-500: #453f3d;  /* Button     */
+    --color-base-400: #57504d;  /* Border     */
 
     --animate-blink: blink 1.2s steps(1) infinite;
     @keyframes blink {
@@ -26,11 +34,11 @@
 /* Project Card CSS */
 
 #projects {
-    @apply h-fit w-11/12 md:w-fit md:max-w-2xl rounded-2xl overflow-hidden border border-[#404051] bg-[#28202d];
+    @apply h-fit w-11/12 md:w-fit md:max-w-2xl rounded-2xl overflow-hidden border border-base-400 bg-base-700;
 }
 
 #project-container {
-    @apply grid grid-cols-1 grid-rows-1 h-fit mt-3 mx-5 overflow-hidden rounded-2xl bg-[#1d171e];
+    @apply grid grid-cols-1 grid-rows-1 h-fit mt-3 mx-5 overflow-hidden rounded-2xl bg-base-800;
 }
 
 .project-card {
@@ -42,7 +50,7 @@
 }
 
 .project-card-description {
-    @apply flex flex-row my-5 py-5 items-center text-[#bebec0] border-t border-[#bebec0];
+    @apply flex flex-row my-5 py-5 items-center text-white border-t border-base-400;
 }
 
 .project-card-description-p {
@@ -50,7 +58,7 @@
 }
 
 .project-card-image {
-    @apply bg-[#28202d] p-5 rounded-2xl border border-[#404051];
+    @apply bg-base-700 p-5 rounded-2xl border border-base-400;
 }
 
 .project-card-image-div {
@@ -62,11 +70,11 @@
 }
 
 #project-pagination {
-    @apply relative z-20 h-fit mb-5 mt-2 mx-5 p-3 rounded-2xl bg-[#1d171e] flex justify-center gap-3;
+    @apply relative z-20 h-fit mb-5 mt-2 mx-5 p-3 rounded-2xl bg-base-800 flex justify-center gap-3;
 }
 
 .project-dot {
-    @apply w-4 h-4 rounded-full hover:bg-amber-300! pointer-events-auto cursor-pointer;
+    @apply w-4 h-4 rounded-full hover:bg-amber-300! pointer-events-auto cursor-pointer border-base-900;
 }
 
 .badge {
@@ -76,7 +84,7 @@
 /* Bubble CSS */
 
 .bubble {
-    @apply bg-[#28202d] p-5 rounded-2xl mt-5 border border-[#404051];
+    @apply bg-base-700 p-5 rounded-2xl mt-5 border border-base-400;
 }
 
 .bubble-title {
@@ -84,7 +92,7 @@
 }
 
 .bubble-container {
-    @apply flex flex-col md:flex-row text-[#bebec0] text-sm;
+    @apply flex flex-col md:flex-row text-white text-sm;
 }
 
 .bubble-content {

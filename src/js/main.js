@@ -49,7 +49,7 @@ window.addEventListener("DOMContentLoaded", () => {
         tl.to(incoming, { xPercent: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }, 0);
 
         dots.forEach((dot, i) => {
-            gsap.to(dot, { backgroundColor: i === targetIndex ? '#f59e0b' : '#404051' });
+            gsap.to(dot, { backgroundColor: i === targetIndex ? '#f59e0b' : '#57504d' });
         });
     }
 
