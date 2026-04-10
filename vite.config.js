@@ -12,7 +12,6 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'index.html'),
                 legal: resolve(__dirname, 'src/html/legal.html'),
-                contact: resolve(__dirname, 'src/html/contact.html'),
                 veille: resolve(__dirname, 'src/html/veille.html'),
             },
         },
