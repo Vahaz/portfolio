@@ -6,7 +6,7 @@ import { createIcons, icons  } from 'lucide';
 
 gsap.registerPlugin(Observer);
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
     createIcons({ icons });
 
     const cards = document.querySelectorAll('.project-card');
@@ -49,9 +49,13 @@ window.addEventListener("DOMContentLoaded", () => {
         tl.to(incoming, { xPercent: 0, opacity: 1, duration: 0.5, ease: "power2.inOut" }, 0);
 
         dots.forEach((dot, i) => {
-            gsap.to(dot, { backgroundColor: i === targetIndex ? '#f59e0b' : '#57504d' });
+            gsap.to(dot, { backgroundColor: i === targetIndex ? '#f59e0b' : '#181716' });
         });
     }
+
+    window.addEventListener('resize', () => {
+        gsap.set(container, { height: cards[currentIndex].offsetHeight });
+    });
 
     dots.forEach((dot, i) => {
         dot.addEventListener('click', () => gotoProject(i, i > currentIndex ? 1 : -1));

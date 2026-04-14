@@ -12,19 +12,11 @@
 @theme {
     --font-rubik: "Rubik", sans-serif;
     --font-firacode: "Fira Code", monospace;
-
     --color-base-900: #181716;  /* Background */
     --color-base-800: #2a2727;  /* Container  */
     --color-base-700: #393433;  /* Card       */
     --color-base-500: #453f3d;  /* Button     */
     --color-base-400: #57504d;  /* Border     */
-
-    --animate-blink: blink 1.2s steps(1) infinite;
-    @keyframes blink {
-        0% { opacity: 1; }
-        50% { opacity: 0; }
-        100% { opacity: 1; }
-    }
 }
 
 .nav-a {
@@ -38,7 +30,7 @@
 }
 
 #project-container {
-    @apply grid grid-cols-1 grid-rows-1 h-fit mt-3 mx-5 overflow-hidden rounded-2xl bg-base-800;
+    @apply grid grid-cols-1 grid-rows-1 h-fit mt-3 mx-5 overflow-hidden rounded-2xl bg-base-800 items-start;
 }
 
 .project-card {
@@ -77,8 +69,10 @@
     @apply w-4 h-4 rounded-full hover:bg-amber-300! pointer-events-auto cursor-pointer border-base-900;
 }
 
+/* Basecoat badge */
+
 .badge {
-    @apply font-firacode text-sm;
+    @apply font-firacode text-sm hover:bg-gray-100 hover:text-black;
 }
 
 /* Bubble CSS */

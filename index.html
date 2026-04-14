@@ -6,27 +6,27 @@
         <link rel="icon" href="/image/picture.jpg" type="image/jpg" />
         <title>Portfolio - Acceuil</title>
     </head>
-    <body class="bg-base-900 h-screen max-w-screen font-firacode">
-        <nav class="fixed bottom-0 md:top-0 left-0 w-full z-10 pt-5 pointer-events-none">
+    <body class="bg-base-900 min-h-screen max-w-screen font-firacode">
+        <nav class="fixed bottom-0 md:top-0 left-0 w-full z-100 pt-5 pointer-events-none">
             <div class="pointer-events-auto hidden absolute left-0 gap-5 p-5 md:flex items-center w-26 hover:w-79 transition-all duration-300 ease-in-out  rounded-s-lg bg-base-700/50 backdrop-blur-sm rounded-full border border-base-400">
                 <img class="rounded-full ring-2 ring-base-400" src="/image/picture.jpg" width="60px">
                 <p class="overflow-hidden text-white text-[1.25rem] font-bold">VALENTIN <br> HERNANDORENA </p>
             </div>
             <div class="flex fixed bottom-0 left-0 w-full justify-around md:absolute md:top-0 md:right-5 md:bottom-auto md:left-auto md:w-fit items-center gap-10 mt-5 p-5 rounded-none md:rounded-full text-white bg-base-700 md:bg-base-700/50 backdrop-blur-sm border border-base-400">
                 <a href="#" class="nav-a pointer-events-auto" data-tooltip="Acceuil" data-side="bottom" data-align="center">
-                    <icon class="w-8 h-8" data-lucide="home"></icon>
+                    <i class="w-8 h-8" data-lucide="home"></i>
                 </a>
                 <a href="#studies" class="nav-a pointer-events-auto" data-tooltip="Mes Études" data-side="bottom" data-align="center">
-                    <icon class="w-8 h-8" data-lucide="square-user"></icon>
+                    <i class="w-8 h-8" data-lucide="square-user"></i>
                 </a>
                 <a href="#projects" class="nav-a pointer-events-auto" data-tooltip="Mes Projets" data-side="bottom" data-align="center">
-                    <icon class="w-8 h-8" data-lucide="terminal"></icon>
+                    <i class="w-8 h-8" data-lucide="terminal"></i>
                 </a>
-                <a href="#" class="nav-a pointer-events-auto" data-tooltip="Veille Technologique" data-side="bottom" data-align="center">
-                    <icon class="w-8 h-8" data-lucide="file-search-corner"></icon>
+                <a href="/src/html/veille.html" class="nav-a pointer-events-auto" data-tooltip="Veille Technologique" data-side="bottom" data-align="center">
+                    <i class="w-8 h-8" data-lucide="file-search-corner"></i>
                 </a>
                 <a href="#" class="nav-a pointer-events-auto" data-tooltip="Documents" data-side="bottom" data-align="center">
-                    <icon class="w-8 h-8" data-lucide="book-marked"></icon>
+                    <i class="w-8 h-8" data-lucide="book-marked"></i>
                 </a>
             </div>
         </nav>
@@ -34,14 +34,14 @@
             <p class="w-fit border-b border-amber-500 pb-3">Mon Portfolio</p>
         </div>
         <main class="flex flex-col items-center my-10 h-fit gap-y-20 text-white">
-            <section id="studies" class="h-fit w-11/12 md:w-fit md:max-w-2xl rounded-2xl overflow-hidden border border-base-400 bg-base-700">
+            <section id="me" class="h-fit w-11/12 md:w-fit md:max-w-2xl rounded-2xl overflow-hidden border border-base-400 bg-base-700">
                 <div class="flex flex-row items-center gap-3 m-5 p-5 font-bold border-b">
-                    <icon class="w-12 h-12" data-lucide="user-round"></icon>
+                    <i class="w-12 h-12" data-lucide="user-round"></i>
                     <p class="text-3xl">A propos de moi</p>
                 </div>
                 <div class="h-fit m-5 p-5 rounded-2xl bg-base-800">
                     <div class="flex flex-row items-center">
-                        <img class="hidden md:block w-23 h-22 rounded-md" src="/image/picture.jpg">
+                        <img class="hidden md:block w-28 h-28 rounded-md" src="/image/picture.jpg">
                         <p class="text-xl ml-5 text-bold">Hernandorena Valentin <br> <span class="text-base italic font-firacode">Étudiant en Informatique / Réseau</span></p>
                     </div>
                     <div class="flex flex-row my-5 py-5 items-center text-[#bebec0] border-t border-[#bebec0]">
@@ -74,44 +74,130 @@
                     <div class="bubble">
                         <p class="bubble-title border-red-500">Compétences Technique</p>
                         <div class="bubble-container flex-wrap gap-3">
-                            <span class="badge">Java</span>
-                            <span class="badge">JavaScript</span>
-                            <span class="badge">Python</span>
-                            <span class="badge">SQL</span>
-                            <span class="badge">HTML</span>
-                            <span class="badge">CSS</span>
-                            <span class="badge">Vite</span>
-                            <span class="badge">Tailwind CSS</span>
-                            <span class="badge">Basecoat</span>
-                            <span class="badge">GSAP</span>
-                            <span class="badge">WebGL</span>
+                            <span class="badge">
+                                <i class="w-4 h-4 m-1 text-red-500" data-lucide="coffee"></i>
+                                Java
+                            </span>
+                            <span class="badge">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg">
+                                JavaScript
+                            </span>
+                            <span class="badge">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/typescript.svg">
+                                TypeScript
+                            </span>
+                            <span class="badge">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/python.svg">
+                               Python
+                            </span>
+                            <span class="badge">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/mysql.svg">
+                                MySQL
+                            </span>
+                            <span class="badge">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg">
+                                HTML
+                            </span>
+                            <span class="badge">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/css.svg">
+                                CSS
+                            </span>
+                            <span class="badge">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/vite.svg">
+                                Vite
+                            </span>
+                            <span class="badge">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/tailwindcss.svg">
+                                Tailwind CSS
+                            </span>
+                            <span class="badge">
+                                <img class="w-4 h-4 m-1 bg-[#1447e6]" src="/simpleicons/basecoat.svg">
+                                Basecoat
+                            </span>
+                            <span class="badge">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/gsap.svg">
+                                GSAP
+                            </span>
+                            <span class="badge">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/webgl.svg">
+                                WebGL
+                            </span>
+                            <span class="badge">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/docker.svg">
+                                Docker
+                            </span>
+                            <span class="badge">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg">
+                                Node.js
+                            </span>
+                            <span class="badge">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/webpack.svg">
+                                Webpack
+                            </span>
                         </div>
                     </div>
                     <div class="bubble">
                         <p class="bubble-title border-amber-500">Compétences Réseau</p>
                         <div class="bubble-container flex-wrap gap-3">
-                            <span class="badge">DHCP</span>
-                            <span class="badge">DNS</span>
-                            <span class="badge">Active Directory (AD)</span>
-                            <span class="badge">FTP</span>
-                            <span class="badge">Groupe Policy (GPO)</span>
-                            <span class="badge">SQL</span>
-                            <span class="badge">Virtualisation</span>
-                            <span class="badge">Permissions Utilisateurs</span>
-                            <span class="badge">Permissions de Groupes</span>
-                            <span class="badge">Windows Server 2022</span>
-                            <span class="badge">Linux - Debian</span>
+                            <span class="badge">
+                                <i class="w-4 h-4 m-1 text-blue-500" data-lucide="network"></i>
+                                DHCP
+                            </span>
+                            <span class="badge">
+                                <i class="w-4 h-4 m-1 text-amber-500" data-lucide="network"></i>
+                                DNS
+                            </span>
+                            <span class="badge">
+                                <i class="w-4 h-4 m-1 text-green-500" data-lucide="network"></i>
+                                Active Directory (AD)
+                            </span>
+                            <span class="badge">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/filezilla.svg">
+                                FileZilla
+                            </span>
+                            <span class="badge">
+                                <i class="w-4 h-4 m-1 text-purple-500" data-lucide="scale"></i>
+                                Groupe Policy (GPO)
+                            </span>
+                            <span class="badge">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/virtualbox.svg">
+                                VirtualBox
+                            </span>
+                            <span class="badge">
+                                <i class="w-4 h-4 m-1 text-yellow-500" data-lucide="scale"></i>
+                                Permissions Utilisateurs
+                            </span>
+                            <span class="badge">
+                                <i class="w-4 h-4 m-1 text-red-500" data-lucide="scale"></i>
+                                Permissions de Groupes
+                            </span>
+                            <span class="badge">
+                                <i class="w-4 h-4 m-1 text-lime-500" data-lucide="server"></i>
+                                Windows Server 2022
+                            </span>
+                            <span class="badge">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/debian.svg">
+                                Linux - Debian
+                            </span>
+                            <span class="badge">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/cisco.svg">
+                                Packet Tracer
+                            </span>
+                            <span class="badge">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/ovh.svg">
+                                OVH
+                            </span>
                         </div>
                     </div>
-                    <button class="btn font-bold mt-5 w-full rounded-2xl! border border-base-400">
-                            Télécharger mon CV
-                            <icon data-lucide="download"></icon>
-                    </button>
+                    <a class="group btn font-bold mt-5 w-full rounded-2xl! border border-base-400 hover:bg-gray-100 hover:text-black" href="/pdf/cv.pdf" download="CV_Valentin_Hernandorena.pdf" type="application/pdf">
+                        Télécharger mon CV
+                        <i data-lucide="download" class="group-hover:animate-bounce"></i>
+                    </a>
                 </div>
             </section>
             <section id="studies" class="h-fit w-11/12 md:w-fit md:max-w-2xl rounded-2xl overflow-hidden border border-base-400 bg-base-700">
                 <div class="flex flex-row items-center gap-3 m-5 p-5 font-bold border-b">
-                    <icon class="w-12 h-12" data-lucide="graduation-cap"></icon>
+                    <i class="w-12 h-12" data-lucide="graduation-cap"></i>
                     <p class="text-3xl">Mes Études</p>
                 </div>
                 <div class="h-fit m-5 p-5 rounded-2xl bg-base-800">
@@ -180,7 +266,7 @@
             </section>
             <section id="projects">
                 <div class="flex flex-row items-center gap-3 m-5 p-5 font-bold border-b">
-                    <icon class="w-12 h-12" data-lucide="terminal"></icon>
+                    <i class="w-12 h-12" data-lucide="terminal"></i>
                     <p class="text-3xl">Mes Projets</p>
                 </div>
                 <div id="project-container">
@@ -198,14 +284,38 @@
                                 <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview_webgl.png">
                             </a>
                             <div class="project-card-image-div">
-                                <span class="badge">TypeScript</span>
-                                <span class="badge">WebGL</span>
-                                <span class="badge">Node.js</span>
-                                <span class="badge">webpack</span>
-                                <span class="badge">Tweakpane</span>
-                                <span class="badge">HTML</span>
-                                <span class="badge">CSS</span>
-                                <span class="badge">Matrices & Vectors</span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/typescript.svg">
+                                    TypeScript
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/webgl.svg">
+                                    WebGL
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg">
+                                    Node.js
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/webpack.svg">
+                                    Webpack
+                                </span>
+                                <span class="badge">
+                                    <i class="w-4 h-4 m-1 text-amber-500" data-lucide="code"></i>
+                                    Tweakpane
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg">
+                                    HTML
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg">
+                                    CSS
+                                </span>
+                                <span class="badge">
+                                    <i class="w-4 h-4 m-1 text-blue-500" data-lucide="spline-pointer"></i>
+                                    Matrices & Vectors
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -223,12 +333,30 @@
                                 <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview_portfolio.png">
                             </a>
                             <div class="project-card-image-div">
-                                <span class="badge">Tailwind CSS</span>
-                                <span class="badge">Basecoat</span>
-                                <span class="badge">HTML</span>
-                                <span class="badge">Javascript</span>
-                                <span class="badge">GSAP</span>
-                                <span class="badge">Vite</span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg">
+                                    HTML
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg">
+                                    JavaScript
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/tailwindcss.svg">
+                                    Tailwind CSS
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1 bg-[#1447e6]" src="/simpleicons/basecoat.svg">
+                                    Basecoat
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/gsap.svg">
+                                    GSAP
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/vite.svg">
+                                    Vite
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -246,10 +374,22 @@
                                 <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview_lcg.png">
                             </a>
                             <div class="project-card-image-div">
-                                <span class="badge text-sm">LCG</span>
-                                <span class="badge text-sm">HTML</span>
-                                <span class="badge text-sm">Javascript</span>
-                                <span class="badge text-sm">CSS</span>
+                                <span class="badge">
+                                    <i class="w-4 h-4 m-1 text-red-500" data-lucide="shuffle"></i>
+                                    LCG
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg">
+                                    HTML
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg">
+                                    JavaScript
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg">
+                                    CSS
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -265,10 +405,22 @@
                                 <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview_gol.png">
                             </a>
                             <div class="project-card-image-div">
-                                <span class="badge text-sm">P5.js</span>
-                                <span class="badge text-sm">HTML</span>
-                                <span class="badge text-sm">Javascript</span>
-                                <span class="badge text-sm">CSS</span>
+                                <span class="badge text-sm">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/p5dotjs.svg">
+                                    p5.js
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg">
+                                    HTML
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg">
+                                    CSS
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg">
+                                    JavaScript
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -284,10 +436,22 @@
                                 <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview_ip.png">
                             </a>
                             <div class="project-card-image-div">
-                                <span class="badge text-sm">IPv4</span>
-                                <span class="badge text-sm">HTML</span>
-                                <span class="badge text-sm">Javascript</span>
-                                <span class="badge text-sm">CSS</span>
+                                <span class="badge text-sm">
+                                    <i class="w-4 h-4 m-1 text-green-500" data-lucide="network"></i>
+                                    IPv4
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg">
+                                    HTML
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg">
+                                    JavaScript
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg">
+                                    CSS
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -304,13 +468,34 @@
                                 <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview_matchlogger.png">
                             </a>
                             <div class="project-card-image-div">
-                                <span class="badge text-sm">Javascript</span>
-                                <span class="badge text-sm">discordjs</span>
-                                <span class="badge text-sm">dotenv</span>
-                                <span class="badge text-sm">merge-images</span>
-                                <span class="badge text-sm">convert-base64-to-image</span>
-                                <span class="badge text-sm">Node.JS</span>
-                                <span class="badge text-sm">Riot Games API</span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg">
+                                    JavaScript
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/discorddotjs.svg">
+                                    discord.js
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/dotenv.svg">
+                                    .ENV
+                                </span>
+                                <span class="badge">
+                                    <i class="w-4 h-4 m-1 text-violet-500" data-lucide="package"></i>
+                                    merge-images
+                                </span>
+                                <span class="badge">
+                                    <i class="w-4 h-4 m-1 text-cyan-500" data-lucide="package"></i>
+                                    convert-base64-to-image
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg">
+                                    Node.js
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/riotgames.svg">
+                                    Riot Games API
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -410,14 +595,14 @@
                 </div>
                 <div id="project-pagination">
                     <button class="project-dot bg-amber-500" data-index="0" data-tooltip="1 - WebGL" data-side="top" data-align="center"></button>
-                    <button class="project-dot " data-index="1" data-tooltip="2 - Portfolio" data-side="top" data-align="center"></button>
-                    <button class="project-dot border-base-900" data-index="2" data-tooltip="3 - LCG" data-side="top" data-align="center"></button>
-                    <button class="project-dot border-base-900" data-index="3" data-tooltip="4 - GOL" data-side="top" data-align="center"></button>
-                    <button class="project-dot border-base-900" data-index="4" data-tooltip="5 - Decoupage IP" data-side="top" data-align="center"></button>
-                    <button class="project-dot border-base-900" data-index="5" data-tooltip="6 - Match Logger V2" data-side="top" data-align="center"></button>
-                    <button class="project-dot border-base-900" data-index="6" data-tooltip="7 - FTP (Cours)" data-side="top" data-align="center"></button>
-                    <button class="project-dot border-base-900" data-index="7" data-tooltip="8 - AD (Cours)" data-side="top" data-align="center"></button>
-                    <button class="project-dot border-base-900" data-index="8" data-tooltip="9 - Docker (Cours)" data-side="top" data-align="center"></button>
+                    <button class="project-dot bg-base-900" data-index="1" data-tooltip="2 - Portfolio" data-side="top" data-align="center"></button>
+                    <button class="project-dot bg-base-900" data-index="2" data-tooltip="3 - LCG" data-side="top" data-align="center"></button>
+                    <button class="project-dot bg-base-900" data-index="3" data-tooltip="4 - GOL" data-side="top" data-align="center"></button>
+                    <button class="project-dot bg-base-900" data-index="4" data-tooltip="5 - Decoupage IP" data-side="top" data-align="center"></button>
+                    <button class="project-dot bg-base-900" data-index="5" data-tooltip="6 - Match Logger V2" data-side="top" data-align="center"></button>
+                    <button class="project-dot bg-base-900" data-index="6" data-tooltip="7 - FTP (Cours)" data-side="top" data-align="center"></button>
+                    <button class="project-dot bg-base-900" data-index="7" data-tooltip="8 - AD (Cours)" data-side="top" data-align="center"></button>
+                    <button class="project-dot bg-base-900" data-index="8" data-tooltip="9 - Docker (Cours)" data-side="top" data-align="center"></button>
                 </div>
             </section>
         </main>

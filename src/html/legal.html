@@ -6,7 +6,7 @@
         <link rel="icon" href="/image/picture.jpg" type="image/jpg" />
         <title>Portfolio - Legal</title>
     </head>
-    <body class="bg-base-900 h-screen max-w-screen font-firacode">
+    <body class="bg-base-900 min-h-screen flex flex-col max-w-screen font-firacode">
         <nav class="fixed bottom-0 md:top-0 left-0 w-full z-10 pt-5 h-fit pointer-events-none">
             <div class="pointer-events-auto hidden absolute left-0 gap-5 p-5 md:flex items-center w-26 hover:w-79 transition-all duration-300 ease-in-out  rounded-s-lg bg-base-700/50 backdrop-blur-sm rounded-full border border-base-400">
                 <img class="rounded-full ring-2 ring-base-400" src="/image/picture.jpg" width="60px">
@@ -22,7 +22,7 @@
                 <a href="/index.html#projects" class="nav-a pointer-events-auto" data-tooltip="Mes Projets" data-side="bottom" data-align="center">
                     <icon class="w-8 h-8" data-lucide="terminal"></icon>
                 </a>
-                <a href="/index.html#" class="nav-a pointer-events-auto" data-tooltip="Veille Technologique" data-side="bottom" data-align="center">
+                <a href="/src/html/veille.html" class="nav-a pointer-events-auto" data-tooltip="Veille Technologique" data-side="bottom" data-align="center">
                     <icon class="w-8 h-8" data-lucide="file-search-corner"></icon>
                 </a>
                 <a href="/index.html#" class="nav-a pointer-events-auto" data-tooltip="Documents" data-side="bottom" data-align="center">
@@ -30,12 +30,12 @@
                 </a>
             </div>
         </nav>
-        <main class="flex flex-col mt-40 text-white">
+        <main class="flex flex-col flex-1 mt-40 text-white">
             <section class="accordion flex flex-col items-center">
-                <h2 class="text-4xl  font-bold underline">Mentions Légales</h2>
-                <details class="group border-b last:border-b-0 w-[75%]">
+                <h2 class="text-4xl font-rubik font-bold underline">Mentions Légales</h2>
+                <details class="group border-b last:border-b-0 w-[75%] mt-5">
                     <summary class="w-full focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] transition-all outline-none rounded-md">
-                    <h2 class="flex flex-1 items-start justify-between gap-4 py-4 text-left text-xl font-bold hover:underline ">
+                    <h2 class="font-rubik flex flex-1 items-start justify-between gap-4 py-4 text-left text-xl font-bold hover:underline ">
                         Propriétaire du site
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground pointer-events-none size-6 shrink-0 translate-y-0.5 transition-transform duration-200 group-:rotate-180"><path d="m6 9 6 6 6-6" /></svg>
                     </h2>
@@ -48,9 +48,9 @@
                         </p>
                     </section>
                 </details>
-                <details class="group border-b last:border-b-0 w-[75%]">
+                <details class="group border-b last:border-b-0 w-[75%] mt-5">
                     <summary class="w-full focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] transition-all outline-none rounded-md">
-                    <h2 class="flex flex-1 items-start justify-between gap-4 py-4 text-left text-lg font-bold hover:underline">
+                    <h2 class="font-rubik flex flex-1 items-start justify-between gap-4 py-4 text-left text-xl font-bold hover:underline">
                         Hébergement
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground pointer-events-none size-6 shrink-0 translate-y-0.5 transition-transform duration-200 group-:rotate-180"><path d="m6 9 6 6 6-6" /></svg>
                     </h2>
@@ -65,7 +65,7 @@
                         </p>
                     </section>
                 </details>
-                <details class="group border-b last:border-b-0 w-[75%]">
+                <details class="group border-b last:border-b-0 w-[75%] mt-5">
                     <summary class="w-full focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] transition-all outline-none rounded-md">
                     <h2 class="flex flex-1 items-start justify-between gap-4 py-4 text-left text-lg font-bold hover:underline">
                         Propriété intellectuelle
@@ -83,72 +83,6 @@
                     </section>
                 </details>
             </section>
-            <section class="accordion flex flex-col items-center">
-                <h2 class="text-4xl  font-bold underline">Politique de confidentialité</h2>
-                <details class="group border-b last:border-b-0  w-[75%]">
-                    <summary class="w-full focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] transition-all outline-none rounded-md">
-                    <h2 class="flex flex-1 items-start justify-between gap-4 py-4 text-left text-lg font-bold hover:underline">
-                        Collecte des données personnelles
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground pointer-events-none size-6 shrink-0 translate-y-0.5 transition-transform duration-200 group-:rotate-180"><path d="m6 9 6 6 6-6" /></svg>
-                    </h2>
-                    </summary>
-                    <section>
-                        <p class="py-8 text-xl font-gummy">
-                            Les informations collectées via le formulaire de contact, y compris le nom, le prénom et l'adresse e-mail, sont nécessaires pour répondre à vos demandes et vous fournir des informations concernant le formulaire de contact de ce site. <br>
-                            Ces données sont collectées de manière confidentielle et ne seront en aucun cas partagées avec des tiers, sauf si la loi l'exige.
-                        </p>
-                    </section>
-                </details>
-                <details class="group border-b last:border-b-0  w-[75%]">
-                    <summary class="w-full focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] transition-all outline-none rounded-md">
-                    <h2 class="flex flex-1 items-start justify-between gap-4 py-4 text-left text-lg font-bold hover:underline">
-                        Utilisation des cookies
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground pointer-events-none size-6 shrink-0 translate-y-0.5 transition-transform duration-200 group-:rotate-180"><path d="m6 9 6 6 6-6" /></svg>
-                    </h2>
-                    </summary>
-                    <section>
-                        <p class="py-8 text-xl font-gummy">
-                            Le site utilise des cookies pour améliorer l'expérience utilisateur. <br>
-                            Ces cookies peuvent être utilisés pour stocker vos préférences et pour analyser l'utilisation du site (via Google Analytics par exemple). <br>
-                            Vous pouvez configurer votre navigateur pour refuser les cookies, bien que certaines fonctionnalités du site puissent ne pas fonctionner correctement sans eux.
-                        </p>
-                    </section>
-                </details>
-                <details class="group border-b last:border-b-0  w-[75%]">
-                    <summary class="w-full focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] transition-all outline-none rounded-md">
-                    <h2 class="flex flex-1 items-start justify-between gap-4 py-4 text-left text-lg font-bold hover:underline">
-                        Protection des données personnelles
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground pointer-events-none size-6 shrink-0 translate-y-0.5 transition-transform duration-200 group-:rotate-180"><path d="m6 9 6 6 6-6" /></svg>
-                    </h2>
-                    </summary>
-                    <section>
-                        <p class="py-8 text-xl font-gummy">
-                            Les données personnelles collectées sur ce site sont sécurisées et stockées conformément aux lois en vigueur, y compris le <ins>Règlement Général sur la Protection des Données</ins> (RGPD). <br>
-                            Vous avez le droit de consulter, modifier ou supprimer les informations vous concernant en nous contactant à l'adresse suivante : <a href="mailto:her.val301@gmail.com"><ins>her.val301@gmail.com</ins></a>.
-                        </p>
-                    </section>
-                </details>
-                <details  class="group border-b last:border-b-0  w-[75%]">
-                    <summary class="w-full focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] transition-all outline-none rounded-md">
-                    <h2 class="flex flex-1 items-start justify-between gap-4 py-4 text-left text-lg font-bold hover:underline">
-                        Droits des utilisateurs
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground pointer-events-none size-6 shrink-0 translate-y-0.5 transition-transform duration-200 group-:rotate-180"><path d="m6 9 6 6 6-6" /></svg>
-                    </h2>
-                    </summary>
-                    <section>
-                        <p class="py-8 text-xl font-gummy">
-                            Conformément à la législation sur la protection des données personnelles, vous disposez des droits suivants : <br>
-                            - Droit d'accès à vos données personnelles. <br>
-                            - Droit de rectification de vos données. <br>
-                            - Droit de suppression de vos données. <br>
-                            - Droit à la limitation du traitement de vos données. <br>
-                            - Droit de retirer votre consentement à tout moment. <br>
-                            - Droit de porter plainte auprès d'une autorité de contrôle (par exemple, la CNIL en France). <br>
-                        </p>
-                    </section>
-                </details>
-            </section>
-            <p class="m-auto text-amber-500 font-bold text-xl text-center"><ins>Note:</ins> Site en construction. <br> Aucun Cookie / Collecte de données n'est effectuée pour le moment. <br> Il s'agit d'un site statique.</p>
         </main>
         <footer class="flex flex-col items-center w-full text-center z-10 mt-20 pb-30 pt-5 md:p-5 bg-base-800 border-t border-base-400 text-white">
             <div class="flex flex-row w-[80%] justify-center gap-10 md:gap-20 pb-5 border-b border-base-400">
@@ -158,7 +92,24 @@
             </div>
             <p class="mt-5 text-[#f4f6fb]">© 2026 - Hernandorena Valentin. Tous droits réservés.</p>
         </footer>
-        <script src="/src/js/theme.js"></script>
         <script type="module" src="/src/js/main.js"></script>
+        <script>
+            (() => {
+                const accordions = document.querySelectorAll(".accordion");
+                accordions.forEach((accordion) => {
+                accordion.addEventListener("click", (event) => {
+                    const summary = event.target.closest("summary");
+                    if (!summary) return;
+                    const details = summary.closest("details");
+                    if (!details) return;
+                    accordion.querySelectorAll("details").forEach((detailsEl) => {
+                    if (detailsEl !== details) {
+                        detailsEl.removeAttribute("open");
+                    }
+                    });
+                });
+                });
+            })();
+        </script>
     </body>
 </html>
