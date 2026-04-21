@@ -69,4 +69,34 @@ window.addEventListener("load", () => {
         tolerance: 10,
         preventDefault: true
     });
+
+    const btnTech = document.getElementById('btn_tech');
+    const bubbleTech = document.getElementById('bubble_tech');
+    const btnRs = document.getElementById('btn_rs');
+    const bubbleRs = document.getElementById('bubble_rs');
+
+    btnTech.addEventListener('click', () => {
+        const icon = btnTech.children[0];
+        if (bubbleTech.classList.contains('h-0')) {
+            bubbleTech.classList.replace('h-0', 'h-fit');
+            icon.setAttribute('data-lucide', 'chevron-up');
+        } else {
+            bubbleTech.classList.replace('h-fit', 'h-0');
+            icon.setAttribute('data-lucide', 'chevron-down');
+        }
+        createIcons({ icons });
+    });
+
+    btnRs.addEventListener('click', () => {
+        const icon = btnRs.children[0];
+        if (bubbleRs.classList.contains('h-0')) {
+            bubbleRs.classList.replace('h-0', 'h-fit');
+            icon.setAttribute('data-lucide', 'chevron-up');
+        } else {
+            bubbleRs.classList.replace('h-fit', 'h-0');
+            icon.setAttribute('data-lucide', 'chevron-down');
+        }
+        createIcons({ icons });
+    });
 });
+

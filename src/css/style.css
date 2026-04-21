@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
 @import "tailwindcss";
 @import "basecoat-css";
 @layer theme, base, components, utilities;
@@ -10,8 +10,7 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
-    --font-rubik: "Rubik", sans-serif;
-    --font-firacode: "Fira Code", monospace;
+    --font-cascadia: "Cascadia Code", sans-serif;
     --color-base-900: #181716;  /* Background */
     --color-base-800: #2a2727;  /* Container  */
     --color-base-700: #393433;  /* Card       */
@@ -69,10 +68,14 @@
     @apply w-4 h-4 rounded-full hover:bg-amber-300! pointer-events-auto cursor-pointer border-base-900;
 }
 
-/* Basecoat badge */
+/* Basecoat Components */
 
 .badge {
-    @apply font-firacode text-sm hover:bg-gray-100 hover:text-black;
+    @apply font-cascadia text-sm hover:bg-gray-100 hover:text-black;
+}
+
+.btn-destructive {
+    @apply bg-red-400;
 }
 
 /* Bubble CSS */
@@ -86,11 +89,11 @@
 }
 
 .bubble-container {
-    @apply flex flex-col md:flex-row text-white text-sm;
+    @apply flex flex-col md:flex-row text-white text-sm overflow-hidden;
 }
 
 .bubble-content {
-    @apply flex flex-col w-full md:w-[50%] font-firacode;
+    @apply flex flex-col w-full md:w-[50%] font-cascadia;
 }
 
 .bubble-content-p {

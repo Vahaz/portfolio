@@ -41,25 +41,3 @@ jobs:
           tags: |
             vhernandorena/portfolio-dev:latest
             vhernandorena/portfolio-dev:${{ steps.versioning.outputs.version }}
-
-  github-pages-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
-
-      - name: Install and Build
-        run: |
-          npm ci
-          npm run build
-
-      - name: Deploy to GH Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: dist
-          branch: prod
