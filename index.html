@@ -10,9 +10,9 @@
         <nav class="fixed bottom-0 md:top-0 left-0 w-full z-100 pt-5 pointer-events-none">
             <div class="pointer-events-auto hidden absolute left-0 gap-5 p-5 md:flex items-center w-26 hover:w-79 transition-all duration-300 ease-in-out  rounded-s-lg bg-base-700/50 backdrop-blur-sm rounded-full border border-base-400">
                 <img class="rounded-full ring-2 ring-base-400" src="/image/picture.jpg" width="60px">
-                <p class="overflow-hidden text-white text-[1.25rem] font-bold">VALENTIN <br> HERNANDORENA </p>
+                <p class="overflow-hidden text-secondary text-[1.25rem] font-bold">VALENTIN <br> HERNANDORENA </p>
             </div>
-            <div class="flex fixed bottom-0 left-0 w-full justify-around md:absolute md:top-0 md:right-5 md:bottom-auto md:left-auto md:w-fit items-center gap-10 mt-5 p-5 rounded-none md:rounded-full text-white bg-base-700 md:bg-base-700/50 backdrop-blur-sm border border-base-400">
+            <div class="flex fixed bottom-0 left-0 w-full justify-around md:absolute md:top-0 md:right-5 md:bottom-auto md:left-auto md:w-fit items-center gap-10 mt-5 p-5 rounded-none md:rounded-full text-secondary bg-base-700 md:bg-base-700/50 backdrop-blur-sm border border-base-400">
                 <a href="#" class="nav-a pointer-events-auto" data-tooltip="Acceuil" data-side="bottom" data-align="center">
                     <i class="w-8 h-8" data-lucide="home"></i>
                 </a>
@@ -30,10 +30,10 @@
                 </a>
             </div>
         </nav>
-        <div class="h-50 flex flex-col justify-center items-center text-5xl text-white">
+        <div class="h-50 flex flex-col justify-center items-center text-5xl text-secondary">
             <p class="w-fit border-b border-amber-500 pb-3">Mon Portfolio</p>
         </div>
-        <main class="flex flex-col items-center my-10 h-fit gap-y-20 text-white">
+        <main class="flex flex-col items-center my-10 h-fit gap-y-20 text-secondary">
             <section id="me" class="h-fit w-11/12 md:w-fit md:max-w-2xl rounded-2xl overflow-hidden border border-base-400 bg-base-700">
                 <div class="flex flex-row items-center gap-3 m-5 p-5 font-bold border-b">
                     <i class="w-12 h-12" data-lucide="user-round"></i>
@@ -203,7 +203,7 @@
                             </span>
                         </div>
                     </div>
-                    <a class="group btn font-bold mt-5 w-full rounded-lg! border border-base-400 hover:bg-gray-100 hover:text-black" href="/pdf/cv.pdf" download="CV_Valentin_Hernandorena.pdf" type="application/pdf">
+                    <a class="group btn font-bold mt-5 w-full rounded-lg! border border-base-400 hover:bg-gray-100 hover:text-primary" href="/pdf/cv.pdf" download="CV_Valentin_Hernandorena.pdf" type="application/pdf">
                         Télécharger mon CV
                         <i data-lucide="download" class="group-hover:animate-bounce"></i>
                     </a>
@@ -375,6 +375,10 @@
                                 <span class="badge">
                                     <img class="w-4 h-4 m-1" src="/simpleicons/vercel.svg">
                                     Vercel
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/resend.svg">
+                                    Resend
                                 </span>
                             </div>
                         </div>
@@ -626,37 +630,53 @@
             </section>
         </main>
         <dialog id="contact-dialog" class="dialog w-full sm:max-w-106.25 max-h-153" aria-labelledby="Formulaire de contact" aria-describedby="Formulaire de contact pour m'envoyer un courriel." onclick="if (event.target === this) this.close()">
-            <div class="bg-base-800 text-white border-base-400">
+            <div class="bg-base-800 text-secondary border-base-400">
                 <header class="text-center">
                     <h2>Formulaire de contact</h2>
                     <p class="text-[#bebec0]">Entrer vos informations pour m'envoyer un courriel. <br> Cliquer sur "Envoyer" quand vous avez terminer.</p>
                 </header>
                 <section>
-                    <form class="form grid gap-6">
+                    <form class="form grid gap-6" id="form">
                         <div class="grid gap-2">
                             <label for="form-mail">Email</label>
-                            <input type="text" id="form-mail" maxlength="50" placeholder="alice@gmail.com" required>
+                            <input type="email" name="email" id="form-mail" maxlength="50" placeholder="alice@gmail.com" required>
                         </div>
                         <div class="grid gap-2">
                             <label for="form-textarea">Contenu</label>
                             <textarea id="form-textarea" class="textarea resize-y max-h-40 overflow-auto" maxlength="1024" placeholder="Contenu de votre courriel..." rows="3"></textarea>
                             <p id="counter" class="text-[#bebec0] text-right text-sm">0/1024</p>
                         </div>
-                        <p class="text-[#bebec0] text-sm">Merci d'envoyer que des courriels sérieux.</p>
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" id="checkbox-with-text" class="input" required>
+                            <div class="grid gap-2">
+                                <label for="checkbox-with-text" class="label">Accepter la politique de confidentialité</label>
+                                <p class="text-muted-foreground text-sm">
+                                    En cochant cette case, vous acceptez le traitement de vos données conformément aux <a href="/src/html/legal.html" class="underline hover:text-secondary">mentions légales</a>.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <input id="hp" class="hidden" type="text" name="hp" tabindex="-1" autocomplete="off">
+                        </div>
+                        <p class="text-[#bebec0] text-sm">
+                            Merci d'envoyer que des courriels sérieux. <br>
+                            Il est également possible de me contacter directement via : <a href="mailto:contact.valentinh@gmail.com" target="_blank">contact.valentinh@gmail.com</a>
+                        </p>
+                        <p id="form-error" class="hidden text-center text-red-300">
+                            Une Erreur est survenue, veuillez réessayer ultérieurement ou me contacter directement via courriel.
+                        </p>
+                        <footer class="flex gap-5">
+                            <button class="btn-destructive grow text-secondary" type="reset" onclick="this.closest('dialog').close()">
+                                <i data-lucide="x"></i>
+                                Annuler
+                            </button>
+                            <button class="btn grow-2" type="submit" id="form-submit">
+                                <i id="form-submit-i" data-lucide="send"></i>
+                                Envoyer
+                            </button>
+                        </footer>
                     </form>
                 </section>
-                <footer>
-                    <button class="btn-destructive grow text-white" type="reset" onclick="this.closest('dialog').close()">
-                        <i data-lucide="x"></i>
-                        Annuler
-                    </button>
-                    <button class="btn grow-2" type="submit" onclick="sendMail()">
-                        <i id="form-send" data-lucide="send"></i>
-                        <i id="form-loader" class="hidden animate-spin" data-lucide="loader"></i>
-                        <i id="form-check" class="hidden" data-lucide="check"></i>
-                        Envoyer
-                    </button>
-                </footer>
                 <button type="button" aria-label="Fermer le formulaire" onclick="this.closest('dialog').close()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x">
                         <path d="M18 6 6 18" />

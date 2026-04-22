@@ -2,11 +2,19 @@ services:
   dev:
     build: .
     ports:
-      - "5173:5173"
+      - "3000:3000"     # Vercel Dev Interface
+      - "24678:24678"   # WebSocket Vite (HMR) for Resend
     volumes:
       - .:/portfolio
       - /portfolio/node_modules
+    env_file:
+      - .env
     environment:
-      - WATCHPACK_POLLING=true
+      - NODE_ENV=development
       - NODE_OPTIONS=--max-old-space-size=1024
-    mem_limit: 1024m
+      - WATCHPACK_POLLING=true
+      - VERCEL_TELEMETRY_DISABLED=1
+    deploy:
+      resources:
+        limits:
+          memory: 1024M
