@@ -12,36 +12,36 @@
                 <img class="rounded-full ring-2 ring-base-400" src="/image/picture.jpg" width="60px">
                 <p class="overflow-hidden text-secondary text-[1.25rem] font-bold">VALENTIN <br> HERNANDORENA </p>
             </div>
-            <div class="flex fixed bottom-0 left-0 w-full justify-around md:absolute md:top-0 md:right-5 md:bottom-auto md:left-auto md:w-fit items-center gap-10 mt-5 p-5 rounded-none md:rounded-full text-secondary bg-base-700 md:bg-base-700/50 backdrop-blur-sm border border-base-400">
-                <a href="#" class="nav-a pointer-events-auto" data-tooltip="Acceuil" data-side="bottom" data-align="center">
+            <div class="flex fixed bottom-0 left-0 w-full justify-around md:absolute md:top-0 md:right-15 md:bottom-auto md:left-auto md:w-fit items-center gap-10 mt-5 p-5 rounded-none md:rounded-full text-secondary bg-base-700 md:bg-base-700/50 backdrop-blur-sm border border-base-400">
+                <a href="#me" target="_self" hreflang="fr" lang="en" aria-label="À Propos De Moi" class="nav-a pointer-events-auto" data-tooltip="Accueil" data-side="bottom" data-align="center">
                     <i class="w-8 h-8" data-lucide="home"></i>
                 </a>
-                <a href="#studies" class="nav-a pointer-events-auto" data-tooltip="Mes Études" data-side="bottom" data-align="center">
+                <a href="#studies" target="_self" hreflang="fr" lang="en" aria-label="Mes Études" class="nav-a pointer-events-auto" data-tooltip="Mes Études" data-side="bottom" data-align="center">
                     <i class="w-8 h-8" data-lucide="square-user"></i>
                 </a>
-                <a href="#projects" class="nav-a pointer-events-auto" data-tooltip="Mes Projets" data-side="bottom" data-align="center">
+                <a href="#projects" target="_self" hreflang="fr" lang="en" aria-label="Mes Projets" class="nav-a pointer-events-auto" data-tooltip="Mes Projets" data-side="bottom" data-align="center">
                     <i class="w-8 h-8" data-lucide="terminal"></i>
                 </a>
-                <a href="/src/html/veille.html" class="nav-a pointer-events-auto" data-tooltip="Veille Technologique" data-side="bottom" data-align="center">
+                <a href="/src/html/veille.html" target="_self" hreflang="fr" lang="en" aria-label="Ma Veille Technologique" class="nav-a pointer-events-auto" data-tooltip="Veille Technologique" data-side="bottom" data-align="center">
                     <i class="w-8 h-8" data-lucide="file-search-corner"></i>
                 </a>
-                <a href="#" class="nav-a pointer-events-auto" data-tooltip="Documents" data-side="bottom" data-align="center">
+                <!-- <a href="#" hreflang="fr" lang="en" aria-label="Mes Documents" class="nav-a pointer-events-auto" data-tooltip="Documents" data-side="bottom" data-align="center">
                     <i class="w-8 h-8" data-lucide="book-marked"></i>
-                </a>
+                </a> -->
             </div>
         </nav>
         <div class="h-50 flex flex-col justify-center items-center text-5xl text-secondary">
             <p class="w-fit border-b border-amber-500 pb-3">Mon Portfolio</p>
         </div>
         <main class="flex flex-col items-center my-10 h-fit gap-y-20 text-secondary">
-            <section id="me" class="h-fit w-11/12 md:w-fit md:max-w-2xl rounded-2xl overflow-hidden border border-base-400 bg-base-700">
+            <section id="me" class="h-fit w-11/12 max-sm:w-full max-sm:rounded-none md:w-fit md:max-w-2xl rounded-2xl overflow-hidden border border-base-400 bg-base-700">
                 <div class="flex flex-row items-center gap-3 m-5 p-5 font-bold border-b">
                     <i class="w-12 h-12" data-lucide="user-round"></i>
                     <p class="text-3xl">À Propos De Moi</p>
                 </div>
                 <div class="h-fit m-5 p-5 rounded-2xl bg-base-800">
                     <div class="flex flex-row items-center">
-                        <img class="hidden md:block w-28 h-28 rounded-md" src="/image/picture.jpg">
+                        <img class="block w-28 h-28 rounded-md" src="/image/picture.jpg">
                         <p class="text-xl ml-5 text-bold">Hernandorena Valentin <br> <span class="text-base italic font-cascadia">Étudiant en Informatique / Réseau</span></p>
                     </div>
                     <div class="flex flex-row my-5 py-5 items-center text-[#bebec0] border-t border-[#bebec0]">
@@ -61,11 +61,11 @@
                         </div>
                         <div class="flex flex-col gap-3 w-[50%]">
                             <p class="ml-auto flex flex-row items-center">
-                                <a href="https://github.com/vahaz" hreflang="fr">Github</a>
+                                <a href="https://github.com/vahaz" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Mon profil Github">Github</a>
                                 <i class="w-5 h-5 ml-3" data-lucide="github"></i>
                             </p>
                             <p class="ml-auto flex flex-row items-center">
-                                <a href="https://gitlab.com/contact.valentinh" hreflang="fr">GitLab</a>
+                                <a href="https://gitlab.com/contact.valentinh" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Mon profil GitLab">GitLab</a>
                                 <i class="w-5 h-5 ml-3" data-lucide="gitlab"></i>
                             </p>
                         </div>
@@ -203,13 +203,13 @@
                             </span>
                         </div>
                     </div>
-                    <a class="group btn font-bold mt-5 w-full rounded-lg! border border-base-400 hover:bg-gray-100 hover:text-primary" href="/pdf/cv.pdf" download="CV_Valentin_Hernandorena.pdf" type="application/pdf">
+                    <a class="group btn font-bold mt-5 w-full rounded-lg! border border-base-400 hover:bg-gray-100 hover:text-primary" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Mon CV en PDF" href="/pdf/cv.pdf" download="CV_Valentin_Hernandorena.pdf" type="application/pdf">
                         Télécharger mon CV
                         <i data-lucide="download" class="group-hover:animate-bounce"></i>
                     </a>
                 </div>
             </section>
-            <section id="studies" class="h-fit w-11/12 md:w-fit md:max-w-2xl rounded-2xl overflow-hidden border border-base-400 bg-base-700">
+            <section id="studies" class="h-fit w-11/12 max-sm:w-full max-sm:rounded-none md:w-fit md:max-w-2xl rounded-2xl overflow-hidden border border-base-400 bg-base-700">
                 <div class="flex flex-row items-center gap-3 m-5 p-5 font-bold border-b">
                     <i class="w-12 h-12" data-lucide="graduation-cap"></i>
                     <p class="text-3xl">Mes Études</p>
@@ -294,7 +294,7 @@
                             </p>
                         </div>
                         <div class="project-card-image">
-                            <a href="https://webgl.valentinhrnd.fr/" target="_blank" hreflang="en" data-tooltip="Voir le projet" data-side="top" data-align="center">
+                            <a href="https://webgl.valentinhrnd.fr/" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Mon projet WebGL" data-tooltip="Voir le projet" data-side="top" data-align="center">
                                 <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview/preview_webgl.png">
                             </a>
                             <div class="project-card-image-div">
@@ -340,11 +340,11 @@
                                 Ce projet a pour but de créer un <strong>portfolio personnel</strong>. <br>
                                 Il utilise pour son aspect visuel (Frontend) : <strong>Tailwind CSS</strong>, <strong>Basecoat</strong> et <strong>GSAP</strong>.
                                 De plus, <strong>Vite</strong> est utilisé pour construire les différents fichiers CSS et JavaScript.
-                                Pour finir, <strong>Vercel</strong> est utilisé pour héberger le site en backend et gérer les emails.
+                                Pour finir, <strong>Vercel</strong> est utilisé pour héberger le site en backend et gérer les emails avec <strong>Resend</strong>.
                             </p>
                         </div>
                         <div class="project-card-image">
-                            <a href="https://valentinhrnd.fr/" target="_blank" hreflang="en" data-tooltip="Voir le projet" data-side="top" data-align="center">
+                            <a href="https://valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Mon Portfolio" data-tooltip="Voir le projet" data-side="top" data-align="center">
                                 <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview/preview_portfolio.png">
                             </a>
                             <div class="project-card-image-div">
@@ -393,7 +393,7 @@
                             </p>
                         </div>
                         <div class="project-card-image">
-                            <a href="https://lcg.valentinhrnd.fr/" target="_blank" hreflang="en" data-tooltip="Voir le projet" data-side="top" data-align="center">
+                            <a href="https://lcg.valentinhrnd.fr/" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Mon projet LCG" data-tooltip="Voir le projet" data-side="top" data-align="center">
                                 <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview/preview_lcg.png">
                             </a>
                             <div class="project-card-image-div">
@@ -424,7 +424,7 @@
                             </p>
                         </div>
                         <div class="project-card-image">
-                            <a href="https://gol.valentinhrnd.fr/" target="_blank" hreflang="en" data-tooltip="Voir le projet" data-side="top" data-align="center">
+                            <a href="https://gol.valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Mon projet GOL" data-tooltip="Voir le projet" data-side="top" data-align="center">
                                 <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview/preview_gol.png">
                             </a>
                             <div class="project-card-image-div">
@@ -455,7 +455,7 @@
                             </p>
                         </div>
                         <div class="project-card-image">
-                            <a href="https://ip.valentinhrnd.fr/" target="_blank" hreflang="en" data-tooltip="Voir le projet" data-side="top" data-align="center">
+                            <a href="https://ip.valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Mon projet d'entraînement au découpage d'IPv4" data-tooltip="Voir le projet" data-side="top" data-align="center">
                                 <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview/preview_ip.png">
                             </a>
                             <div class="project-card-image-div">
@@ -487,7 +487,7 @@
                             </p>
                         </div>
                         <div class="project-card-image">
-                            <a href="https://github.com/Vahaz/Game_of_Life_P5.js" target="_blank" hreflang="en" data-tooltip="Ouvrir le projet sur Github" data-side="top" data-align="center">
+                            <a href="https://github.com/Vahaz/match_logger_v2" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Page Github de mon projet MatchLoggerV2" data-tooltip="Ouvrir le projet sur Github" data-side="top" data-align="center">
                                 <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview/preview_matchlogger.png">
                             </a>
                             <div class="project-card-image-div">
@@ -651,7 +651,7 @@
                             <div class="grid gap-2">
                                 <label for="checkbox-with-text" class="label">Accepter la politique de confidentialité</label>
                                 <p class="text-muted-foreground text-sm">
-                                    En cochant cette case, vous acceptez le traitement de vos données conformément aux <a href="/src/html/legal.html" class="underline hover:text-secondary">mentions légales</a>.
+                                    En cochant cette case, vous acceptez le traitement de vos données conformément aux <a href="/src/html/legal.html" hreflang="fr" lang="fr" target="_self" aria-label="Informations légales de mon Portfolio" class="underline hover:text-secondary">mentions légales</a>.
                                 </p>
                             </div>
                         </div>
@@ -660,7 +660,7 @@
                         </div>
                         <p class="text-[#bebec0] text-sm">
                             Merci d'envoyer que des courriels sérieux. <br>
-                            Il est également possible de me contacter directement via : <a href="mailto:contact.valentinh@gmail.com" target="_blank">contact.valentinh@gmail.com</a>
+                            Il est également possible de me contacter directement via : <a href="mailto:contact.valentinh@gmail.com" target="_blank" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Me contacter via courriel">contact.valentinh@gmail.com</a>
                         </p>
                         <p id="form-error" class="hidden text-center text-red-300">
                             Une Erreur est survenue, veuillez réessayer ultérieurement ou me contacter directement via courriel.
@@ -687,7 +687,7 @@
         </dialog>
         <footer class="flex flex-col items-center w-full text-center z-10 mt-20 pb-30 pt-5 md:p-5 bg-base-700 border-t border-base-400 text-[#f4f6fb]">
             <div class="flex flex-row w-[80%] justify-center gap-10 md:gap-20 pb-5 border-b border-base-400">
-                <a href="/src/html/legal.html">Informations Légales</a>
+                <a href="/src/html/legal.html" hreflang="fr" lang="fr" target="_self" aria-label="Informations légales de mon Portfolio">Informations Légales</a>
                 <button class="cursor-pointer" type="button" onclick="document.getElementById('contact-dialog').showModal()">Formulaire de Contact</button>
             </div>
             <p class="mt-5 text-[#f4f6fb]">© 2026 - Hernandorena Valentin. Tous droits réservés.</p>
