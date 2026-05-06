@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
-        <link rel="icon" href="/image/picture.jpg" type="image/jpg" />
+        <link rel="icon" href="/image/picture.webp" type="image/webp">
         <title>Portfolio - Acceuil</title>
         <!-- Web Search Engine -->
         <meta name="robots" content="index, follow">
@@ -15,7 +15,7 @@
                 "@type": "Organization",
                 "name": "Valentin Hernandorena",
                 "url": "https://valentinhrnd.fr",
-                "logo": "https://www.valentinhrnd.fr/image/picture.jpg",
+                "logo": "https://www.valentinhrnd.fr/image/picture.webp",
                 "sameAs": [
                     "https://github.com/vahaz",
                     "https://gitlab.com/valentinhrnd"
@@ -26,7 +26,7 @@
         <!-- Open Graph -->
         <meta property="og:title" content="Valentin Hernandorena - Portfolio">
         <meta property="og:description" content="Portfolio de Valentin Hernandorena, étudiant en réseau, cybersécurité et informatique. Découvrez mes études, projets, veille technologique et compétences.">
-        <meta property="og:image" content="https://valentinhrnd.fr/image/preview/preview_og.png">
+        <meta property="og:image" content="https://valentinhrnd.fr/image/preview/preview_og.webp">
         <meta property="og:url" content="https://valentinhrnd.fr">
         <meta property="og:type" content="website">
         <!-- Twitter / X -->
@@ -35,7 +35,7 @@
     <body class="bg-base-900 min-h-screen max-w-screen font-cascadia">
         <nav class="fixed bottom-0 md:top-0 left-0 w-full z-100 pt-5 pointer-events-none">
             <div class="pointer-events-auto hidden absolute left-0 gap-5 p-5 md:flex items-center w-26 hover:w-79 transition-all duration-300 ease-in-out  rounded-s-lg bg-base-700/50 backdrop-blur-sm rounded-full border border-base-400">
-                <img class="rounded-full ring-2 ring-base-400" src="/image/picture.jpg" width="60px">
+                <img alt="Photo de profil" class="rounded-full ring-2 ring-base-400" src="/image/picture.webp" width="60" height="60">
                 <p class="overflow-hidden text-secondary text-[1.25rem] font-bold">VALENTIN <br> HERNANDORENA </p>
             </div>
             <div class="flex fixed bottom-0 left-0 w-full justify-around md:absolute md:top-0 md:right-15 md:bottom-auto md:left-auto md:w-fit items-center gap-10 mt-5 p-5 rounded-none md:rounded-full text-secondary bg-base-700 md:bg-base-700/50 backdrop-blur-sm border border-base-400">
@@ -51,9 +51,6 @@
                 <a href="/src/html/veille.html" target="_self" hreflang="fr" lang="en" aria-label="Ma Veille Technologique" class="nav-a pointer-events-auto" data-tooltip="Veille Technologique" data-side="bottom" data-align="center">
                     <i class="w-8 h-8" data-lucide="file-search-corner"></i>
                 </a>
-                <!-- <a href="#" hreflang="fr" lang="en" aria-label="Mes Documents" class="nav-a pointer-events-auto" data-tooltip="Documents" data-side="bottom" data-align="center">
-                    <i class="w-8 h-8" data-lucide="book-marked"></i>
-                </a> -->
             </div>
         </nav>
         <div class="h-50 flex flex-col justify-center items-center text-5xl text-secondary">
@@ -63,11 +60,11 @@
             <section id="me" class="h-fit w-11/12 max-sm:w-full max-sm:rounded-none md:w-fit md:max-w-2xl rounded-2xl overflow-hidden border border-base-400 bg-base-700">
                 <div class="flex flex-row items-center gap-3 m-5 p-5 font-bold border-b">
                     <i class="w-12 h-12" data-lucide="user-round"></i>
-                    <p class="text-3xl">À Propos De Moi</p>
+                    <h2 class="text-3xl">À Propos De Moi</h2>
                 </div>
                 <div class="h-fit m-5 p-5 rounded-2xl bg-base-800">
                     <div class="flex flex-row items-center">
-                        <img class="block w-28 h-28 rounded-md" src="/image/picture.jpg">
+                        <img alt="Image de couverture du projet" class="block w-28 h-28 rounded-md" src="/image/picture.webp" width="112" height="112">
                         <p class="text-xl ml-5 text-bold">Hernandorena Valentin <br> <span class="text-base italic font-cascadia">Étudiant en Informatique / Réseau</span></p>
                     </div>
                     <div class="flex flex-row my-5 py-5 items-center text-[#bebec0] border-t border-[#bebec0]">
@@ -104,7 +101,7 @@
                     <div class="bubble">
                         <div class="flex flex-row w-full">
                             <p class="bubble-title border-red-500">Compétences Technique</p>
-                            <button id="btn_tech" class="ml-auto hover:text-red-500"><i data-lucide="chevron-down"></i></button>
+                            <button id="btn_tech" aria-label="Ouvrir / Fermer la bulle" class="ml-auto hover:text-red-500"><i data-lucide="chevron-down"></i></button>
                         </div>
                         <div id="bubble_tech" class="bubble-container flex-wrap gap-3 h-0">
                             <span class="badge">
@@ -112,59 +109,59 @@
                                 Java
                             </span>
                             <span class="badge">
-                                <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
                                 JavaScript
                             </span>
                             <span class="badge">
-                                <img class="w-4 h-4 m-1" src="/simpleicons/typescript.svg">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/typescript.svg" alt="Logo TypeScript" width="16" height="16">
                                 TypeScript
                             </span>
                             <span class="badge">
-                                <img class="w-4 h-4 m-1" src="/simpleicons/python.svg">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/python.svg" alt="Logo Python" width="16" height="16">
                                Python
                             </span>
                             <span class="badge">
-                                <img class="w-4 h-4 m-1" src="/simpleicons/mysql.svg">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/mysql.svg" alt="Logo MySQL" width="16" height="16">
                                 MySQL
                             </span>
                             <span class="badge">
-                                <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
                                 HTML
                             </span>
                             <span class="badge">
-                                <img class="w-4 h-4 m-1" src="/simpleicons/css.svg">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
                                 CSS
                             </span>
                             <span class="badge">
-                                <img class="w-4 h-4 m-1" src="/simpleicons/vite.svg">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/vite.svg" alt="Logo Vite" width="16" height="16">
                                 Vite
                             </span>
                             <span class="badge">
-                                <img class="w-4 h-4 m-1" src="/simpleicons/tailwindcss.svg">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/tailwindcss.svg" alt="Logo Tailwind CSS" width="16" height="16">
                                 Tailwind CSS
                             </span>
                             <span class="badge">
-                                <img class="w-4 h-4 m-1 bg-[#1447e6]" src="/simpleicons/basecoat.svg">
+                                <img class="w-4 h-4 m-1 bg-[#1447e6]" src="/simpleicons/basecoat.svg" alt="Logo Basecoat" width="16" height="16">
                                 Basecoat
                             </span>
                             <span class="badge">
-                                <img class="w-4 h-4 m-1" src="/simpleicons/gsap.svg">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/gsap.svg" alt="Logo GSAP" width="16" height="16">
                                 GSAP
                             </span>
                             <span class="badge">
-                                <img class="w-4 h-4 m-1" src="/simpleicons/webgl.svg">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/webgl.svg" alt="Logo WebGL" width="16" height="16">
                                 WebGL
                             </span>
                             <span class="badge">
-                                <img class="w-4 h-4 m-1" src="/simpleicons/docker.svg">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/docker.svg" alt="Logo Docker" width="16" height="16">
                                 Docker
                             </span>
                             <span class="badge">
-                                <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg" alt="Logo Node.js" width="16" height="16">
                                 Node.js
                             </span>
                             <span class="badge">
-                                <img class="w-4 h-4 m-1" src="/simpleicons/webpack.svg">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/webpack.svg" alt="Logo Webpack" width="16" height="16">
                                 Webpack
                             </span>
                         </div>
@@ -172,7 +169,7 @@
                     <div class="bubble">
                         <div class="flex flex-row w-full">
                             <p class="bubble-title border-amber-500">Compétences Réseau</p>
-                            <button id="btn_rs" class="ml-auto hover:text-amber-500"><i data-lucide="chevron-down"></i></button>
+                            <button id="btn_rs" aria-label="Ouvrir / Fermer la bulle" class="ml-auto hover:text-amber-500"><i data-lucide="chevron-down"></i></button>
                         </div>
                         <div id="bubble_rs" class="bubble-container flex-wrap gap-3 h-0">
                             <span class="badge">
@@ -188,7 +185,7 @@
                                 Active Directory (AD)
                             </span>
                             <span class="badge">
-                                <img class="w-4 h-4 m-1" src="/simpleicons/filezilla.svg">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/filezilla.svg" alt="Logo FileZilla" width="16" height="16">
                                 FileZilla
                             </span>
                             <span class="badge">
@@ -196,7 +193,7 @@
                                 Groupe Policy (GPO)
                             </span>
                             <span class="badge">
-                                <img class="w-4 h-4 m-1" src="/simpleicons/virtualbox.svg">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/virtualbox.svg" alt="Logo VirtualBox" width="16" height="16">
                                 VirtualBox
                             </span>
                             <span class="badge">
@@ -212,19 +209,19 @@
                                 Windows Server 2022
                             </span>
                             <span class="badge">
-                                <img class="w-4 h-4 m-1" src="/simpleicons/debian.svg">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/debian.svg" alt="Logo Debian" width="16" height="16">
                                 Linux - Debian
                             </span>
                             <span class="badge">
-                                <img class="w-4 h-4 m-1" src="/simpleicons/nixos.svg">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/nixos.svg" alt="Logo NixOS" width="16" height="16">
                                 Linux - NixOS
                             </span>
                             <span class="badge">
-                                <img class="w-4 h-4 m-1" src="/simpleicons/cisco.svg">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/cisco.svg" alt="Logo Cisco Packet Tracer" width="16" height="16">
                                 Packet Tracer
                             </span>
                             <span class="badge">
-                                <img class="w-4 h-4 m-1" src="/simpleicons/ovh.svg">
+                                <img class="w-4 h-4 m-1" src="/simpleicons/ovh.svg" alt="Logo OVH" width="16" height="16">
                                 OVH
                             </span>
                         </div>
@@ -238,11 +235,11 @@
             <section id="studies" class="h-fit w-11/12 max-sm:w-full max-sm:rounded-none md:w-fit md:max-w-2xl rounded-2xl overflow-hidden border border-base-400 bg-base-700">
                 <div class="flex flex-row items-center gap-3 m-5 p-5 font-bold border-b">
                     <i class="w-12 h-12" data-lucide="graduation-cap"></i>
-                    <p class="text-3xl">Mes Études</p>
+                    <h2 class="text-3xl">Mes Études</h2>
                 </div>
                 <div class="h-fit m-5 p-5 rounded-2xl bg-base-800">
                     <div class="flex flex-row items-center">
-                        <img class="hidden md:block w-20 h-22 rounded-md" src="/image/aubanel_logo.jpg">
+                        <img class="hidden md:block w-20 h-22 rounded-md object-cover" src="/image/aubanel_logo.webp" alt="Logo Lycée Théodore Aubanel" width="80" height="88">
                         <p class="text-xl ml-5 text-bold">BTS services informatiques aux organisations <br> <span class="text-base italic font-cascadia">Option Solutions d'Infrastructure, Systèmes et Réseaux</span></p>
                     </div>
                     <div class="flex flex-row my-5 py-5 items-center text-[#bebec0] border-t border-[#bebec0]">
@@ -307,7 +304,7 @@
             <section id="projects">
                 <div class="flex flex-row items-center gap-3 m-5 p-5 font-bold border-b">
                     <i class="w-12 h-12" data-lucide="terminal"></i>
-                    <p class="text-3xl">Mes Projets</p>
+                    <h2 class="text-3xl">Mes Projets</h2>
                 </div>
                 <div id="project-container">
                     <div class="project-card opacity-100! visible!">
@@ -321,23 +318,23 @@
                         </div>
                         <div class="project-card-image">
                             <a href="https://webgl.valentinhrnd.fr/" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Mon projet WebGL" data-tooltip="Voir le projet" data-side="top" data-align="center">
-                                <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview/preview_webgl.png">
+                                <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview/preview_webgl.webp">
                             </a>
                             <div class="project-card-image-div">
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/typescript.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/typescript.svg" alt="Logo TypeScript" width="16" height="16">
                                     TypeScript
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/webgl.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/webgl.svg" alt="Logo WebGL" width="16" height="16">
                                     WebGL
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg" alt="Logo Node.js" width="16" height="16">
                                     Node.js
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/webpack.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/webpack.svg" alt="Logo Webpack" width="16" height="16">
                                     Webpack
                                 </span>
                                 <span class="badge">
@@ -345,11 +342,11 @@
                                     Tweakpane
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
                                     HTML
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
                                     CSS
                                 </span>
                                 <span class="badge">
@@ -371,39 +368,39 @@
                         </div>
                         <div class="project-card-image">
                             <a href="https://valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Mon Portfolio" data-tooltip="Voir le projet" data-side="top" data-align="center">
-                                <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview/preview_portfolio.png">
+                                <img alt="Image de couverture du projet" loading="lazy" class="w-full h-fit mb-3" src="/image/preview/preview_portfolio.webp">
                             </a>
                             <div class="project-card-image-div">
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
                                     HTML
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
                                     JavaScript
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/tailwindcss.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/tailwindcss.svg" alt="Logo Tailwind CSS" width="16" height="16">
                                     Tailwind CSS
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1 bg-[#1447e6]" src="/simpleicons/basecoat.svg">
+                                    <img class="w-4 h-4 m-1 bg-[#1447e6]" src="/simpleicons/basecoat.svg" alt="Logo Basecoat" width="16" height="16">
                                     Basecoat
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/gsap.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/gsap.svg" alt="Logo GSAP" width="16" height="16">
                                     GSAP
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/vite.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/vite.svg" alt="Logo Vite" width="16" height="16">
                                     Vite
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/vercel.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/vercel.svg" alt="Logo Vercel" width="16" height="16">
                                     Vercel
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/resend.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/resend.svg" alt="Logo Resend" width="16" height="16">
                                     Resend
                                 </span>
                             </div>
@@ -420,7 +417,7 @@
                         </div>
                         <div class="project-card-image">
                             <a href="https://lcg.valentinhrnd.fr/" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Mon projet LCG" data-tooltip="Voir le projet" data-side="top" data-align="center">
-                                <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview/preview_lcg.png">
+                                <img alt="Image de couverture du projet" loading="lazy" width="548" height="308" class="w-full h-fit mb-3" src="/image/preview/preview_lcg.webp">
                             </a>
                             <div class="project-card-image-div">
                                 <span class="badge">
@@ -428,15 +425,15 @@
                                     LCG
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
                                     HTML
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
                                     JavaScript
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
                                     CSS
                                 </span>
                             </div>
@@ -451,23 +448,23 @@
                         </div>
                         <div class="project-card-image">
                             <a href="https://gol.valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Mon projet GOL" data-tooltip="Voir le projet" data-side="top" data-align="center">
-                                <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview/preview_gol.png">
+                                <img alt="Image de couverture du projet" loading="lazy" width="548" height="308" class="w-full h-fit mb-3" src="/image/preview/preview_gol.webp">
                             </a>
                             <div class="project-card-image-div">
                                 <span class="badge text-sm">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/p5dotjs.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/p5dotjs.svg" alt="Logo p5.js" width="16" height="16">
                                     p5.js
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
                                     HTML
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
                                     CSS
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
                                     JavaScript
                                 </span>
                             </div>
@@ -482,7 +479,7 @@
                         </div>
                         <div class="project-card-image">
                             <a href="https://ip.valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Mon projet d'entraînement au découpage d'IPv4" data-tooltip="Voir le projet" data-side="top" data-align="center">
-                                <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview/preview_ip.png">
+                                <img alt="Image de couverture du projet" loading="lazy" width="548" height="308" class="w-full h-fit mb-3" src="/image/preview/preview_ip.webp">
                             </a>
                             <div class="project-card-image-div">
                                 <span class="badge text-sm">
@@ -490,15 +487,15 @@
                                     IPv4
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
                                     HTML
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
                                     JavaScript
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
                                     CSS
                                 </span>
                             </div>
@@ -514,19 +511,19 @@
                         </div>
                         <div class="project-card-image">
                             <a href="https://github.com/Vahaz/match_logger_v2" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Page Github de mon projet MatchLoggerV2" data-tooltip="Ouvrir le projet sur Github" data-side="top" data-align="center">
-                                <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview/preview_matchlogger.png">
+                                <img alt="Image de couverture du projet" loading="lazy" width="548" height="308" class="w-full h-fit mb-3" src="/image/preview/preview_matchlogger.webp">
                             </a>
                             <div class="project-card-image-div">
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
                                     JavaScript
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/discorddotjs.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/discorddotjs.svg" alt="Logo discord.js" width="16" height="16">
                                     discord.js
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/dotenv.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/dotenv.svg" alt="Logo .ENV" width="16" height="16">
                                     .ENV
                                 </span>
                                 <span class="badge">
@@ -538,11 +535,11 @@
                                     convert-base64-to-image
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg" alt="Logo Node.js" width="16" height="16">
                                     Node.js
                                 </span>
                                 <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/riotgames.svg">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/riotgames.svg" alt="Logo Riot Games API" width="16" height="16">
                                     Riot Games API
                                 </span>
                             </div>
@@ -551,7 +548,7 @@
                     <div class="project-card">
                         <p class="project-card-p">FTP</p>
                         <div class="project-card-image bg-transparent! border-none!">
-                            <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview/preview_ftp.png">
+                            <img alt="Image de couverture du projet" loading="lazy" width="548" height="308" class="w-full h-fit mb-3" src="/image/preview/preview_ftp.webp">
                             <div class="bubble">
                                 <p class="bubble-title border-red-500">Sujets abordés dans ce cours</p>
                                 <div class="bubble-container">
@@ -582,7 +579,7 @@
                     <div class="project-card">
                         <p class="project-card-p">Active Directory (AD)</p>
                         <div class="project-card-image bg-transparent! border-none!">
-                            <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview/preview_ad.png">
+                            <img alt="Image de couverture du projet" loading="lazy" width="548" height="308" class="w-full h-fit mb-3" src="/image/preview/preview_ad.webp">
                             <div class="bubble">
                                 <p class="bubble-title border-amber-500">Sujets abordés dans ce cours</p>
                                 <div class="bubble-container">
@@ -613,7 +610,7 @@
                     <div class="project-card">
                         <p class="project-card-p">Docker</p>
                         <div class="project-card-image bg-transparent! border-none!">
-                            <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview/preview_docker.png">
+                            <img alt="Image de couverture du projet" loading="lazy" width="548" height="308" class="w-full h-fit mb-3" src="/image/preview/preview_docker.webp">
                             <div class="bubble">
                                 <p class="bubble-title border-blue-500">Sujets abordés dans ce cours</p>
                                 <div class="bubble-container">
@@ -643,15 +640,15 @@
                     </div>
                 </div>
                 <div id="project-pagination">
-                    <button class="project-dot bg-amber-500" data-index="0" data-tooltip="1 - WebGL" data-side="top" data-align="center"></button>
-                    <button class="project-dot bg-base-900" data-index="1" data-tooltip="2 - Portfolio" data-side="top" data-align="center"></button>
-                    <button class="project-dot bg-base-900" data-index="2" data-tooltip="3 - LCG" data-side="top" data-align="center"></button>
-                    <button class="project-dot bg-base-900" data-index="3" data-tooltip="4 - GOL" data-side="top" data-align="center"></button>
-                    <button class="project-dot bg-base-900" data-index="4" data-tooltip="5 - Decoupage IP" data-side="top" data-align="center"></button>
-                    <button class="project-dot bg-base-900" data-index="5" data-tooltip="6 - Match Logger V2" data-side="top" data-align="center"></button>
-                    <button class="project-dot bg-base-900" data-index="6" data-tooltip="7 - FTP (Cours)" data-side="top" data-align="center"></button>
-                    <button class="project-dot bg-base-900" data-index="7" data-tooltip="8 - AD (Cours)" data-side="top" data-align="center"></button>
-                    <button class="project-dot bg-base-900" data-index="8" data-tooltip="9 - Docker (Cours)" data-side="top" data-align="center"></button>
+                    <button class="project-dot bg-amber-500" data-index="0" aria-label="1 - WebGL" data-tooltip="1 - WebGL" data-side="top" data-align="center"></button>
+                    <button class="project-dot bg-base-900" data-index="1" aria-label="2 - Portfolio" data-tooltip="2 - Portfolio" data-side="top" data-align="center"></button>
+                    <button class="project-dot bg-base-900" data-index="2" aria-label="3 - LCG" data-tooltip="3 - LCG" data-side="top" data-align="center"></button>
+                    <button class="project-dot bg-base-900" data-index="3" aria-label="4 - GOL" data-tooltip="4 - GOL" data-side="top" data-align="center"></button>
+                    <button class="project-dot bg-base-900" data-index="4" aria-label="5 - Decoupage IP" data-tooltip="5 - Decoupage IP" data-side="top" data-align="center"></button>
+                    <button class="project-dot bg-base-900" data-index="5" aria-label="6 - Match Logger V2" data-tooltip="6 - Match Logger V2" data-side="top" data-align="center"></button>
+                    <button class="project-dot bg-base-900" data-index="6" aria-label="7 - FTP (Cours)" data-tooltip="7 - FTP (Cours)" data-side="top" data-align="center"></button>
+                    <button class="project-dot bg-base-900" data-index="7" aria-label="8 - AD (Cours)" data-tooltip="8 - AD (Cours)" data-side="top" data-align="center"></button>
+                    <button class="project-dot bg-base-900" data-index="8" aria-label="9 - Docker (Cours)" data-tooltip="9 - Docker (Cours)" data-side="top" data-align="center"></button>
                 </div>
             </section>
         </main>
@@ -661,7 +658,7 @@
                     <h2>Formulaire de contact</h2>
                     <p class="text-[#bebec0]">Entrer vos informations pour m'envoyer un courriel. <br> Cliquer sur "Envoyer" quand vous avez terminer.</p>
                 </header>
-                <section>
+                <div>
                     <form class="form grid gap-6" id="form">
                         <div class="grid gap-2">
                             <label for="form-mail">Email</label>
@@ -692,17 +689,17 @@
                             Une Erreur est survenue, veuillez réessayer ultérieurement ou me contacter directement via courriel.
                         </p>
                         <footer class="flex gap-5">
-                            <button class="btn-destructive grow text-secondary" type="reset" onclick="this.closest('dialog').close()">
+                            <button class="btn-destructive grow text-secondary" aria-label="Fermer le formulaire" type="reset" onclick="this.closest('dialog').close()">
                                 <i data-lucide="x"></i>
                                 Annuler
                             </button>
-                            <button class="btn grow-2" type="submit" id="form-submit">
+                            <button class="btn grow-2" aria-label="Envoyer le formulaire" type="submit" id="form-submit">
                                 <i id="form-submit-i" data-lucide="send"></i>
                                 Envoyer
                             </button>
                         </footer>
                     </form>
-                </section>
+                </div>
                 <button type="button" aria-label="Fermer le formulaire" onclick="this.closest('dialog').close()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x">
                         <path d="M18 6 6 18" />
@@ -714,7 +711,7 @@
         <footer class="flex flex-col items-center w-full text-center z-10 mt-20 pb-30 pt-5 md:p-5 bg-base-700 border-t border-base-400 text-[#f4f6fb]">
             <div class="flex flex-row w-[80%] justify-center gap-10 md:gap-20 pb-5 border-b border-base-400">
                 <a href="/src/html/legal.html" hreflang="fr" lang="fr" target="_self" aria-label="Informations légales de mon Portfolio">Informations Légales</a>
-                <button class="cursor-pointer" type="button" onclick="document.getElementById('contact-dialog').showModal()">Formulaire de Contact</button>
+                <button class="cursor-pointer" aria-label="Formulaire de contact" type="button" onclick="document.getElementById('contact-dialog').showModal()">Formulaire de Contact</button>
             </div>
             <p class="mt-5 text-[#f4f6fb]">© 2026 - Hernandorena Valentin. Tous droits réservés.</p>
         </footer>
