@@ -13,6 +13,7 @@ export default defineConfig({
                 main: resolve(__dirname, 'index.html'),
                 legal: resolve(__dirname, 'src/html/legal.html'),
                 veille: resolve(__dirname, 'src/html/veille.html'),
+                project: resolve(__dirname, 'src/html/project.html'),
             },
         },
     },

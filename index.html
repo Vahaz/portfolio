@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
-        <link rel="icon" href="/image/picture.webp" type="image/webp">
+        <link rel="icon" href="/image/picture_128.webp" type="image/webp">
         <title>Portfolio - Acceuil</title>
         <!-- Web Search Engine -->
         <meta name="robots" content="index, follow">
@@ -15,7 +15,7 @@
                 "@type": "Organization",
                 "name": "Valentin Hernandorena",
                 "url": "https://valentinhrnd.fr",
-                "logo": "https://www.valentinhrnd.fr/image/picture.webp",
+                "logo": "https://www.valentinhrnd.fr/image/picture_128.webp",
                 "sameAs": [
                     "https://github.com/vahaz",
                     "https://gitlab.com/valentinhrnd"
@@ -35,7 +35,7 @@
     <body class="bg-base-900 min-h-screen max-w-screen font-cascadia">
         <nav class="fixed bottom-0 md:top-0 left-0 w-full z-100 pt-5 pointer-events-none">
             <div class="pointer-events-auto hidden absolute left-0 gap-5 p-5 md:flex items-center w-26 hover:w-79 transition-all duration-300 ease-in-out  rounded-s-lg bg-base-700/50 backdrop-blur-sm rounded-full border border-base-400">
-                <img alt="Photo de profil" class="rounded-full ring-2 ring-base-400" src="/image/picture.webp" width="60" height="60">
+                <img alt="Photo de profil" class="rounded-full ring-2 ring-base-400" src="/image/picture_60.webp" width="60" height="60">
                 <p class="overflow-hidden text-secondary text-[1.25rem] font-bold">VALENTIN <br> HERNANDORENA </p>
             </div>
             <div class="flex fixed bottom-0 left-0 w-full justify-around md:absolute md:top-0 md:right-15 md:bottom-auto md:left-auto md:w-fit items-center gap-10 mt-5 p-5 rounded-none md:rounded-full text-secondary bg-base-700 md:bg-base-700/50 backdrop-blur-sm border border-base-400">
@@ -45,7 +45,7 @@
                 <a href="#studies" target="_self" hreflang="fr" lang="en" aria-label="Mes Études" class="nav-a pointer-events-auto" data-tooltip="Mes Études" data-side="bottom" data-align="center">
                     <i class="w-8 h-8" data-lucide="square-user"></i>
                 </a>
-                <a href="#projects" target="_self" hreflang="fr" lang="en" aria-label="Mes Projets" class="nav-a pointer-events-auto" data-tooltip="Mes Projets" data-side="bottom" data-align="center">
+                <a href="/src/html/project.html" target="_self" hreflang="fr" lang="en" aria-label="Mes Projets" class="nav-a pointer-events-auto" data-tooltip="Mes Projets" data-side="bottom" data-align="center">
                     <i class="w-8 h-8" data-lucide="terminal"></i>
                 </a>
                 <a href="/src/html/veille.html" target="_self" hreflang="fr" lang="en" aria-label="Ma Veille Technologique" class="nav-a pointer-events-auto" data-tooltip="Veille Technologique" data-side="bottom" data-align="center">
@@ -58,13 +58,13 @@
         </div>
         <main class="flex flex-col items-center my-10 h-fit gap-y-20 text-secondary">
             <section id="me" class="h-fit w-11/12 max-sm:w-full max-sm:rounded-none md:w-fit md:max-w-2xl rounded-2xl overflow-hidden border border-base-400 bg-base-700">
-                <div class="flex flex-row items-center gap-3 m-5 p-5 font-bold border-b">
+                <div class="flex flex-row items-center gap-3 m-5 p-5 font-bold border-b h-fit">
                     <i class="w-12 h-12" data-lucide="user-round"></i>
                     <h2 class="text-3xl">À Propos De Moi</h2>
                 </div>
                 <div class="h-fit m-5 p-5 rounded-2xl bg-base-800">
                     <div class="flex flex-row items-center">
-                        <img alt="Image de couverture du projet" class="block w-28 h-28 rounded-md" src="/image/picture.webp" width="112" height="112">
+                        <img alt="Image de couverture du projet" class="block w-28 h-28 rounded-md" src="/image/picture_128.webp" width="112" height="112">
                         <p class="text-xl ml-5 text-bold">Hernandorena Valentin <br> <span class="text-base italic font-cascadia">Étudiant en Informatique / Réseau</span></p>
                     </div>
                     <div class="flex flex-row my-5 py-5 items-center text-[#bebec0] border-t border-[#bebec0]">
@@ -95,8 +95,8 @@
                     </div>
                     <p class="ml-auto flex flex-row items-center">
                         Étudiant, de 21 ans, en première année de BTS SIO, option SISR.
-                        Je suis passionné par l'informatique et le réseau depuis toujours.
-                        J'apprécie découvrir de nouvelles technologies et langages de programmations.
+                        Passionné par l'informatique et le réseau depuis toujours.
+                        J'apprécie découvrir de nouveaux langages de programmation et développer des applications / programmes.
                     </p>
                     <div class="bubble">
                         <div class="flex flex-row w-full">
@@ -226,6 +226,26 @@
                             </span>
                         </div>
                     </div>
+                    <div class="bubble">
+                        <div class="flex flex-row w-full">
+                            <p class="bubble-title border-blue-500">Compétences Sociale</p>
+                            <button id="btn_sc" aria-label="Ouvrir / Fermer la bulle" class="ml-auto hover:text-amber-500"><i data-lucide="chevron-down"></i></button>
+                        </div>
+                        <div id="bubble_sc" class="bubble-container flex-wrap gap-3 h-0">
+                            <span class="badge border-green-500!">
+                                <i class="w-4 h-4 m-1 text-green-500" data-lucide="arrow-up-right"></i>
+                                Enseigner
+                            </span>
+                            <span class="badge border-green-500">
+                                <i class="w-4 h-4 m-1 text-green-500" data-lucide="arrow-up-right"></i>
+                                Apprendre
+                            </span>
+                            <span class="badge border-green-500">
+                                <i class="w-4 h-4 m-1 text-green-500" data-lucide="arrow-up-right"></i>
+                                Aider mes camarades
+                            </span>
+                        </div>
+                    </div>
                     <a class="group btn font-bold mt-5 w-full rounded-lg! border border-base-400 hover:bg-gray-100 hover:text-primary" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Mon CV en PDF" href="/pdf/cv.pdf" download="CV_Valentin_Hernandorena.pdf" type="application/pdf">
                         Télécharger mon CV
                         <i data-lucide="download" class="group-hover:animate-bounce"></i>
@@ -301,368 +321,23 @@
                     </div>
                 </div>
             </section>
-            <section id="projects">
-                <div class="flex flex-row items-center gap-3 m-5 p-5 font-bold border-b">
-                    <i class="w-12 h-12" data-lucide="terminal"></i>
-                    <h2 class="text-3xl">Mes Projets</h2>
-                </div>
-                <div id="project-container">
-                    <div class="project-card opacity-100! visible!">
-                        <p class="project-card-p">WEBGL</p>
-                        <div class="project-card-description">
-                            <p class="project-card-description-p">
-                                Ce projet personnel a été réalisé dans le but d'apprendre à utiliser l'API graphique <strong>WebGL</strong> avec <strong>TypeScript</strong>, compilé à l'aide de <strong>webpack</strong>. <br>
-                                De plus, afin de maîtriser les concepts de vecteurs et de matrices, aucune bibliothèque publique n'a été utilisée.
-                                En effet, l'ensemble des classes mathématiques ont été développées manuellement dans l'objectif d'apprendre.
-                            </p>
-                        </div>
-                        <div class="project-card-image">
-                            <a href="https://webgl.valentinhrnd.fr/" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Mon projet WebGL" data-tooltip="Voir le projet" data-side="top" data-align="center">
-                                <img alt="Image de couverture du projet" class="w-full h-fit mb-3" src="/image/preview/preview_webgl.webp">
-                            </a>
-                            <div class="project-card-image-div">
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/typescript.svg" alt="Logo TypeScript" width="16" height="16">
-                                    TypeScript
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/webgl.svg" alt="Logo WebGL" width="16" height="16">
-                                    WebGL
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg" alt="Logo Node.js" width="16" height="16">
-                                    Node.js
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/webpack.svg" alt="Logo Webpack" width="16" height="16">
-                                    Webpack
-                                </span>
-                                <span class="badge">
-                                    <i class="w-4 h-4 m-1 text-amber-500" data-lucide="code"></i>
-                                    Tweakpane
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
-                                    HTML
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
-                                    CSS
-                                </span>
-                                <span class="badge">
-                                    <i class="w-4 h-4 m-1 text-blue-500" data-lucide="spline-pointer"></i>
-                                    Matrices & Vectors
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <p class="project-card-p">PORTFOLIO</p>
-                        <div class="project-card-description">
-                            <p class="project-card-description-p">
-                                Ce projet a pour but de créer un <strong>portfolio personnel</strong>. <br>
-                                Il utilise pour son aspect visuel (Frontend) : <strong>Tailwind CSS</strong>, <strong>Basecoat</strong> et <strong>GSAP</strong>.
-                                De plus, <strong>Vite</strong> est utilisé pour construire les différents fichiers CSS et JavaScript.
-                                Pour finir, <strong>Vercel</strong> est utilisé pour héberger le site en backend et gérer les emails avec <strong>Resend</strong>.
-                            </p>
-                        </div>
-                        <div class="project-card-image">
-                            <a href="https://valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Mon Portfolio" data-tooltip="Voir le projet" data-side="top" data-align="center">
-                                <img alt="Image de couverture du projet" loading="lazy" class="w-full h-fit mb-3" src="/image/preview/preview_portfolio.webp">
-                            </a>
-                            <div class="project-card-image-div">
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
-                                    HTML
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
-                                    JavaScript
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/tailwindcss.svg" alt="Logo Tailwind CSS" width="16" height="16">
-                                    Tailwind CSS
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1 bg-[#1447e6]" src="/simpleicons/basecoat.svg" alt="Logo Basecoat" width="16" height="16">
-                                    Basecoat
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/gsap.svg" alt="Logo GSAP" width="16" height="16">
-                                    GSAP
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/vite.svg" alt="Logo Vite" width="16" height="16">
-                                    Vite
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/vercel.svg" alt="Logo Vercel" width="16" height="16">
-                                    Vercel
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/resend.svg" alt="Logo Resend" width="16" height="16">
-                                    Resend
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <p class="project-card-p">GENERATEUR A <br> CONGRUENT LINEAIRE</p>
-                        <div class="project-card-description">
-                            <p class="project-card-description-p">
-                                Ce projet personnel a pour but de créer un <strong>visualiseur d'aléatoire</strong> basé sur les nombres générés par un <strong>Générateur à congruence linéaire</strong> (LCG).
-                                En effet, cet algorithme est très connu dans la génération de <strong>nombres pseudo-aléatoires</strong> et était présent dans certaines versions de <strong>PHP</strong>.
-                                Malheureusement, celui-ci n'est pas considéré comme sécurisé cryptographiquement étant donné qu'une de ses variables utilise la génération précédente.
-                            </p>
-                        </div>
-                        <div class="project-card-image">
-                            <a href="https://lcg.valentinhrnd.fr/" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Mon projet LCG" data-tooltip="Voir le projet" data-side="top" data-align="center">
-                                <img alt="Image de couverture du projet" loading="lazy" width="548" height="308" class="w-full h-fit mb-3" src="/image/preview/preview_lcg.webp">
-                            </a>
-                            <div class="project-card-image-div">
-                                <span class="badge">
-                                    <i class="w-4 h-4 m-1 text-red-500" data-lucide="shuffle"></i>
-                                    LCG
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
-                                    HTML
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
-                                    JavaScript
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
-                                    CSS
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <p class="project-card-p">GAME OF LIFE</p>
-                        <div class="project-card-description">
-                            <p class="project-card-description-p">
-                                Ce projet personnel est une recréation du « Jeu de la vie », en <strong>JavaScript</strong>, en utilisant la bibliothèque graphique <strong>p5.js</strong>.
-                            </p>
-                        </div>
-                        <div class="project-card-image">
-                            <a href="https://gol.valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Mon projet GOL" data-tooltip="Voir le projet" data-side="top" data-align="center">
-                                <img alt="Image de couverture du projet" loading="lazy" width="548" height="308" class="w-full h-fit mb-3" src="/image/preview/preview_gol.webp">
-                            </a>
-                            <div class="project-card-image-div">
-                                <span class="badge text-sm">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/p5dotjs.svg" alt="Logo p5.js" width="16" height="16">
-                                    p5.js
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
-                                    HTML
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
-                                    CSS
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
-                                    JavaScript
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <p class="project-card-p">ENTRAINEMENT DECOUPAGE IPV4</p>
-                        <div class="project-card-description">
-                            <p class="project-card-description-p">
-                                Un petit site web pour s'entraîner au <strong>découpage d'adresses IPv4</strong>.
-                            </p>
-                        </div>
-                        <div class="project-card-image">
-                            <a href="https://ip.valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Mon projet d'entraînement au découpage d'IPv4" data-tooltip="Voir le projet" data-side="top" data-align="center">
-                                <img alt="Image de couverture du projet" loading="lazy" width="548" height="308" class="w-full h-fit mb-3" src="/image/preview/preview_ip.webp">
-                            </a>
-                            <div class="project-card-image-div">
-                                <span class="badge text-sm">
-                                    <i class="w-4 h-4 m-1 text-green-500" data-lucide="network"></i>
-                                    IPv4
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
-                                    HTML
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
-                                    JavaScript
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
-                                    CSS
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <p class="project-card-p">MATCH LOGGER V2</p>
-                        <div class="project-card-description">
-                            <p class="project-card-description-p">
-                                Ancien projet personnel dont l'objectif était de créer un bot <strong>Discord</strong> permettant d'afficher les statistiques d'un joueur sur sa dernière partie de <strong>League of Legends</strong>.
-                                Ce projet utilise l'<strong>API Riot Games</strong>, ainsi que <strong>JavaScript</strong> avec la bibliothèque <strong>discordjs</strong> pour l'envoi d'embeds sur <strong>Discord</strong>.
-                            </p>
-                        </div>
-                        <div class="project-card-image">
-                            <a href="https://github.com/Vahaz/match_logger_v2" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Page Github de mon projet MatchLoggerV2" data-tooltip="Ouvrir le projet sur Github" data-side="top" data-align="center">
-                                <img alt="Image de couverture du projet" loading="lazy" width="548" height="308" class="w-full h-fit mb-3" src="/image/preview/preview_matchlogger.webp">
-                            </a>
-                            <div class="project-card-image-div">
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
-                                    JavaScript
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/discorddotjs.svg" alt="Logo discord.js" width="16" height="16">
-                                    discord.js
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/dotenv.svg" alt="Logo .ENV" width="16" height="16">
-                                    .ENV
-                                </span>
-                                <span class="badge">
-                                    <i class="w-4 h-4 m-1 text-violet-500" data-lucide="package"></i>
-                                    merge-images
-                                </span>
-                                <span class="badge">
-                                    <i class="w-4 h-4 m-1 text-cyan-500" data-lucide="package"></i>
-                                    convert-base64-to-image
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg" alt="Logo Node.js" width="16" height="16">
-                                    Node.js
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/riotgames.svg" alt="Logo Riot Games API" width="16" height="16">
-                                    Riot Games API
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <p class="project-card-p">FTP</p>
-                        <div class="project-card-image bg-transparent! border-none!">
-                            <img alt="Image de couverture du projet" loading="lazy" width="548" height="308" class="w-full h-fit mb-3" src="/image/preview/preview_ftp.webp">
-                            <div class="bubble">
-                                <p class="bubble-title border-red-500">Sujets abordés dans ce cours</p>
-                                <div class="bubble-container">
-                                    <div class="bubble-content">
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-red-500" data-lucide="chevron-right"></i>
-                                            Serveur FTP
-                                        </p>
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-red-500" data-lucide="chevron-right"></i>
-                                            Clients FTP
-                                        </p>
-                                    </div>
-                                    <div class="bubble-content">
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-red-500" data-lucide="chevron-right"></i>
-                                            Partage de dossiers
-                                        </p>
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-red-500" data-lucide="chevron-right"></i>
-                                            Permissions Utilisateurs <br> et Groupes FTP
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <p class="project-card-p">Active Directory (AD)</p>
-                        <div class="project-card-image bg-transparent! border-none!">
-                            <img alt="Image de couverture du projet" loading="lazy" width="548" height="308" class="w-full h-fit mb-3" src="/image/preview/preview_ad.webp">
-                            <div class="bubble">
-                                <p class="bubble-title border-amber-500">Sujets abordés dans ce cours</p>
-                                <div class="bubble-container">
-                                    <div class="bubble-content">
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-amber-500" data-lucide="chevron-right"></i>
-                                            Utilisateurs & Groupes
-                                        </p>
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-amber-500" data-lucide="chevron-right"></i>
-                                            GPO simples
-                                        </p>
-                                    </div>
-                                    <div class="bubble-content">
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-amber-500" data-lucide="chevron-right"></i>
-                                            Partage de dossiers
-                                        </p>
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-amber-500" data-lucide="chevron-right"></i>
-                                            DNS
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <p class="project-card-p">Docker</p>
-                        <div class="project-card-image bg-transparent! border-none!">
-                            <img alt="Image de couverture du projet" loading="lazy" width="548" height="308" class="w-full h-fit mb-3" src="/image/preview/preview_docker.webp">
-                            <div class="bubble">
-                                <p class="bubble-title border-blue-500">Sujets abordés dans ce cours</p>
-                                <div class="bubble-container">
-                                    <div class="bubble-content">
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-blue-500" data-lucide="chevron-right"></i>
-                                            docker-compose
-                                        </p>
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-blue-500" data-lucide="chevron-right"></i>
-                                            Dockerfile
-                                        </p>
-                                    </div>
-                                    <div class="bubble-content">
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-blue-500" data-lucide="chevron-right"></i>
-                                            Réseau et Volumes
-                                        </p>
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-blue-500" data-lucide="chevron-right"></i>
-                                            Image et versionnage
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="project-pagination">
-                    <button class="project-dot bg-amber-500" data-index="0" aria-label="1 - WebGL" data-tooltip="1 - WebGL" data-side="top" data-align="center"></button>
-                    <button class="project-dot bg-base-900" data-index="1" aria-label="2 - Portfolio" data-tooltip="2 - Portfolio" data-side="top" data-align="center"></button>
-                    <button class="project-dot bg-base-900" data-index="2" aria-label="3 - LCG" data-tooltip="3 - LCG" data-side="top" data-align="center"></button>
-                    <button class="project-dot bg-base-900" data-index="3" aria-label="4 - GOL" data-tooltip="4 - GOL" data-side="top" data-align="center"></button>
-                    <button class="project-dot bg-base-900" data-index="4" aria-label="5 - Decoupage IP" data-tooltip="5 - Decoupage IP" data-side="top" data-align="center"></button>
-                    <button class="project-dot bg-base-900" data-index="5" aria-label="6 - Match Logger V2" data-tooltip="6 - Match Logger V2" data-side="top" data-align="center"></button>
-                    <button class="project-dot bg-base-900" data-index="6" aria-label="7 - FTP (Cours)" data-tooltip="7 - FTP (Cours)" data-side="top" data-align="center"></button>
-                    <button class="project-dot bg-base-900" data-index="7" aria-label="8 - AD (Cours)" data-tooltip="8 - AD (Cours)" data-side="top" data-align="center"></button>
-                    <button class="project-dot bg-base-900" data-index="8" aria-label="9 - Docker (Cours)" data-tooltip="9 - Docker (Cours)" data-side="top" data-align="center"></button>
-                </div>
-            </section>
         </main>
         <dialog id="contact-dialog" class="dialog w-full sm:max-w-106.25 max-h-153" aria-labelledby="Formulaire de contact" aria-describedby="Formulaire de contact pour m'envoyer un courriel." onclick="if (event.target === this) this.close()">
             <div class="bg-base-800 text-secondary border-base-400">
                 <header class="text-center">
                     <h2>Formulaire de contact</h2>
-                    <p class="text-[#bebec0]">Entrer vos informations pour m'envoyer un courriel. <br> Cliquer sur "Envoyer" quand vous avez terminer.</p>
+                    <p class="text-[#bebec0]">
+                        Entrer vos informations pour m'envoyer un courriel. <br>
+                        Cliquer sur "Envoyer" quand vous avez terminer. <br>
+                        <br>
+                        Il est également possible de me contacter directement via : <a href="mailto:contact.valentinh@gmail.com" target="_blank" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Me contacter via courriel">contact.valentinh@gmail.com</a>
+                    </p>
                 </header>
                 <div>
                     <form class="form grid gap-6" id="form">
                         <div class="grid gap-2">
-                            <label for="form-mail">Email</label>
-                            <input type="email" name="email" id="form-mail" maxlength="50" placeholder="alice@gmail.com" required>
+                            <label for="form-mail">Email <span class="ml-auto text-red-400">* Requis</span></label>
+                            <input class="invalid:border-red-400 invalid:text-red-400 focus:invalid:border-red-400 focus:invalid:outline-red-400 valid:border-green-400 valid:text-green-400" type="email" name="email" id="form-mail" maxlength="50" placeholder="alice@exemple.com" autocomplete="email" required>
                         </div>
                         <div class="grid gap-2">
                             <label for="form-textarea">Contenu</label>
@@ -672,19 +347,19 @@
                         <div class="flex items-start gap-3">
                             <input type="checkbox" id="checkbox-with-text" class="input" required>
                             <div class="grid gap-2">
-                                <label for="checkbox-with-text" class="label">Accepter la politique de confidentialité</label>
+                                <label for="checkbox-with-text" class="label">
+                                    Accepter la
+                                    <a href="/src/html/legal.html" target="_self" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Informations Légales" class="underline">politique de confidentialité</a>
+                                    <span class="ml-auto text-red-400">* Requis</span>
+                                </label>
                                 <p class="text-muted-foreground text-sm">
-                                    En cochant cette case, vous acceptez le traitement de vos données conformément aux <a href="/src/html/legal.html" hreflang="fr" lang="fr" target="_self" aria-label="Informations légales de mon Portfolio" class="underline hover:text-secondary">mentions légales</a>.
+                                    En cochant cette case, vous acceptez le traitement de vos données conformément aux <a href="/src/html/legal.html" target="_self" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Informations Légales" class="underline hover:text-secondary">mentions légales</a>.
                                 </p>
                             </div>
                         </div>
                         <div>
                             <input id="hp" class="hidden" type="text" name="hp" tabindex="-1" autocomplete="off">
                         </div>
-                        <p class="text-[#bebec0] text-sm">
-                            Merci d'envoyer que des courriels sérieux. <br>
-                            Il est également possible de me contacter directement via : <a href="mailto:contact.valentinh@gmail.com" target="_blank" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Me contacter via courriel">contact.valentinh@gmail.com</a>
-                        </p>
                         <p id="form-error" class="hidden text-center text-red-300">
                             Une Erreur est survenue, veuillez réessayer ultérieurement ou me contacter directement via courriel.
                         </p>

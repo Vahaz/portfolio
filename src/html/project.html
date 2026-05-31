@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="icon" href="/image/picture_128.webp" type="image/webp">
+        <title>Portfolio - Projets</title>
+        <!-- Web Search Engine -->
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="all">
+        <meta name="description" content="Portfolio de Valentin Hernandorena, étudiant en réseau, cybersécurité et informatique. Découvrez mes études, projets, veille technologique et compétences.">
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Valentin Hernandorena",
+                "url": "https://valentinhrnd.fr",
+                "logo": "https://www.valentinhrnd.fr/image/picture_128.webp",
+                "sameAs": [
+                    "https://github.com/vahaz",
+                    "https://gitlab.com/valentinhrnd"
+                ]
+            }
+        </script>
+        <link rel="canonical" href="https://valentinhrnd.fr">
+        <!-- Open Graph -->
+        <meta property="og:title" content="Valentin Hernandorena - Portfolio">
+        <meta property="og:description" content="Portfolio de Valentin Hernandorena, étudiant en réseau, cybersécurité et informatique. Découvrez mes études, projets, veille technologique et compétences.">
+        <meta property="og:image" content="https://valentinhrnd.fr/image/preview/preview_og.webp">
+        <meta property="og:url" content="https://valentinhrnd.fr">
+        <meta property="og:type" content="website">
+        <!-- Twitter / X -->
+        <meta name="twitter:card" content="summary_large_image">
+    </head>
+    <body class="bg-base-900 min-h-screen flex flex-col max-w-screen font-cascadia">
+        <nav class="fixed bottom-0 md:top-0 left-0 w-full z-100 pt-5 pointer-events-none">
+            <div class="pointer-events-auto hidden absolute left-0 gap-5 p-5 md:flex items-center w-26 hover:w-79 transition-all duration-300 ease-in-out  rounded-s-lg bg-base-700/50 backdrop-blur-sm rounded-full border border-base-400">
+                <img alt="Photo de profil" class="rounded-full ring-2 ring-base-400" src="/image/picture_60.webp" width="60" height="60">
+                <p class="overflow-hidden text-secondary text-[1.25rem] font-bold">VALENTIN <br> HERNANDORENA </p>
+            </div>
+            <div class="flex fixed bottom-0 left-0 w-full justify-around md:absolute md:top-0 md:right-15 md:bottom-auto md:left-auto md:w-fit items-center gap-10 mt-5 p-5 rounded-none md:rounded-full text-secondary bg-base-700 md:bg-base-700/50 backdrop-blur-sm border border-base-400 pointer-events-auto">
+                <a href="/index.html#" target="_self" hreflang="fr" lang="en" aria-label="À Propos De Moi" class="nav-a pointer-events-auto" data-tooltip="Accueil" data-side="bottom" data-align="center">
+                    <i class="w-8 h-8" data-lucide="home"></i>
+                </a>
+                <a href="/index.html#studies" target="_self" hreflang="fr" lang="en" aria-label="Mes Études" class="nav-a pointer-events-auto" data-tooltip="Mes Études" data-side="bottom" data-align="center">
+                    <i class="w-8 h-8" data-lucide="square-user"></i>
+                </a>
+                <a href="#" target="_self" hreflang="fr" lang="en" aria-label="Mes Projets" class="nav-a pointer-events-auto" data-tooltip="Mes Projets" data-side="bottom" data-align="center">
+                    <i class="w-8 h-8" data-lucide="terminal"></i>
+                </a>
+                <a href="/src/html/veille.html" target="_self" hreflang="fr" lang="en" aria-label="Ma Veille Technologique" class="nav-a pointer-events-auto" data-tooltip="Veille Technologique" data-side="bottom" data-align="center">
+                    <i class="w-8 h-8" data-lucide="file-search-corner"></i>
+                </a>
+            </div>
+        </nav>
+        <main class="text-secondary min-h-screen">
+            <div class="group relative w-full h-80 flex flex-col justify-center items-center overflow-hidden pt-20 mb-10 border-b border-base-400 shadow-xl/30">
+                <img class="absolute inset-0 w-full h-full object-cover -z-10" alt="Image de fond" src="/image/preview/fotis-fotopoulos-DuHKoV44prg-unsplash.webp" fetchpriority="high" height="360" width="1920">
+                <div class="bg-base-900/50 backdrop-blur-sm rounded-2xl p-5">
+                    <h1 class="relative font-bold text-4xl max-sm:text-2xl md:text-6xl border-b border-amber-500 z-10 text-center">Mes Projets</h1>
+                </div>
+                <span class="absolute bottom-4 right-4 text-base-400/80 text-sm opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 italic">
+                    Crédit: <a class="cursor-pointer underline hover:text-secondary" href="https://unsplash.com/photos/black-computer-keyboard-DuHKoV44prg" target="_blank" hreflang="en" lang="en" rel="noopener noreferrer" aria-label="Page Unsplash de l'image">Fotis Fotopoulos - Unsplash</a>
+                </span>
+            </div>
+            <div>
+                <!-- PROJECTS : CLASS -->
+                <button aria-label="Ouvrir / Fermer la liste" class="project-btn group">
+                    <i class="h-16 w-16" data-lucide="chevron-up"></i>
+                    <p class="inset-shadow-[0px_-12px_var(--color-highlight)] group-hover:inset-shadow-[0px_-12px_var(--color-base-100)]">Cours</p>
+                </button>
+                <div class="project-container open">
+                    <!-- FTP -->
+                    <div class="project-card group">
+                        <div class="pc-top">
+                            <p class="text-highlight">\\</p>
+                            <h2 class="pc-top-title">FTP</h2>
+                            <button aria-label="Ouvrir / Fermer la bulle" class="pc-toggle ml-auto hover:text-highlight"><i data-lucide="chevron-down" class=" h-8 w-8"></i></button>
+                        </div>
+                        <div class="pc-mid">
+                            <div class="bubble mt-0!">
+                                <p class="bubble-title border-red-500">Sujets abordés dans ce cours</p>
+                                <div class="bubble-container">
+                                    <div class="bubble-content">
+                                        <p class="bubble-content-p">
+                                            <i class="bubble-content-i text-red-500" data-lucide="chevron-right"></i>
+                                            Serveur FTP
+                                        </p>
+                                        <p class="bubble-content-p">
+                                            <i class="bubble-content-i text-red-500" data-lucide="chevron-right"></i>
+                                            Clients FTP
+                                        </p>
+                                    </div>
+                                    <div class="bubble-content">
+                                        <p class="bubble-content-p">
+                                            <i class="bubble-content-i text-red-500" data-lucide="chevron-right"></i>
+                                            Partage de dossiers
+                                        </p>
+                                        <p class="bubble-content-p">
+                                            <i class="bubble-content-i text-red-500" data-lucide="chevron-right"></i>
+                                            Permissions Utilisateurs <br> et Groupes
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pc-bot mt-4">
+                            <img alt="Image de couverture du projet" loading="lazy" width="514" height="289" class="w-full h-fit mb-3" src="/image/preview/preview_ftp.webp">
+                        </div>
+                    </div>
+                    <!-- ACTIVE DIRECTORY -->
+                    <div class="project-card group">
+                        <div class="pc-top">
+                            <p class="text-highlight">\\</p>
+                            <h2 class="pc-top-title">ACTIVE DIRECTORY</h2>
+                            <button aria-label="Ouvrir / Fermer la bulle" class="pc-toggle ml-auto hover:text-highlight"><i data-lucide="chevron-down" class=" h-8 w-8"></i></button>
+                        </div>
+                        <div class="pc-mid">
+                            <div class="bubble mt-0!">
+                                <p class="bubble-title border-green-500">Sujets abordés dans ce cours</p>
+                                <div class="bubble-container">
+                                    <div class="bubble-content">
+                                        <p class="bubble-content-p">
+                                            <i class="bubble-content-i text-green-500" data-lucide="chevron-right"></i>
+                                            Utilisateurs & Groupes
+                                        </p>
+                                        <p class="bubble-content-p">
+                                            <i class="bubble-content-i text-green-500" data-lucide="chevron-right"></i>
+                                            GPO simples
+                                        </p>
+                                    </div>
+                                    <div class="bubble-content">
+                                        <p class="bubble-content-p">
+                                            <i class="bubble-content-i text-green-500" data-lucide="chevron-right"></i>
+                                            Partage de dossiers
+                                        </p>
+                                        <p class="bubble-content-p">
+                                            <i class="bubble-content-i text-green-500" data-lucide="chevron-right"></i>
+                                            DNS
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pc-bot mt-4">
+                            <img alt="Image de couverture du projet" loading="lazy" width="514" height="289" class="w-full h-fit mb-3" src="/image/preview/preview_ad.webp">
+                        </div>
+                    </div>
+                    <!-- DOCKER -->
+                    <div class="project-card group">
+                        <div class="pc-top">
+                            <p class="text-highlight">\\</p>
+                            <h2 class="pc-top-title">DOCKER</h2>
+                            <button aria-label="Ouvrir / Fermer la bulle" class="pc-toggle ml-auto hover:text-highlight"><i data-lucide="chevron-down" class=" h-8 w-8"></i></button>
+                        </div>
+                        <div class="pc-mid">
+                            <div class="bubble mt-0!">
+                                <p class="bubble-title border-blue-500">Sujets abordés dans ce cours</p>
+                                <div class="bubble-container">
+                                    <div class="bubble-content">
+                                        <p class="bubble-content-p">
+                                            <i class="bubble-content-i text-blue-500" data-lucide="chevron-right"></i>
+                                            docker-compose
+                                        </p>
+                                        <p class="bubble-content-p">
+                                            <i class="bubble-content-i text-blue-500" data-lucide="chevron-right"></i>
+                                            Dockerfile
+                                        </p>
+                                    </div>
+                                    <div class="bubble-content">
+                                        <p class="bubble-content-p">
+                                            <i class="bubble-content-i text-blue-500" data-lucide="chevron-right"></i>
+                                            Réseau et Volumes
+                                        </p>
+                                        <p class="bubble-content-p">
+                                            <i class="bubble-content-i text-blue-500" data-lucide="chevron-right"></i>
+                                            Image et versionnage
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pc-bot mt-4">
+                            <img alt="Image de couverture du projet" loading="lazy" width="514" height="289" class="w-full h-fit mb-3" src="/image/preview/preview_docker.webp">
+                        </div>
+                    </div>
+                </div>
+                <!-- PROJECTS : PERSO -->
+                <button aria-label="Ouvrir / Fermer la liste" class="project-btn group">
+                    <i class="h-16 w-16" data-lucide="chevron-down"></i>
+                    <p class="inset-shadow-[0px_-12px_var(--color-highlight)] group-hover:inset-shadow-[0px_-12px_var(--color-base-100)]">Personnel</p>
+                </button>
+                <div class="project-container">
+                    <!-- WEBGL -->
+                    <div class="project-card group">
+                        <div class="pc-top">
+                            <p class="text-highlight">\\</p>
+                            <h2 class="pc-top-title">WEBGL</h2>
+                            <button aria-label="Ouvrir / Fermer la bulle" class="pc-toggle ml-auto hover:text-highlight"><i data-lucide="chevron-down" class="h-8 w-8"></i></button>
+                        </div>
+                        <div class="pc-mid">
+                            <p>
+                                Ce projet personnel a été réalisé dans le but d'apprendre à utiliser l'API graphique <strong>WebGL</strong> avec <strong>TypeScript</strong>, compilé à l'aide de <strong>webpack</strong>.
+                                De plus, afin de maîtriser les concepts de vecteurs et de matrices, aucune bibliothèque publique n'a été utilisée.
+                                En effet, l'ensemble des classes mathématiques ont été développées manuellement dans l'objectif d'apprendre.
+                            </p>
+                        </div>
+                        <div class="pc-bot">
+                            <a href="https://webgl.valentinhrnd.fr/" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Mon projet WebGL" data-tooltip="Voir le projet" data-side="top" data-align="center">
+                                <img alt="Image de couverture du projet" loading="lazy" width="514" height="289" class="w-full h-fit mb-3" src="/image/preview/preview_webgl.webp">
+                            </a>
+                            <div class="pc-bot-badges">
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/typescript.svg" alt="Logo TypeScript" width="16" height="16">
+                                    TypeScript
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/webgl.svg" alt="Logo WebGL" width="16" height="16">
+                                    WebGL
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg" alt="Logo Node.js" width="16" height="16">
+                                    Node.js
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/webpack.svg" alt="Logo Webpack" width="16" height="16">
+                                    Webpack
+                                </span>
+                                <span class="badge">
+                                    <i class="w-4 h-4 m-1 text-highlight" data-lucide="code"></i>
+                                    Tweakpane
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
+                                    HTML
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
+                                    CSS
+                                </span>
+                                <span class="badge">
+                                    <i class="w-4 h-4 m-1 text-blue-500" data-lucide="spline-pointer"></i>
+                                    Matrices & Vectors
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PORTFOLIO -->
+                    <div class="project-card group">
+                        <div class="pc-top">
+                            <p class="text-highlight">\\</p>
+                            <h2 class="pc-top-title">PORTFOLIO</h2>
+                            <button aria-label="Ouvrir / Fermer la bulle" class="pc-toggle ml-auto hover:text-highlight"><i data-lucide="chevron-down" class=" h-8 w-8"></i></button>
+                        </div>
+                        <div class="pc-mid">
+                            <p>
+                                Projet qui a pour objectif de créer un <strong>portfolio</strong>.
+                                Pour son aspect visuel (Frontend) j'ai utilisé : <strong>Tailwind CSS</strong>, <strong>Basecoat</strong> et <strong>GSAP</strong>.
+                                De plus, <strong>Vite</strong> est utilisé pour construire les différents fichiers CSS et JavaScript.
+                                Pour finir, <strong>Vercel</strong> est utilisé pour héberger le site en backend et gérer les emails avec <strong>Resend</strong>.
+                            </p>
+                        </div>
+                        <div class="pc-bot">
+                            <a href="https://valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Mon Portfolio" data-tooltip="Voir le projet" data-side="top" data-align="center">
+                                <img alt="Image de couverture du projet" loading="lazy" width="514" height="289" class="w-full h-fit mb-3" src="/image/preview/preview_portfolio.webp">
+                            </a>
+                            <div class="pc-bot-badges">
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
+                                    HTML
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
+                                    JavaScript
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/tailwindcss.svg" alt="Logo Tailwind CSS" width="16" height="16">
+                                    Tailwind CSS
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1 bg-[#1447e6]" src="/simpleicons/basecoat.svg" alt="Logo Basecoat" width="16" height="16">
+                                    Basecoat
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/gsap.svg" alt="Logo GSAP" width="16" height="16">
+                                    GSAP
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/vite.svg" alt="Logo Vite" width="16" height="16">
+                                    Vite
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/vercel.svg" alt="Logo Vercel" width="16" height="16">
+                                    Vercel
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/resend.svg" alt="Logo Resend" width="16" height="16">
+                                    Resend
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- GCL -->
+                    <div class="project-card group">
+                        <div class="pc-top">
+                            <i data-lucide="network" class="text-highlight flex items-center justify-center h-10 w-10"></i>
+                            <h2 class="pc-top-title">GCL</h2>
+                            <button aria-label="Ouvrir / Fermer la bulle" class="pc-toggle ml-auto hover:text-highlight"><i data-lucide="chevron-down" class=" h-8 w-8"></i></button>
+                        </div>
+                        <div class="pc-mid">
+                            <p>
+                                Ce projet personnel a pour but de créer un <strong>visualiseur d'aléatoire</strong> basé sur les nombres générés par un <strong>Générateur à congruence linéaire</strong> (LCG).
+                                En effet, cet algorithme est très connu dans la génération de <strong>nombres pseudo-aléatoires</strong> et était présent dans certaines versions de <strong>PHP</strong>.
+                                Malheureusement, celui-ci n'est pas considéré comme sécurisé cryptographiquement étant donné qu'une de ses variables utilise la génération précédente.
+                            </p>
+                        </div>
+                        <div class="pc-bot">
+                            <a href="https://lcg.valentinhrnd.fr/" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Mon projet LCG" data-tooltip="Voir le projet" data-side="top" data-align="center">
+                                <img alt="Image de couverture du projet" loading="lazy" width="514" height="289" class="w-full h-fit mb-3" src="/image/preview/preview_lcg.webp">
+                            </a>
+                            <div class="pc-bot-badges">
+                                <span class="badge">
+                                    <i class="w-4 h-4 m-1 text-red-500" data-lucide="shuffle"></i>
+                                    LCG
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
+                                    HTML
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
+                                    JavaScript
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
+                                    CSS
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- GAME OF LIFE -->
+                    <div class="project-card group">
+                        <div class="pc-top">
+                            <p class="text-highlight">\\</p>
+                            <h2 class="pc-top-title">GAME OF LIFE</h2>
+                            <button aria-label="Ouvrir / Fermer la bulle" class="pc-toggle ml-auto hover:text-highlight"><i data-lucide="chevron-down" class=" h-8 w-8"></i></button>
+                        </div>
+                        <div class="pc-mid">
+                            <p>
+                                Ce projet personnel est une recréation du « Jeu de la vie », en <strong>JavaScript</strong>, en utilisant la bibliothèque graphique <strong>p5.js</strong>.
+                            </p>
+                        </div>
+                        <div class="pc-bot">
+                            <a href="https://gol.valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Mon projet GOL" data-tooltip="Voir le projet" data-side="top" data-align="center">
+                                <img alt="Image de couverture du projet" loading="lazy" width="514" height="289" class="w-full h-fit mb-3" src="/image/preview/preview_gol.webp">
+                            </a>
+                            <div class="pc-bot-badges">
+                                <span class="badge text-sm">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/p5dotjs.svg" alt="Logo p5.js" width="16" height="16">
+                                    p5.js
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
+                                    HTML
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
+                                    CSS
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
+                                    JavaScript
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DÉCOUPAGE IPV4 -->
+                    <div class="project-card group">
+                        <div class="pc-top">
+                            <p class="text-highlight">\\</p>
+                            <h2 class="pc-top-title">DÉCOUPAGE IPV4</h2>
+                            <button aria-label="Ouvrir / Fermer la bulle" class="pc-toggle ml-auto hover:text-highlight"><i data-lucide="chevron-down" class=" h-8 w-8"></i></button>
+                        </div>
+                        <div class="pc-mid">
+                            <p>
+                                Un petit site web pour s'entraîner au <strong>découpage d'adresses IPv4</strong>.
+                            </p>
+                        </div>
+                        <div class="pc-bot">
+                            <a href="https://ip.valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Mon projet d'entraînement au découpage d'IPv4" data-tooltip="Voir le projet" data-side="top" data-align="center">
+                                <img alt="Image de couverture du projet" loading="lazy" width="514" height="289" class="w-full h-fit mb-3" src="/image/preview/preview_ip.webp">
+                            </a>
+                            <div class="pc-bot-badges">
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
+                                    HTML
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
+                                    JavaScript
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
+                                    CSS
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- MATCH LOGGER V2 -->
+                    <div class="project-card group">
+                        <div class="pc-top">
+                            <p class="text-highlight">\\</p>
+                            <h2 class="pc-top-title">MATCH LOGGER V2</h2>
+                            <button aria-label="Ouvrir / Fermer la bulle" class="pc-toggle ml-auto hover:text-highlight"><i data-lucide="chevron-down" class=" h-8 w-8"></i></button>
+                        </div>
+                        <div class="pc-mid">
+                            <p>
+                                Ancien projet personnel dont l'objectif était de créer un bot <strong>Discord</strong> permettant d'afficher les statistiques d'un joueur sur sa dernière partie de <strong>League of Legends</strong>.
+                                Ce projet utilise l'<strong>API Riot Games</strong>, ainsi que <strong>JavaScript</strong> avec la bibliothèque <strong>discordjs</strong> pour l'envoi d'embeds sur <strong>Discord</strong>.
+                            </p>
+                        </div>
+                        <div class="pc-bot">
+                            <a href="https://github.com/Vahaz/match_logger_v2" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Page Github de mon projet MatchLoggerV2" data-tooltip="Ouvrir le projet sur Github" data-side="top" data-align="center">
+                                <img alt="Image de couverture du projet" loading="lazy" width="514" height="289" class="w-full h-fit mb-3" src="/image/preview/preview_matchlogger.webp">
+                            </a>
+                            <div class="pc-bot-badges">
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
+                                    JavaScript
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/discorddotjs.svg" alt="Logo discord.js" width="16" height="16">
+                                    discord.js
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/dotenv.svg" alt="Logo .ENV" width="16" height="16">
+                                    .ENV
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg" alt="Logo Node.js" width="16" height="16">
+                                    Node.js
+                                </span>
+                                <span class="badge">
+                                    <img class="w-4 h-4 m-1" src="/simpleicons/riotgames.svg" alt="Logo Riot Games API" width="16" height="16">
+                                    Riot Games API
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <dialog id="contact-dialog" class="dialog w-full sm:max-w-106.25 max-h-153" aria-labelledby="Formulaire de contact" aria-describedby="Formulaire de contact pour m'envoyer un courriel." onclick="if (event.target === this) this.close()">
+            <div class="bg-base-800 text-secondary border-base-400">
+                <header class="text-center">
+                    <h2>Formulaire de contact</h2>
+                    <p class="text-[#bebec0]">
+                        Entrer vos informations pour m'envoyer un courriel. <br>
+                        Cliquer sur "Envoyer" quand vous avez terminer. <br>
+                        <br>
+                        Il est également possible de me contacter directement via : <a href="mailto:contact.valentinh@gmail.com" target="_blank" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Me contacter via courriel">contact.valentinh@gmail.com</a>
+                    </p>
+                </header>
+                <div>
+                    <form class="form grid gap-6" id="form">
+                        <div class="grid gap-2">
+                            <label for="form-mail">Email <span class="ml-auto text-red-400">* Requis</span></label>
+                            <input class="invalid:border-red-400 invalid:text-red-400 focus:invalid:border-red-400 focus:invalid:outline-red-400 valid:border-green-400 valid:text-green-400" type="email" name="email" id="form-mail" maxlength="50" placeholder="alice@exemple.com" autocomplete="email" required>
+                        </div>
+                        <div class="grid gap-2">
+                            <label for="form-textarea">Contenu</label>
+                            <textarea id="form-textarea" class="textarea resize-y max-h-40 overflow-auto" maxlength="1024" placeholder="Contenu de votre courriel..." rows="3"></textarea>
+                            <p id="counter" class="text-[#bebec0] text-right text-sm">0/1024</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" id="checkbox-with-text" class="input" required>
+                            <div class="grid gap-2">
+                                <label for="checkbox-with-text" class="label">
+                                    Accepter la
+                                    <a href="/src/html/legal.html" target="_self" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Informations Légales" class="underline">politique de confidentialité</a>
+                                    <span class="ml-auto text-red-400">* Requis</span>
+                                </label>
+                                <p class="text-muted-foreground text-sm">
+                                    En cochant cette case, vous acceptez le traitement de vos données conformément aux <a href="/src/html/legal.html" target="_self" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Informations Légales" class="underline hover:text-secondary">mentions légales</a>.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <input id="hp" class="hidden" type="text" name="hp" tabindex="-1" autocomplete="off">
+                        </div>
+                        <p id="form-error" class="hidden text-center text-red-300">
+                            Une Erreur est survenue, veuillez réessayer ultérieurement ou me contacter directement via courriel.
+                        </p>
+                        <footer class="flex gap-5">
+                            <button class="btn-destructive grow text-secondary" aria-label="Fermer le formulaire" type="reset" onclick="this.closest('dialog').close()">
+                                <i data-lucide="x"></i>
+                                Annuler
+                            </button>
+                            <button class="btn grow-2" aria-label="Envoyer le formulaire" type="submit" id="form-submit">
+                                <i id="form-submit-i" data-lucide="send"></i>
+                                Envoyer
+                            </button>
+                        </footer>
+                    </form>
+                </div>
+                <button type="button" aria-label="Fermer le formulaire" onclick="this.closest('dialog').close()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </button>
+            </div>
+        </dialog>
+        <footer class="flex flex-col items-center w-full text-center z-10 mt-20 pb-30 pt-5 md:p-5 bg-base-800 border-t border-base-400 text-secondary">
+            <div class="flex flex-row w-[80%] justify-center gap-10 md:gap-20 pb-5 border-b border-base-400">
+                <a href="/src/html/legal.html" hreflang="fr" lang="fr" target="_self" aria-label="Informations légales de mon Portfolio">Informations Légales</a>
+                <button class="cursor-pointer" aria-label="Formulaire de contact" type="button" onclick="document.getElementById('contact-dialog').showModal()">Formulaire de Contact</button>
+            </div>
+            <p class="mt-5 text-[#f4f6fb]">© 2026 - Hernandorena Valentin. Tous droits réservés.</p>
+        </footer>
+        <script type="module" src="/src/js/main.js"></script>
+        <script type="module" src="/src/js/contact.js"></script>
+    </body>
+</html>

@@ -16,6 +16,8 @@
     --color-base-700: #393433;  /* Card       */
     --color-base-500: #453f3d;  /* Button     */
     --color-base-400: #57504d;  /* Border     */
+    --color-base-100: #f3f4f6;  /* Sub Text   */
+    --color-highlight: #f59e0b; /* Highlight  */
 }
 
 .nav-a {
@@ -24,54 +26,71 @@
 
 /* Project Card CSS */
 
-#projects {
-    @apply h-fit w-11/12 max-sm:w-full max-sm:rounded-none md:w-fit md:max-w-2xl rounded-2xl overflow-hidden border border-base-400 bg-base-700;
+.project-btn {
+    @apply flex flex-row text-5xl w-full ml-[15vw] items-center hover:text-amber-500 hover:cursor-pointer;
 }
 
-#project-container {
-    @apply grid grid-cols-1 grid-rows-1 h-fit mt-3 mx-5 overflow-hidden rounded-2xl bg-base-800 items-start;
+.project-btn svg {
+    @apply transition-transform duration-300 ease-in-out;
+}
+
+.project-btn.open svg {
+    @apply rotate-180;
+}
+
+.project-container {
+    @apply max-h-0 min-h-0 overflow-hidden opacity-0 transition-all duration-300 transition-discrete grid break-inside-avoid items-start p-6 gap-10 grid-cols-1 md:grid-cols-1 lg:grid-cols-2 max-w-7xl mx-auto;
+}
+
+.project-container.open {
+    @apply min-h-fit opacity-100;
 }
 
 .project-card {
-    @apply col-start-1 row-start-1 p-5 opacity-0 invisible;
+    @apply flex flex-col overflow-hidden bg-base-800 p-5 rounded-2xl h-fit border border-base-400;
 }
 
-.project-card-p {
-    @apply text-4xl w-full text-center;
+.pc-top {
+    @apply flex flex-row gap-3 text-4xl;
 }
 
-.project-card-description {
-    @apply flex flex-row my-5 py-5 items-center text-white border-t border-base-400;
+.pc-top-title {
+    word-spacing: 0rem;
+    @apply inset-shadow-[0px_-12px_var(--color-highlight)] whitespace-nowrap;
 }
 
-.project-card-description-p {
-    @apply text-center w-full;
+.pc-mid {
+    @apply p-2 my-0 text-base-100 max-h-0 min-h-0 overflow-hidden opacity-0 transition-all duration-300 transition-discrete;
 }
 
-.project-card-image {
-    @apply bg-base-700 p-5 rounded-2xl border border-base-400;
+.pc-bot {
+    @apply bg-base-700 p-5 rounded-2xl;
 }
 
-.project-card-image-div {
-    @apply flex flex-wrap gap-2 justify-center;
+.pc-bot-badges {
+    @apply flex flex-wrap gap-2 justify-center max-h-0 min-h-0 overflow-hidden opacity-0 transition-all duration-300 transition-discrete;
 }
 
-.project-card-image > a {
-    @apply relative block pointer-events-auto w-full h-full;
+.project-card.open .pc-mid {
+    @apply min-h-55 opacity-100 flex items-center;
 }
 
-#project-pagination {
-    @apply relative z-20 h-fit mb-5 mt-2 mx-5 p-3 rounded-2xl bg-base-800 flex justify-center gap-3;
+.project-card.open .pc-bot-badges {
+    @apply min-h-fit opacity-100;
 }
 
-.project-dot {
-    @apply w-4 h-4 rounded-full hover:bg-amber-300! pointer-events-auto cursor-pointer border-base-900;
+.pc-toggle svg {
+    @apply transition-transform duration-300 ease-in-out;
+}
+
+.project-card.open .pc-toggle svg {
+    @apply rotate-180;
 }
 
 /* Basecoat Components */
 
 .badge {
-    @apply font-cascadia text-sm hover:bg-gray-100 hover:text-black;
+    @apply font-cascadia text-sm hover:bg-base-100 hover:text-black mt-0!;
 }
 
 .btn-destructive {
@@ -81,7 +100,7 @@
 /* Bubble CSS */
 
 .bubble {
-    @apply bg-base-700 p-5 rounded-2xl mt-5 border border-base-400;
+    @apply bg-base-700 p-5 rounded-2xl mt-5 border border-base-400 w-full;
 }
 
 .bubble-title {
