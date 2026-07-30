@@ -4,9 +4,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
         <link rel="icon" href="/image/picture_128.webp" type="image/webp">
-        <title>Portfolio - Legal</title>
+        <title>Portfolio - Info. Légales</title>
         <!-- Web Search Engine -->
-        <meta name="robots" content="noindex, nofollow">
+        <meta name="robots" content="index, follow">
         <meta name="googlebot" content="none">
         <meta name="description" content="Portfolio de Valentin Hernandorena, étudiant en réseau, cybersécurité et informatique. Découvrez mes études, projets, veille technologique et compétences.">
         <script type="application/ld+json">
@@ -32,28 +32,62 @@
         <!-- Twitter / X -->
         <meta name="twitter:card" content="summary_large_image">
     </head>
-    <body class="bg-base-900 min-h-screen flex flex-col max-w-screen font-cascadia">
-        <nav class="fixed bottom-0 md:top-0 left-0 w-full z-10 pt-5 pointer-events-none">
-            <div class="pointer-events-auto hidden absolute left-0 gap-5 p-5 md:flex items-center w-26 hover:w-79 transition-all duration-300 ease-in-out  rounded-s-lg bg-base-700/50 backdrop-blur-sm rounded-full border border-base-400">
-                <img alt="Photo de profil" class="rounded-full ring-2 ring-base-400" src="/image/picture_60.webp" width="60" height="60">
-                <p class="overflow-hidden text-secondary text-[1.25rem] font-bold">VALENTIN <br> HERNANDORENA </p>
+    <body class="bg-base-900 min-h-screen flex max-w-screen font-cascadia">
+        <aside class="aside">
+            <div class="flex flex-col gap-6">
+                <div class="flex items-center gap-3 px-2 py-1 text-zinc-200 hover:text-white transition-colors">
+                    <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center">
+                        <img alt="Photo de profil" class="rounded-full ring-2 ring-base-400" src="/image/picture_60.webp" width="60" height="60">
+                    </div>
+                    <span class="text-base font-medium hover:underline">Portfolio</span>
+                </div>
+                <nav class="flex flex-col gap-1">
+                    <a href="/index.html" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page d'accueil du site">
+                        <i data-lucide="home" class="w-4 h-4"></i>
+                        <span>Page d'accueil</span>
+                    </a>
+                    <a href="/src/html/about.html" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page a propos du site">
+                        <i data-lucide="user" class="w-4 h-4"></i>
+                        <span>À Propos</span>
+                    </a>
+                    <a href="/src/html/exp.html" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page expériences du site">
+                        <i data-lucide="library" class="w-4 h-4"></i>
+                        <span>Expériences</span>
+                    </a>
+                    <a href="/src/html/project.html" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page projets du site">
+                        <i data-lucide="terminal" class="w-4 h-4"></i>
+                        <span>Projets</span>
+                    </a>
+                    <a href="/src/html/veille.html" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page veille technologique du site">
+                        <i data-lucide="file-search-corner" class="w-4 h-4"></i>
+                        <span>Veille Tech.</span>
+                    </a>
+                </nav>
             </div>
-            <div class="flex fixed bottom-0 left-0 w-full justify-around md:absolute md:top-0 md:right-15 md:bottom-auto md:left-auto md:w-fit items-center gap-10 mt-5 p-5 rounded-none md:rounded-full text-secondary bg-base-700 md:bg-base-700/50 backdrop-blur-sm border border-base-400">
-                <a href="/index.html#" target="_self" hreflang="fr" lang="en" aria-label="À Propos De Moi" class="nav-a pointer-events-auto" data-tooltip="Accueil" data-side="bottom" data-align="center">
-                    <i class="w-8 h-8" data-lucide="home"></i>
+            <div class="flex flex-col gap-1 pt-4 border-t border-zinc-700">
+                <a href="/pdf/cv.pdf" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Mon CV format PDF" download="CV_Valentin_Hernandorena.pdf" type="application/pdf" class="group nav">
+                    <i data-lucide="download" class="group-hover:animate-bounce w-4 h-4"></i>
+                    <span>Mon CV</span>
                 </a>
-                <a href="/index.html#studies" target="_self" hreflang="fr" lang="en" aria-label="Mes Études" class="nav-a pointer-events-auto" data-tooltip="Mes Études" data-side="bottom" data-align="center">
-                    <i class="w-8 h-8" data-lucide="square-user"></i>
+                <a href="#" hreflang="fr" lang="fr" target="_self" aria-label="Informations légales de mon Portfolio" class="nav-selected">
+                    <i data-lucide="scale" class="w-4 h-4"></i>
+                    <span>Info. Légales</span>
                 </a>
-                <a href="/index.html#projects" target="_self" hreflang="fr" lang="en" aria-label="Mes Projets" class="nav-a pointer-events-auto" data-tooltip="Mes Projets" data-side="bottom" data-align="center">
-                    <i class="w-8 h-8" data-lucide="terminal"></i>
-                </a>
-                <a href="/src/html/veille.html" target="_self" hreflang="fr" lang="en" aria-label="Ma Veille Technologique" class="nav-a pointer-events-auto" data-tooltip="Veille Technologique" data-side="bottom" data-align="center">
-                    <i class="w-8 h-8" data-lucide="file-search-corner"></i>
-                </a>
+                <button class="nav cursor-pointer mb-4" aria-label="Formulaire de contact" type="button" onclick="document.getElementById('contact-dialog').showModal()">
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                    <span>Contact</span>
+                </button>
+                <div class="flex items-center gap-3 pt-4 px-3 py-2 text-sm border-t border-zinc-700">
+                    <span class="text-center ">Réalisé avec ❤️ par Valentin</span>
+                </div>
             </div>
-        </nav>
-        <main class="flex flex-col flex-1 mt-40 text-secondary">
+        </aside>
+        <main class="relative grow text-secondary max-h-full">
+            <canvas class="canvas" id="background"></canvas>
+            <header class="header">
+                <i data-lucide="scale" class="w-4 h-4"></i>
+                <p>Informations légales</p>
+            </header>
             <section class="accordion flex flex-col items-center">
                 <h2 class="text-4xl font-mono font-bold underline text-center">Mentions Légales</h2>
                 <details class="group border-b last:border-b-0 w-[75%] mt-5">
@@ -239,15 +273,9 @@
                 </button>
             </div>
         </dialog>
-        <footer class="flex flex-col items-center w-full text-center z-10 mt-20 pb-30 pt-5 md:p-5 bg-base-800 border-t border-base-400 text-secondary">
-            <div class="flex flex-row w-[80%] justify-center gap-10 md:gap-20 pb-5 border-b border-base-400">
-                <a href="#" hreflang="fr" lang="fr" target="_self" aria-label="Informations légales de mon Portfolio">Informations Légales</a>
-                <button class="cursor-pointer" aria-label="Formulaire de contact" type="button" onclick="document.getElementById('contact-dialog').showModal()">Formulaire de Contact</button>
-            </div>
-            <p class="mt-5 text-[#f4f6fb]">© 2026 - Hernandorena Valentin. Tous droits réservés.</p>
-        </footer>
         <script type="module" src="/src/js/main.js"></script>
         <script type="module" src="/src/js/contact.js"></script>
+        <script type="module" src="/src/js/canvas.js"></script>
         <script>
             (() => {
                 const accordions = document.querySelectorAll(".accordion");

@@ -32,420 +32,633 @@
         <!-- Twitter / X -->
         <meta name="twitter:card" content="summary_large_image">
     </head>
-    <body class="bg-base-900 min-h-screen flex flex-col max-w-screen font-cascadia">
-        <nav class="fixed bottom-0 md:top-0 left-0 w-full z-100 pt-5 pointer-events-none">
-            <div class="pointer-events-auto hidden absolute left-0 gap-5 p-5 md:flex items-center w-26 hover:w-79 transition-all duration-300 ease-in-out  rounded-s-lg bg-base-700/50 backdrop-blur-sm rounded-full border border-base-400">
-                <img alt="Photo de profil" class="rounded-full ring-2 ring-base-400" src="/image/picture_60.webp" width="60" height="60">
-                <p class="overflow-hidden text-secondary text-[1.25rem] font-bold">VALENTIN <br> HERNANDORENA </p>
-            </div>
-            <div class="flex fixed bottom-0 left-0 w-full justify-around md:absolute md:top-0 md:right-15 md:bottom-auto md:left-auto md:w-fit items-center gap-10 mt-5 p-5 rounded-none md:rounded-full text-secondary bg-base-700 md:bg-base-700/50 backdrop-blur-sm border border-base-400 pointer-events-auto">
-                <a href="/index.html#" target="_self" hreflang="fr" lang="en" aria-label="À Propos De Moi" class="nav-a pointer-events-auto" data-tooltip="Accueil" data-side="bottom" data-align="center">
-                    <i class="w-8 h-8" data-lucide="home"></i>
-                </a>
-                <a href="/index.html#studies" target="_self" hreflang="fr" lang="en" aria-label="Mes Études" class="nav-a pointer-events-auto" data-tooltip="Mes Études" data-side="bottom" data-align="center">
-                    <i class="w-8 h-8" data-lucide="square-user"></i>
-                </a>
-                <a href="#" target="_self" hreflang="fr" lang="en" aria-label="Mes Projets" class="nav-a pointer-events-auto" data-tooltip="Mes Projets" data-side="bottom" data-align="center">
-                    <i class="w-8 h-8" data-lucide="terminal"></i>
-                </a>
-                <a href="/src/html/veille.html" target="_self" hreflang="fr" lang="en" aria-label="Ma Veille Technologique" class="nav-a pointer-events-auto" data-tooltip="Veille Technologique" data-side="bottom" data-align="center">
-                    <i class="w-8 h-8" data-lucide="file-search-corner"></i>
-                </a>
-            </div>
-        </nav>
-        <main class="text-secondary min-h-screen">
-            <div class="group relative w-full h-80 flex flex-col justify-center items-center overflow-hidden pt-20 mb-10 border-b border-base-400 shadow-xl/30">
-                <img class="absolute inset-0 w-full h-full object-cover -z-10" alt="Image de fond" src="/image/preview/fotis-fotopoulos-DuHKoV44prg-unsplash.webp" fetchpriority="high" height="360" width="1920">
-                <div class="bg-base-900/50 backdrop-blur-sm rounded-2xl p-5">
-                    <h1 class="relative font-bold text-4xl max-sm:text-2xl md:text-6xl border-b border-amber-500 z-10 text-center">Mes Projets</h1>
+    <body class="bg-base-900 min-h-screen flex max-w-screen font-cascadia">
+        <aside class="aside">
+            <div class="flex flex-col gap-6">
+                <div class="flex items-center gap-3 px-2 py-1 text-zinc-200 hover:text-white transition-colors">
+                    <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center">
+                        <img alt="Photo de profil" class="rounded-full ring-2 ring-base-400" src="/image/picture_60.webp" width="60" height="60">
+                    </div>
+                    <span class="text-base font-medium hover:underline">Portfolio</span>
                 </div>
-                <span class="absolute bottom-4 right-4 text-base-400/80 text-sm opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 italic">
-                    Crédit: <a class="cursor-pointer underline hover:text-secondary" href="https://unsplash.com/photos/black-computer-keyboard-DuHKoV44prg" target="_blank" hreflang="en" lang="en" rel="noopener noreferrer" aria-label="Page Unsplash de l'image">Fotis Fotopoulos - Unsplash</a>
-                </span>
+                <nav class="flex flex-col gap-1">
+                    <a href="/index.html" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page d'accueil du site">
+                        <i data-lucide="home" class="w-4 h-4"></i>
+                        <span>Page d'accueil</span>
+                    </a>
+                    <a href="/src/html/about.html" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page a propos du site">
+                        <i data-lucide="user" class="w-4 h-4"></i>
+                        <span>À Propos</span>
+                    </a>
+                    <a href="/src/html/exp.html" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page expériences du site">
+                        <i data-lucide="library" class="w-4 h-4"></i>
+                        <span>Expériences</span>
+                    </a>
+                    <a href="#" class="nav-selected" hreflang="fr" lang="fr" target="_self" aria-label="Page projets du site">
+                        <i data-lucide="terminal" class="w-4 h-4"></i>
+                        <span>Projets</span>
+                    </a>
+                    <a href="/src/html/veille.html" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page veille technologique du site">
+                        <i data-lucide="file-search-corner" class="w-4 h-4"></i>
+                        <span>Veille Tech.</span>
+                    </a>
+                </nav>
             </div>
+            <div class="flex flex-col gap-1 pt-4 border-t border-zinc-700">
+                <a href="/pdf/cv.pdf" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Mon CV format PDF" download="CV_Valentin_Hernandorena.pdf" type="application/pdf" class="group nav">
+                    <i data-lucide="download" class="group-hover:animate-bounce w-4 h-4"></i>
+                    <span>Mon CV</span>
+                </a>
+                <a href="/src/html/legal.html" hreflang="fr" lang="fr" target="_self" aria-label="Informations légales de mon Portfolio" class="nav">
+                    <i data-lucide="scale" class="w-4 h-4"></i>
+                    <span>Info. Légales</span>
+                </a>
+                <button class="nav cursor-pointer mb-4" aria-label="Formulaire de contact" type="button" onclick="document.getElementById('contact-dialog').showModal()">
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                    <span>Contact</span>
+                </button>
+                <div class="flex items-center gap-3 pt-4 px-3 py-2 text-sm border-t border-zinc-700">
+                    <span class="text-center ">Réalisé avec ❤️ par Valentin</span>
+                </div>
+            </div>
+        </aside>
+        <main class="grow text-secondary max-h-full">
+            <canvas class="canvas" id="background"></canvas>
+            <header class="header">
+                <i data-lucide="code" class="w-4 h-4"></i>
+                <p>Mes projets</p>
+            </header>
             <div>
                 <!-- PROJECTS : CLASS -->
-                <button aria-label="Ouvrir / Fermer la liste" class="project-btn group">
-                    <i class="h-16 w-16" data-lucide="chevron-up"></i>
-                    <p class="inset-shadow-[0px_-12px_var(--color-highlight)] group-hover:inset-shadow-[0px_-12px_var(--color-base-100)]">Cours</p>
-                </button>
-                <div class="project-container open">
+                <div class="project-container">
                     <!-- FTP -->
-                    <div class="project-card group">
-                        <div class="pc-top">
-                            <p class="text-highlight">\\</p>
-                            <h2 class="pc-top-title">FTP</h2>
-                            <button aria-label="Ouvrir / Fermer la bulle" class="pc-toggle ml-auto hover:text-highlight"><i data-lucide="chevron-down" class=" h-8 w-8"></i></button>
-                        </div>
-                        <div class="pc-mid">
-                            <div class="bubble mt-0!">
-                                <p class="bubble-title border-red-500">Sujets abordés dans ce cours</p>
-                                <div class="bubble-container">
-                                    <div class="bubble-content">
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-red-500" data-lucide="chevron-right"></i>
-                                            Serveur FTP
-                                        </p>
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-red-500" data-lucide="chevron-right"></i>
-                                            Clients FTP
-                                        </p>
-                                    </div>
-                                    <div class="bubble-content">
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-red-500" data-lucide="chevron-right"></i>
-                                            Partage de dossiers
-                                        </p>
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-red-500" data-lucide="chevron-right"></i>
-                                            Permissions Utilisateurs <br> et Groupes
-                                        </p>
-                                    </div>
-                                </div>
+                    <div class="project cours group">
+                        <button type="button" onclick="document.getElementById('ftp-dialog').showModal()" aria-label="Voir les détails du cour" class="project-display">
+                            <img alt="Logo FileZilla" class="project-display-image" width="96" height="96" src="/simpleicons/filezilla.svg">
+                            <h2 class="project-display-title">FTP</h2>
+                            <div class="flex absolute right-5 bottom-5 items-center gap-2 text-zinc-400">
+                                <i data-lucide="book" class="w-4 h-4"></i>
+                                <span class="w-fit">Cours</span>
                             </div>
-                        </div>
-                        <div class="pc-bot mt-4">
-                            <img alt="Image de couverture du projet" loading="lazy" width="514" height="289" class="w-full h-fit mb-3" src="/image/preview/preview_ftp.webp">
-                        </div>
+                            <div class="flex absolute left-5 bottom-5 items-center gap-2 text-zinc-400">
+                                <i data-lucide="clock" class="w-4 h-4"></i>
+                                <span class="w-fit">2025</span>
+                            </div>
+                        </button>
+                        <dialog id="ftp-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                            <div class="project-dialog-content">
+                                <header class="project-header">
+                                    <h2 class="project-header-title">Cours : <span class="text-highlight">FTP</span></h2>
+                                </header>
+                                <div class="project-body">
+                                    <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_ftp.webp">
+                                    <ul class="project-bubble">
+                                        <li class="project-bubble-title">
+                                            <p class="project-bubble-title-p border-red-500">Compétences acquises</p>
+                                        </li>
+                                        <li class="project-bubble-item">
+                                            <i data-lucide="server" class="text-red-500 shrink-0"></i>
+                                            <p>Installation et administration d'un serveur FTP sécurisé avec <strong>FileZilla Server</strong>.</p>
+                                        </li>
+                                        <li class="project-bubble-item">
+                                            <i data-lucide="shield-check" class="text-red-500 shrink-0"></i>
+                                            <p>Gestion des <strong>droits d'accès</strong> (lecture, écriture, suppression) sur les dossiers partagés.</p>
+                                        </li>
+                                        <li class="project-bubble-item">
+                                            <i data-lucide="users" class="text-red-500 shrink-0 mt-1"></i>
+                                            <p>Utilisation de groupes pour simplifier l'administration.</p>
+                                        </li>
+                                    </ul>
+                                    <p class="project-bubble p-5">
+                                        À travers ce TP, nous avons vu comment mettre en place un serveur et des clients FTP.<br>
+                                        <br>
+                                        Nous avons vu comment mettre en place les permissions sur les différents dossiers partagés.<br>
+                                        <br>
+                                    </p>
+                                </div>
+                                <footer class="project-footer">
+                                    <button class="btn-destructive ml-auto project-footer-interactive" onclick="this.closest('dialog').close()">
+                                        <i data-lucide="X"></i>
+                                        Fermer
+                                    </button>
+                                </footer>
+                            </div>
+                        </dialog>
                     </div>
                     <!-- ACTIVE DIRECTORY -->
-                    <div class="project-card group">
-                        <div class="pc-top">
-                            <p class="text-highlight">\\</p>
-                            <h2 class="pc-top-title">ACTIVE DIRECTORY</h2>
-                            <button aria-label="Ouvrir / Fermer la bulle" class="pc-toggle ml-auto hover:text-highlight"><i data-lucide="chevron-down" class=" h-8 w-8"></i></button>
-                        </div>
-                        <div class="pc-mid">
-                            <div class="bubble mt-0!">
-                                <p class="bubble-title border-green-500">Sujets abordés dans ce cours</p>
-                                <div class="bubble-container">
-                                    <div class="bubble-content">
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-green-500" data-lucide="chevron-right"></i>
-                                            Utilisateurs & Groupes
-                                        </p>
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-green-500" data-lucide="chevron-right"></i>
-                                            GPO simples
-                                        </p>
-                                    </div>
-                                    <div class="bubble-content">
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-green-500" data-lucide="chevron-right"></i>
-                                            Partage de dossiers
-                                        </p>
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-green-500" data-lucide="chevron-right"></i>
-                                            DNS
-                                        </p>
-                                    </div>
-                                </div>
+                    <div class="project cours group">
+                        <button type="button" onclick="document.getElementById('ad-dialog').showModal()" aria-label="Voir les détails du cour" class="project-display">
+                            <img alt="Logo Active Directory" class="project-display-image w-48!" width="192" height="96" src="/image/icons/ad.webp">
+                            <h2 class="project-display-title">Windows Server 2019</h2>
+                            <div class="flex absolute right-5 bottom-5 items-center gap-2 text-zinc-400">
+                                <i data-lucide="book" class="w-4 h-4"></i>
+                                <span class="w-fit">Cours</span>
                             </div>
-                        </div>
-                        <div class="pc-bot mt-4">
-                            <img alt="Image de couverture du projet" loading="lazy" width="514" height="289" class="w-full h-fit mb-3" src="/image/preview/preview_ad.webp">
-                        </div>
+                            <div class="flex absolute left-5 bottom-5 items-center gap-2 text-zinc-400">
+                                <i data-lucide="clock" class="w-4 h-4"></i>
+                                <span class="w-fit">2025</span>
+                            </div>
+                        </button>
+                        <dialog id="ad-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                            <div class="project-dialog-content">
+                                <header class="project-header">
+                                    <h2 class="project-header-title">Cours : <span class="text-highlight">AD / WS</span></h2>
+                                </header>
+                                <div class="project-body">
+                                    <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_ftp.webp">
+                                    <ul class="project-bubble">
+                                        <li class="project-bubble-title">
+                                            <p class="project-bubble-title-p border-green-500">Compétences acquises</p>
+                                        </li>
+                                        <li class="flex items-center gap-5 p-2">
+                                            <i data-lucide="user" class="text-green-500 shrink-0"></i>
+                                            <p>Création d'utilisateurs et groupes sur Active Directory.</p>
+                                        </li>
+                                        <li class="flex items-center gap-5 p-2 bg-base-500">
+                                            <i data-lucide="shield-check" class="text-green-500 shrink-0"></i>
+                                            <p>Gestion des stratégies de groupes (GPO) pour empêcher l'exécution d'applications, gérer l'installation automatique de logiciels et gérer les permissions et accès.</p>
+                                        </li>
+                                        <li class="flex items-center gap-5 p-2">
+                                            <i data-lucide="users" class="text-green-500 shrink-0 mt-1"></i>
+                                            <p>Mise en place du lien entre l'AD et le DNS/DHCP pour la transmission du controlleur de domaine.</p>
+                                        </li>
+                                    </ul>
+                                    <p class="project-bubble p-5">
+                                        Ce TP a pour objectif de maîtriser la mise en place et le fonctionnement d'Active Directory, sur une machine virtuelle Windows Server 2019.<br>
+                                        <br>
+                                        Nous avons mis en place un Active Directory avec des utilisateurs, groupes et GPO.<br>
+                                        <br>
+                                        Nous avons également mis en place, sur le même serveur que l'AD, un DHCP, DNS et du routage logicielle.
+                                    </p>
+                                </div>
+                                <footer class="project-footer">
+                                    <button class="btn-destructive ml-auto project-footer-interactive" onclick="this.closest('dialog').close()">
+                                        <i data-lucide="X"></i>
+                                        Fermer
+                                    </button>
+                                </footer>
+                            </div>
+                        </dialog>
                     </div>
                     <!-- DOCKER -->
-                    <div class="project-card group">
-                        <div class="pc-top">
-                            <p class="text-highlight">\\</p>
-                            <h2 class="pc-top-title">DOCKER</h2>
-                            <button aria-label="Ouvrir / Fermer la bulle" class="pc-toggle ml-auto hover:text-highlight"><i data-lucide="chevron-down" class=" h-8 w-8"></i></button>
-                        </div>
-                        <div class="pc-mid">
-                            <div class="bubble mt-0!">
-                                <p class="bubble-title border-blue-500">Sujets abordés dans ce cours</p>
-                                <div class="bubble-container">
-                                    <div class="bubble-content">
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-blue-500" data-lucide="chevron-right"></i>
-                                            docker-compose
-                                        </p>
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-blue-500" data-lucide="chevron-right"></i>
-                                            Dockerfile
-                                        </p>
-                                    </div>
-                                    <div class="bubble-content">
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-blue-500" data-lucide="chevron-right"></i>
-                                            Réseau et Volumes
-                                        </p>
-                                        <p class="bubble-content-p">
-                                            <i class="bubble-content-i text-blue-500" data-lucide="chevron-right"></i>
-                                            Image et versionnage
-                                        </p>
-                                    </div>
+                    <div class="project cours group">
+                        <button type="button" onclick="document.getElementById('docker-dialog').showModal()" aria-label="Voir les détails du cour" class="project-display">
+                            <img alt="Logo Active Directory" class="project-display-image" width="96" height="96" src="/simpleicons/docker.svg">
+                            <h2 class="project-display-title">Docker</h2>
+                            <div class="flex absolute right-5 bottom-5 items-center gap-2 text-zinc-400">
+                                <i data-lucide="book" class="w-4 h-4"></i>
+                                <span class="w-fit">Cours</span>
+                            </div>
+                            <div class="flex absolute left-5 bottom-5 items-center gap-2 text-zinc-400">
+                                <i data-lucide="clock" class="w-4 h-4"></i>
+                                <span class="w-fit">2025</span>
+                            </div>
+                        </button>
+                        <dialog id="docker-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                            <div class="project-dialog-content">
+                                <header class="project-header">
+                                    <h2 class="project-header-title">Cours : <span class="text-highlight">Docker</span></h2>
+                                </header>
+                                <div class="project-body">
+                                    <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_docker.webp">
+                                    <p class="project-bubble p-5">
+                                        Ce TP a pour objectif de découvrir l'environnement Docker via CLI (Command-line interface).<br>
+                                        <br>
+                                        Nous avons vu comment confectionner une image et un conteneur via un fichier Dockerfile en gérant un volume et un réseau customisé.<br>
+                                        <br>
+                                        Nous avons également mis en place docker-compose pour créer et gérer plusieurs images / conteneurs en même temps.<br>
+                                        <br>
+                                        Enfin, nous avons crée un compte Docker Hub, pour publier notre image en ligne.
+                                    </p>
                                 </div>
+                                <footer class="project-footer">
+                                    <a class="btn project-footer-interactive" href="https://hub.docker.com/repositories/vhernandorena" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Ma page Docker Hub" data-tooltip="Voir ma page Docker Hub" data-side="top" data-align="center">
+                                        <i data-lucide="link-2"></i>
+                                        Mon Docker Hub
+                                    </a>
+                                    <button class="btn-destructive project-footer-interactive" onclick="this.closest('dialog').close()">
+                                        <i data-lucide="X"></i>
+                                        Fermer
+                                    </button>
+                                </footer>
                             </div>
-                        </div>
-                        <div class="pc-bot mt-4">
-                            <img alt="Image de couverture du projet" loading="lazy" width="514" height="289" class="w-full h-fit mb-3" src="/image/preview/preview_docker.webp">
-                        </div>
+                        </dialog>
                     </div>
-                </div>
-                <!-- PROJECTS : PERSO -->
-                <button aria-label="Ouvrir / Fermer la liste" class="project-btn group">
-                    <i class="h-16 w-16" data-lucide="chevron-down"></i>
-                    <p class="inset-shadow-[0px_-12px_var(--color-highlight)] group-hover:inset-shadow-[0px_-12px_var(--color-base-100)]">Personnel</p>
-                </button>
-                <div class="project-container">
                     <!-- WEBGL -->
-                    <div class="project-card group">
-                        <div class="pc-top">
-                            <p class="text-highlight">\\</p>
-                            <h2 class="pc-top-title">WEBGL</h2>
-                            <button aria-label="Ouvrir / Fermer la bulle" class="pc-toggle ml-auto hover:text-highlight"><i data-lucide="chevron-down" class="h-8 w-8"></i></button>
-                        </div>
-                        <div class="pc-mid">
-                            <p>
-                                Ce projet personnel a été réalisé dans le but d'apprendre à utiliser l'API graphique <strong>WebGL</strong> avec <strong>TypeScript</strong>, compilé à l'aide de <strong>webpack</strong>.
-                                De plus, afin de maîtriser les concepts de vecteurs et de matrices, aucune bibliothèque publique n'a été utilisée.
-                                En effet, l'ensemble des classes mathématiques ont été développées manuellement dans l'objectif d'apprendre.
-                            </p>
-                        </div>
-                        <div class="pc-bot">
-                            <a href="https://webgl.valentinhrnd.fr/" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Mon projet WebGL" data-tooltip="Voir le projet" data-side="top" data-align="center">
-                                <img alt="Image de couverture du projet" loading="lazy" width="514" height="289" class="w-full h-fit mb-3" src="/image/preview/preview_webgl.webp">
-                            </a>
-                            <div class="pc-bot-badges">
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/typescript.svg" alt="Logo TypeScript" width="16" height="16">
-                                    TypeScript
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/webgl.svg" alt="Logo WebGL" width="16" height="16">
-                                    WebGL
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg" alt="Logo Node.js" width="16" height="16">
-                                    Node.js
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/webpack.svg" alt="Logo Webpack" width="16" height="16">
-                                    Webpack
-                                </span>
-                                <span class="badge">
-                                    <i class="w-4 h-4 m-1 text-highlight" data-lucide="code"></i>
-                                    Tweakpane
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
-                                    HTML
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
-                                    CSS
-                                </span>
-                                <span class="badge">
-                                    <i class="w-4 h-4 m-1 text-blue-500" data-lucide="spline-pointer"></i>
-                                    Matrices & Vectors
-                                </span>
+                    <div class="project personnel group">
+                        <button type="button" onclick="document.getElementById('perso-webgl-dialog').showModal()" aria-label="Voir les détails du projet" class="project-display">
+                            <img alt="Logo Active Directory" class="project-display-image" width="96" height="96" src="/simpleicons/webgl.svg">
+                            <h2 class="project-display-title">WebGL</h2>
+                            <div class="flex absolute right-5 bottom-5 items-center gap-2 text-zinc-400">
+                                <i data-lucide="book" class="w-4 h-4"></i>
+                                <span class="w-fit">Personnel</span>
                             </div>
-                        </div>
+                            <div class="flex absolute left-5 bottom-5 items-center gap-2 text-zinc-400">
+                                <i data-lucide="clock" class="w-4 h-4"></i>
+                                <span class="w-fit">2025</span>
+                            </div>
+                        </button>
+                        <dialog id="perso-webgl-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                            <div class="project-dialog-content">
+                                <header class="project-header">
+                                    <h2 class="project-header-title">Projet : <span class="text-highlight">WebGL</span></h2>
+                                </header>
+                                <div class="project-body">
+                                    <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_webgl.webp">
+                                    <p class="project-bubble p-5">
+                                        Ce projet personnel a été réalisé dans le but d'apprendre à utiliser l'API graphique WebGL.<br>
+                                        <br>
+                                        Le projet est écrit avec TypeScript, puis, compilé à l'aide de webpack en un fichier JavaScript.<br>
+                                        <br>
+                                        De plus, afin de maîtriser les concepts de vecteurs, matrices et quaternions, aucune bibliothèque mathématique publique, comme glMatrix, n'a été utilisée.<br>
+                                        <br>
+                                        Le site web affiche 2 modèles .gltf qui sont contrôlables via le panneau Tweakpane.
+                                    </p>
+                                    <ul class="project-bubble">
+                                        <li class="project-bubble-title">
+                                            <p class="project-bubble-title-p border-green-500">Tech Stack</p>
+                                        </li>
+                                        <li class="flex flex-wrap gap-3 p-2">
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/typescript.svg" alt="Logo TypeScript" width="16" height="16">
+                                                TypeScript
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/webgl.svg" alt="Logo WebGL" width="16" height="16">
+                                                WebGL
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg" alt="Logo Node.js" width="16" height="16">
+                                                Node.js
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/webpack.svg" alt="Logo Webpack" width="16" height="16">
+                                                Webpack
+                                            </div>
+                                            <div class="badge">
+                                                <i class="w-4 h-4 m-1 text-highlight" data-lucide="code"></i>
+                                                Tweakpane
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
+                                                HTML
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
+                                                CSS
+                                            </div>
+                                            <div class="badge">
+                                                <i class="w-4 h-4 m-1 text-blue-500" data-lucide="spline-pointer"></i>
+                                                Matrices & Vectors
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <footer class="project-footer">
+                                    <a class="btn project-footer-interactive" href="https://webgl.valentinhrnd.fr/" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Page web du projet" data-tooltip="Voir la page web du projet" data-side="top" data-align="center">
+                                        <i data-lucide="link-2"></i>
+                                        Voir le projet
+                                    </a>
+                                    <button class="btn-destructive project-footer-interactive" onclick="this.closest('dialog').close()">
+                                        <i data-lucide="X"></i>
+                                        Fermer
+                                    </button>
+                                </footer>
+                            </div>
+                        </dialog>
                     </div>
                     <!-- PORTFOLIO -->
-                    <div class="project-card group">
-                        <div class="pc-top">
-                            <p class="text-highlight">\\</p>
-                            <h2 class="pc-top-title">PORTFOLIO</h2>
-                            <button aria-label="Ouvrir / Fermer la bulle" class="pc-toggle ml-auto hover:text-highlight"><i data-lucide="chevron-down" class=" h-8 w-8"></i></button>
-                        </div>
-                        <div class="pc-mid">
-                            <p>
-                                Projet qui a pour objectif de créer un <strong>portfolio</strong>.
-                                Pour son aspect visuel (Frontend) j'ai utilisé : <strong>Tailwind CSS</strong>, <strong>Basecoat</strong> et <strong>GSAP</strong>.
-                                De plus, <strong>Vite</strong> est utilisé pour construire les différents fichiers CSS et JavaScript.
-                                Pour finir, <strong>Vercel</strong> est utilisé pour héberger le site en backend et gérer les emails avec <strong>Resend</strong>.
-                            </p>
-                        </div>
-                        <div class="pc-bot">
-                            <a href="https://valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Mon Portfolio" data-tooltip="Voir le projet" data-side="top" data-align="center">
-                                <img alt="Image de couverture du projet" loading="lazy" width="514" height="289" class="w-full h-fit mb-3" src="/image/preview/preview_portfolio.webp">
-                            </a>
-                            <div class="pc-bot-badges">
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
-                                    HTML
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
-                                    JavaScript
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/tailwindcss.svg" alt="Logo Tailwind CSS" width="16" height="16">
-                                    Tailwind CSS
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1 bg-[#1447e6]" src="/simpleicons/basecoat.svg" alt="Logo Basecoat" width="16" height="16">
-                                    Basecoat
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/gsap.svg" alt="Logo GSAP" width="16" height="16">
-                                    GSAP
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/vite.svg" alt="Logo Vite" width="16" height="16">
-                                    Vite
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/vercel.svg" alt="Logo Vercel" width="16" height="16">
-                                    Vercel
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/resend.svg" alt="Logo Resend" width="16" height="16">
-                                    Resend
-                                </span>
+                    <div class="project personnel group">
+                        <button type="button" onclick="document.getElementById('perso-portfolio-dialog').showModal()" aria-label="Voir les détails du projet" class="project-display">
+                            <img alt="Logo Active Directory" class="project-display-image rounded-2xl" width="96" height="96" src="/image/picture_96.webp">
+                            <h2 class="project-display-title">Portfolio</h2>
+                            <div class="flex absolute right-5 bottom-5 items-center gap-2 text-zinc-400">
+                                <i data-lucide="book" class="w-4 h-4"></i>
+                                <span class="w-fit">Personnel</span>
                             </div>
-                        </div>
+                            <div class="flex absolute left-5 bottom-5 items-center gap-2 text-zinc-400">
+                                <i data-lucide="clock" class="w-4 h-4"></i>
+                                <span class="w-fit">2026</span>
+                            </div>
+                        </button>
+                        <dialog id="perso-portfolio-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                            <div class="project-dialog-content">
+                                <header class="project-header">
+                                    <h2 class="project-header-title">Projet : <span class="text-highlight">Portfolio</span></h2>
+                                </header>
+                                <div class="project-body">
+                                    <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_portfolio.webp">
+                                    <p class="project-bubble p-5">
+                                        Voici mon portfolio. <br>
+                                        <br>
+                                        Pour son aspect visuel (Frontend), j'ai utilisé : Tailwind CSS, Basecoat et GSAP pour les animations.<br>
+                                        <br>
+                                        De plus, Vite est utilisé pour construire les différents fichiers CSS et JavaScript.<br>
+                                        <br>
+                                        Pour finir, Vercel est utilisé pour héberger le site en backend et gérer le lien avec Resend pour le formulaire de contact.
+                                    </p>
+                                    <ul class="project-bubble">
+                                        <li class="project-bubble-title">
+                                            <p class="project-bubble-title-p border-green-500">Tech Stack</p>
+                                        </li>
+                                        <li class="flex flex-wrap gap-3 p-2">
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
+                                                HTML
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
+                                                JavaScript
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/tailwindcss.svg" alt="Logo Tailwind CSS" width="16" height="16">
+                                                Tailwind CSS
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1 bg-[#1447e6]" src="/simpleicons/basecoat.svg" alt="Logo Basecoat" width="16" height="16">
+                                                Basecoat
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/gsap.svg" alt="Logo GSAP" width="16" height="16">
+                                                GSAP
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/vite.svg" alt="Logo Vite" width="16" height="16">
+                                                Vite
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/vercel.svg" alt="Logo Vercel" width="16" height="16">
+                                                Vercel
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/resend.svg" alt="Logo Resend" width="16" height="16">
+                                                Resend
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <footer class="project-footer">
+                                    <a class="btn project-footer-interactive" href="https://valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Page web du projet" data-tooltip="Voir la page web du projet" data-side="top" data-align="center">
+                                        <i data-lucide="link-2"></i>
+                                        Voir le projet
+                                    </a>
+                                    <button class="btn-destructive project-footer-interactive" onclick="this.closest('dialog').close()">
+                                        <i data-lucide="X"></i>
+                                        Fermer
+                                    </button>
+                                </footer>
+                            </div>
+                        </dialog>
                     </div>
                     <!-- GCL -->
-                    <div class="project-card group">
-                        <div class="pc-top">
-                            <i data-lucide="network" class="text-highlight flex items-center justify-center h-10 w-10"></i>
-                            <h2 class="pc-top-title">GCL</h2>
-                            <button aria-label="Ouvrir / Fermer la bulle" class="pc-toggle ml-auto hover:text-highlight"><i data-lucide="chevron-down" class=" h-8 w-8"></i></button>
-                        </div>
-                        <div class="pc-mid">
-                            <p>
-                                Ce projet personnel a pour but de créer un <strong>visualiseur d'aléatoire</strong> basé sur les nombres générés par un <strong>Générateur à congruence linéaire</strong> (LCG).
-                                En effet, cet algorithme est très connu dans la génération de <strong>nombres pseudo-aléatoires</strong> et était présent dans certaines versions de <strong>PHP</strong>.
-                                Malheureusement, celui-ci n'est pas considéré comme sécurisé cryptographiquement étant donné qu'une de ses variables utilise la génération précédente.
-                            </p>
-                        </div>
-                        <div class="pc-bot">
-                            <a href="https://lcg.valentinhrnd.fr/" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Mon projet LCG" data-tooltip="Voir le projet" data-side="top" data-align="center">
-                                <img alt="Image de couverture du projet" loading="lazy" width="514" height="289" class="w-full h-fit mb-3" src="/image/preview/preview_lcg.webp">
-                            </a>
-                            <div class="pc-bot-badges">
-                                <span class="badge">
-                                    <i class="w-4 h-4 m-1 text-red-500" data-lucide="shuffle"></i>
-                                    LCG
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
-                                    HTML
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
-                                    JavaScript
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
-                                    CSS
-                                </span>
+                    <div class="project personnel group">
+                        <button type="button" onclick="document.getElementById('perso-lcg-dialog').showModal()" aria-label="Voir les détails du projet" class="project-display">
+                            <img alt="Logo Active Directory" class="project-display-image rounded-2xl" width="96" height="96" src="/image/icons/lcg.webp">
+                            <h2 class="project-display-title">Générateur à congruence linéaire</h2>
+                            <div class="flex absolute right-5 bottom-5 items-center gap-2 text-zinc-400">
+                                <i data-lucide="book" class="w-4 h-4"></i>
+                                <span class="w-fit">Personnel</span>
                             </div>
-                        </div>
+                            <div class="flex absolute left-5 bottom-5 items-center gap-2 text-zinc-400">
+                                <i data-lucide="clock" class="w-4 h-4"></i>
+                                <span class="w-fit">2025</span>
+                            </div>
+                        </button>
+                        <dialog id="perso-lcg-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                            <div class="project-dialog-content">
+                                <header class="project-header">
+                                    <h2 class="project-header-title">Projet : <span class="text-highlight">GCL</span></h2>
+                                </header>
+                                <div class="project-body">
+                                    <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_lcg.webp">
+                                    <p class="project-bubble p-5">
+                                        Ce projet personnel a pour but de créer un visualiseur d'aléatoire basé sur les nombres générés par un Générateur à congruence linéaire (LCG).<br>
+                                        <br>
+                                        En effet, cet algorithme est très connu dans la génération de nombres pseudo-aléatoires et était présent dans certaines versions de PHP.<br>
+                                        <br>
+                                        Malheureusement, celui-ci n'est pas considéré comme sécurisé cryptographiquement, étant donné qu'une de ses variables utilise la génération précédente.<br>
+                                    </p>
+                                    <ul class="project-bubble">
+                                        <li class="project-bubble-title">
+                                            <p class="project-bubble-title-p border-green-500">Tech Stack</p>
+                                        </li>
+                                        <li class="flex flex-wrap gap-3 p-2">
+                                            <div class="badge">
+                                                <i class="w-4 h-4 m-1 text-red-500" data-lucide="shuffle"></i>
+                                                LCG
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
+                                                HTML
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
+                                                JavaScript
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
+                                                CSS
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <footer class="project-footer">
+                                    <a class="btn project-footer-interactive" href="https://lcg.valentinhrnd.fr/" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Page web du projet" data-tooltip="Voir la page web du projet" data-side="top" data-align="center">
+                                        <i data-lucide="link-2"></i>
+                                        Voir le projet
+                                    </a>
+                                    <button class="btn-destructive project-footer-interactive" onclick="this.closest('dialog').close()">
+                                        <i data-lucide="X"></i>
+                                        Fermer
+                                    </button>
+                                </footer>
+                            </div>
+                        </dialog>
                     </div>
                     <!-- GAME OF LIFE -->
-                    <div class="project-card group">
-                        <div class="pc-top">
-                            <p class="text-highlight">\\</p>
-                            <h2 class="pc-top-title">GAME OF LIFE</h2>
-                            <button aria-label="Ouvrir / Fermer la bulle" class="pc-toggle ml-auto hover:text-highlight"><i data-lucide="chevron-down" class=" h-8 w-8"></i></button>
-                        </div>
-                        <div class="pc-mid">
-                            <p>
-                                Ce projet personnel est une recréation du « Jeu de la vie », en <strong>JavaScript</strong>, en utilisant la bibliothèque graphique <strong>p5.js</strong>.
-                            </p>
-                        </div>
-                        <div class="pc-bot">
-                            <a href="https://gol.valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Mon projet GOL" data-tooltip="Voir le projet" data-side="top" data-align="center">
-                                <img alt="Image de couverture du projet" loading="lazy" width="514" height="289" class="w-full h-fit mb-3" src="/image/preview/preview_gol.webp">
-                            </a>
-                            <div class="pc-bot-badges">
-                                <span class="badge text-sm">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/p5dotjs.svg" alt="Logo p5.js" width="16" height="16">
-                                    p5.js
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
-                                    HTML
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
-                                    CSS
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
-                                    JavaScript
-                                </span>
+                    <div class="project personnel group">
+                        <button type="button" onclick="document.getElementById('perso-gol-dialog').showModal()" aria-label="Voir les détails du projet" class="project-display">
+                            <img alt="Logo Active Directory" class="project-display-image rounded-2xl" width="96" height="96" src="/image/icons/gol.webp">
+                            <h2 class="project-display-title">Game of Life</h2>
+                            <div class="flex absolute right-5 bottom-5 items-center gap-2 text-zinc-400">
+                                <i data-lucide="book" class="w-4 h-4"></i>
+                                <span class="w-fit">Personnel</span>
                             </div>
-                        </div>
+                            <div class="flex absolute left-5 bottom-5 items-center gap-2 text-zinc-400">
+                                <i data-lucide="clock" class="w-4 h-4"></i>
+                                <span class="w-fit">2025</span>
+                            </div>
+                        </button>
+                        <dialog id="perso-gol-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                            <div class="project-dialog-content">
+                                <header class="project-header">
+                                    <h2 class="project-header-title">Projet : <span class="text-highlight">Game of Life</span></h2>
+                                </header>
+                                <div class="project-body">
+                                    <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_gol.webp">
+                                    <p class="project-bubble p-5">
+                                        Ce projet personnel est une recréation du « Jeu de la vie », en JavaScript, en utilisant la bibliothèque graphique p5.js.<br>
+                                    </p>
+                                    <ul class="project-bubble">
+                                        <li class="project-bubble-title">
+                                            <p class="project-bubble-title-p border-green-500">Tech Stack</p>
+                                        </li>
+                                        <li class="flex flex-wrap gap-3 p-2">
+                                            <div class="badge text-sm">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/p5dotjs.svg" alt="Logo p5.js" width="16" height="16">
+                                                p5.js
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
+                                                HTML
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
+                                                CSS
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
+                                                JavaScript
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <footer class="project-footer">
+                                    <a class="btn project-footer-interactive" href="https://gol.valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Page web du projet" data-tooltip="Voir la page web du projet" data-side="top" data-align="center">
+                                        <i data-lucide="link-2"></i>
+                                        Voir le projet
+                                    </a>
+                                    <button class="btn-destructive project-footer-interactive" onclick="this.closest('dialog').close()">
+                                        <i data-lucide="X"></i>
+                                        Fermer
+                                    </button>
+                                </footer>
+                            </div>
+                        </dialog>
                     </div>
                     <!-- DÉCOUPAGE IPV4 -->
-                    <div class="project-card group">
-                        <div class="pc-top">
-                            <p class="text-highlight">\\</p>
-                            <h2 class="pc-top-title">DÉCOUPAGE IPV4</h2>
-                            <button aria-label="Ouvrir / Fermer la bulle" class="pc-toggle ml-auto hover:text-highlight"><i data-lucide="chevron-down" class=" h-8 w-8"></i></button>
-                        </div>
-                        <div class="pc-mid">
-                            <p>
-                                Un petit site web pour s'entraîner au <strong>découpage d'adresses IPv4</strong>.
-                            </p>
-                        </div>
-                        <div class="pc-bot">
-                            <a href="https://ip.valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Mon projet d'entraînement au découpage d'IPv4" data-tooltip="Voir le projet" data-side="top" data-align="center">
-                                <img alt="Image de couverture du projet" loading="lazy" width="514" height="289" class="w-full h-fit mb-3" src="/image/preview/preview_ip.webp">
-                            </a>
-                            <div class="pc-bot-badges">
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
-                                    HTML
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
-                                    JavaScript
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
-                                    CSS
-                                </span>
+                    <div class="project personnel group">
+                        <button type="button" onclick="document.getElementById('perso-ip-dialog').showModal()" aria-label="Voir les détails du projet" class="project-display">
+                            <img alt="Logo Active Directory" class="project-display-image rounded-2xl" width="96" height="96" src="/image/icons/ip.webp">
+                            <h2 class="project-display-title">Entraînement découpage IPv4</h2>
+                            <div class="flex absolute right-5 bottom-5 items-center gap-2 text-zinc-400">
+                                <i data-lucide="book" class="w-4 h-4"></i>
+                                <span class="w-fit">Personnel</span>
                             </div>
-                        </div>
+                            <div class="flex absolute left-5 bottom-5 items-center gap-2 text-zinc-400">
+                                <i data-lucide="clock" class="w-4 h-4"></i>
+                                <span class="w-fit">2025</span>
+                            </div>
+                        </button>
+                        <dialog id="perso-ip-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                            <div class="project-dialog-content">
+                                <header class="project-header">
+                                    <h2 class="project-header-title">Projet : <span class="text-highlight">Entraînement découpage IPv4</span></h2>
+                                </header>
+                                <div class="project-body">
+                                    <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_ip.webp">
+                                    <p class="project-bubble p-5">
+                                        Un petit site web pour s'entraîner au découpage d'adresses IPv4.<br>
+                                    </p>
+                                    <ul class="project-bubble">
+                                        <li class="project-bubble-title">
+                                            <p class="project-bubble-title-p border-green-500">Tech Stack</p>
+                                        </li>
+                                        <li class="flex flex-wrap gap-3 p-2">
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
+                                                HTML
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
+                                                JavaScript
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
+                                                CSS
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <footer class="project-footer">
+                                    <a class="btn project-footer-interactive" href="https://ip.valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Page web du projet" data-tooltip="Voir la page web du projet" data-side="top" data-align="center">
+                                        <i data-lucide="link-2"></i>
+                                        Voir le projet
+                                    </a>
+                                    <button class="btn-destructive project-footer-interactive" onclick="this.closest('dialog').close()">
+                                        <i data-lucide="X"></i>
+                                        Fermer
+                                    </button>
+                                </footer>
+                            </div>
+                        </dialog>
                     </div>
                     <!-- MATCH LOGGER V2 -->
-                    <div class="project-card group">
-                        <div class="pc-top">
-                            <p class="text-highlight">\\</p>
-                            <h2 class="pc-top-title">MATCH LOGGER V2</h2>
-                            <button aria-label="Ouvrir / Fermer la bulle" class="pc-toggle ml-auto hover:text-highlight"><i data-lucide="chevron-down" class=" h-8 w-8"></i></button>
-                        </div>
-                        <div class="pc-mid">
-                            <p>
-                                Ancien projet personnel dont l'objectif était de créer un bot <strong>Discord</strong> permettant d'afficher les statistiques d'un joueur sur sa dernière partie de <strong>League of Legends</strong>.
-                                Ce projet utilise l'<strong>API Riot Games</strong>, ainsi que <strong>JavaScript</strong> avec la bibliothèque <strong>discordjs</strong> pour l'envoi d'embeds sur <strong>Discord</strong>.
-                            </p>
-                        </div>
-                        <div class="pc-bot">
-                            <a href="https://github.com/Vahaz/match_logger_v2" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Page Github de mon projet MatchLoggerV2" data-tooltip="Ouvrir le projet sur Github" data-side="top" data-align="center">
-                                <img alt="Image de couverture du projet" loading="lazy" width="514" height="289" class="w-full h-fit mb-3" src="/image/preview/preview_matchlogger.webp">
-                            </a>
-                            <div class="pc-bot-badges">
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
-                                    JavaScript
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/discorddotjs.svg" alt="Logo discord.js" width="16" height="16">
-                                    discord.js
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/dotenv.svg" alt="Logo .ENV" width="16" height="16">
-                                    .ENV
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg" alt="Logo Node.js" width="16" height="16">
-                                    Node.js
-                                </span>
-                                <span class="badge">
-                                    <img class="w-4 h-4 m-1" src="/simpleicons/riotgames.svg" alt="Logo Riot Games API" width="16" height="16">
-                                    Riot Games API
-                                </span>
+                    <div class="project personnel group">
+                        <button type="button" onclick="document.getElementById('perso-mlv2-dialog').showModal()" aria-label="Voir les détails du projet" class="project-display">
+                            <img alt="Logo Active Directory" class="project-display-image rounded-2xl" width="96" height="96" src="/simpleicons/discorddotjs.svg">
+                            <h2 class="project-display-title">Match Logger V2</h2>
+                            <div class="flex absolute right-5 bottom-5 items-center gap-2 text-zinc-400">
+                                <i data-lucide="book" class="w-4 h-4"></i>
+                                <span class="w-fit">Personnel</span>
                             </div>
-                        </div>
+                            <div class="flex absolute left-5 bottom-5 items-center gap-2 text-zinc-400">
+                                <i data-lucide="clock" class="w-4 h-4"></i>
+                                <span class="w-fit">2025</span>
+                            </div>
+                        </button>
+                        <dialog id="perso-mlv2-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                            <div class="project-dialog-content">
+                                <header class="project-header">
+                                    <h2 class="project-header-title">Projet : <span class="text-highlight">Game of Life</span></h2>
+                                </header>
+                                <div class="project-body">
+                                    <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_matchlogger.webp">
+                                    <p class="project-bubble p-5">
+                                        Ancien projet personnel dont l'objectif était de créer un bot Discord permettant d'afficher les statistiques d'un joueur sur sa dernière partie de League of Legends.<br>
+                                        <br>
+                                        Ce projet utilise l'API Riot Games, ainsi que JavaScript avec la bibliothèque discordjs pour l'envoi d'embeds sur Discord.<br>
+                                    </p>
+                                    <ul class="project-bubble">
+                                        <li class="project-bubble-title">
+                                            <p class="project-bubble-title-p border-green-500">Tech Stack</p>
+                                        </li>
+                                        <li class="flex flex-wrap gap-3 p-2">
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
+                                                JavaScript
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/discorddotjs.svg" alt="Logo discord.js" width="16" height="16">
+                                                discord.js
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/dotenv.svg" alt="Logo .ENV" width="16" height="16">
+                                                .ENV
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg" alt="Logo Node.js" width="16" height="16">
+                                                Node.js
+                                            </div>
+                                            <div class="badge">
+                                                <img class="w-4 h-4 m-1" src="/simpleicons/riotgames.svg" alt="Logo Riot Games API" width="16" height="16">
+                                                Riot Games API
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <footer class="project-footer">
+                                    <a class="btn project-footer-interactive" href="https://github.com/Vahaz/match_logger_v2" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Page Github du projet" data-tooltip="Voir la page Github du projet" data-side="top" data-align="center">
+                                        <i data-lucide="link-2"></i>
+                                        Voir le projet
+                                    </a>
+                                    <button class="btn-destructive project-footer-interactive" onclick="this.closest('dialog').close()">
+                                        <i data-lucide="X"></i>
+                                        Fermer
+                                    </button>
+                                </footer>
+                            </div>
+                        </dialog>
                     </div>
                 </div>
             </div>
@@ -511,14 +724,8 @@
                 </button>
             </div>
         </dialog>
-        <footer class="flex flex-col items-center w-full text-center z-10 mt-20 pb-30 pt-5 md:p-5 bg-base-800 border-t border-base-400 text-secondary">
-            <div class="flex flex-row w-[80%] justify-center gap-10 md:gap-20 pb-5 border-b border-base-400">
-                <a href="/src/html/legal.html" hreflang="fr" lang="fr" target="_self" aria-label="Informations légales de mon Portfolio">Informations Légales</a>
-                <button class="cursor-pointer" aria-label="Formulaire de contact" type="button" onclick="document.getElementById('contact-dialog').showModal()">Formulaire de Contact</button>
-            </div>
-            <p class="mt-5 text-[#f4f6fb]">© 2026 - Hernandorena Valentin. Tous droits réservés.</p>
-        </footer>
         <script type="module" src="/src/js/main.js"></script>
         <script type="module" src="/src/js/contact.js"></script>
+        <script type="module" src="/src/js/canvas.js"></script>
     </body>
 </html>

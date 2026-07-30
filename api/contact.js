@@ -28,10 +28,10 @@ export default async function handler(req, res) {
 
     try {
         const { data, error } = await resend.emails.send({
-            from: "Portfolio <send@valentinhrnd.fr>",
+            from: "Contact - Portfolio <contact@valentinhrnd.fr>",
             to: "contact.valentinh@gmail.com",
             replyTo: email,
-            subject: "<Portfolio> Formulaire de Contact",
+            subject: "<Portfolio> Demande de Contact",
             text: message,
             html: `
                 <div style="font-family: sans-serif; padding: 20px;">

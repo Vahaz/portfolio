@@ -1,0 +1,8 @@
+/* TEAM */
+  Developer: Valentin Hernandorena
+  Contact: contact.valentinh@gmail.com
+  Github: https://github.com/Vahaz
+
+/* SITE */
+  Last update: 30/07/2026
+  Tech: HTML, CSS, JS, Vite.js, Docker, Vercel, TailwindCSS, Basecoat

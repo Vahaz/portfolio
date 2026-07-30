@@ -6,7 +6,7 @@
         <link rel="icon" href="/image/picture_128.webp" type="image/webp">
         <title>Portfolio - Veille</title>
         <!-- Web Search Engine -->
-        <meta name="robots" content="noindex, nofollow">
+        <meta name="robots" content="index, follow">
         <meta name="googlebot" content="none">
         <meta name="description" content="Portfolio de Valentin Hernandorena, étudiant en réseau, cybersécurité et informatique. Découvrez mes études, projets, veille technologique et compétences.">
         <script type="application/ld+json">
@@ -32,157 +32,117 @@
         <!-- Twitter / X -->
         <meta name="twitter:card" content="summary_large_image">
     </head>
-    <body class="bg-base-900 min-h-screen flex flex-col max-w-screen font-cascadia">
-        <nav class="fixed bottom-0 md:top-0 left-0 w-full z-100 pt-5 pointer-events-none">
-            <div class="pointer-events-auto hidden absolute left-0 gap-5 p-5 md:flex items-center w-26 hover:w-79 transition-all duration-300 ease-in-out  rounded-s-lg bg-base-700/50 backdrop-blur-sm rounded-full border border-base-400">
-                <img alt="Photo de profil" class="rounded-full ring-2 ring-base-400" src="/image/picture_60.webp" width="60" height="60">
-                <p class="overflow-hidden text-secondary text-[1.25rem] font-bold">VALENTIN <br> HERNANDORENA </p>
-            </div>
-            <div class="flex fixed bottom-0 left-0 w-full justify-around md:absolute md:top-0 md:right-15 md:bottom-auto md:left-auto md:w-fit items-center gap-10 mt-5 p-5 rounded-none md:rounded-full text-secondary bg-base-700 md:bg-base-700/50 backdrop-blur-sm border border-base-400 pointer-events-auto">
-                <a href="/index.html#" target="_self" hreflang="fr" lang="en" aria-label="À Propos De Moi" class="nav-a pointer-events-auto" data-tooltip="Accueil" data-side="bottom" data-align="center">
-                    <i class="w-8 h-8" data-lucide="home"></i>
-                </a>
-                <a href="/index.html#studies" target="_self" hreflang="fr" lang="en" aria-label="Mes Études" class="nav-a pointer-events-auto" data-tooltip="Mes Études" data-side="bottom" data-align="center">
-                    <i class="w-8 h-8" data-lucide="square-user"></i>
-                </a>
-                <a href="/src/html/project.html" target="_self" hreflang="fr" lang="en" aria-label="Mes Projets" class="nav-a pointer-events-auto" data-tooltip="Mes Projets" data-side="bottom" data-align="center">
-                    <i class="w-8 h-8" data-lucide="terminal"></i>
-                </a>
-                <a href="#" target="_self" hreflang="fr" lang="en" aria-label="Ma Veille Technologique" class="nav-a pointer-events-auto" data-tooltip="Veille Technologique" data-side="bottom" data-align="center">
-                    <i class="w-8 h-8" data-lucide="file-search-corner"></i>
-                </a>
-            </div>
-        </nav>
-        <main class="flex flex-col items-center text-secondary gap-y-20">
-            <div class="group relative w-full h-80 flex flex-col justify-center items-center overflow-hidden pt-20 mb-10 border-b border-base-400 shadow-xl/30">
-                <img class="absolute inset-0 w-full h-full object-cover -z-10" alt="Image de fond" src="/image/veille/photo-1451187580459-43490279c0fa.avif">
-                <div class="bg-base-900/50 backdrop-blur-sm rounded-2xl p-5">
-                    <h1 class="relative font-bold text-4xl max-sm:text-2xl md:text-6xl border-b border-amber-500 z-10 text-center">Les Fuites De Données</h1>
+    <body class="bg-base-900 min-h-screen flex max-w-screen font-cascadia">
+        <aside class="aside">
+            <div class="flex flex-col gap-6">
+                <div class="flex items-center gap-3 px-2 py-1 text-zinc-200 hover:text-white transition-colors">
+                    <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center">
+                        <img alt="Photo de profil" class="rounded-full ring-2 ring-base-400" src="/image/picture_60.webp" width="60" height="60">
+                    </div>
+                    <span class="text-base font-medium hover:underline">Portfolio</span>
                 </div>
-                <span class="absolute bottom-4 right-4 text-base-400/80 text-sm opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 italic">
-                    Crédit: <a class="cursor-pointer underline hover:text-secondary" href="https://unsplash.com/photos/photo-of-outer-space-Q1p7bh3SHj8" target="_blank" hreflang="en" lang="en" rel="noopener noreferrer" aria-label="Page Unsplash de l'image">NASA - Unsplash</a>
-                </span>
+                <nav class="flex flex-col gap-1">
+                    <a href="/index.html" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page d'accueil du site">
+                        <i data-lucide="home" class="w-4 h-4"></i>
+                        <span>Page d'accueil</span>
+                    </a>
+                    <a href="/src/html/about.html" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page a propos du site">
+                        <i data-lucide="user" class="w-4 h-4"></i>
+                        <span>À Propos</span>
+                    </a>
+                    <a href="/src/html/exp.html" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page expériences du site">
+                        <i data-lucide="library" class="w-4 h-4"></i>
+                        <span>Expériences</span>
+                    </a>
+                    <a href="/src/html/project.html" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page projets du site">
+                        <i data-lucide="terminal" class="w-4 h-4"></i>
+                        <span>Projets</span>
+                    </a>
+                    <a href="#" class="nav-selected" hreflang="fr" lang="fr" target="_self" aria-label="Page veille technologique du site">
+                        <i data-lucide="file-search-corner" class="w-4 h-4"></i>
+                        <span>Veille Tech.</span>
+                    </a>
+                </nav>
             </div>
-            <div class="bubble w-8/12! max-sm:w-full! max-sm:rounded-none!">
-                <h2 class="bubble-title m-auto border-green-500 ">La veille technologique ?</h2>
-                <p class="p-5 bg-base-800 rounded-2xl">
-                    La veille technologique est une partie essentielle de notre formation en BTS réseau / cybersécurité. <br>
-                    L'objectif est de connaître et de se tenir informé sur un sujet précis en rapport avec notre formation. <br>
-                    <br>
-                    <u>Ici, le sujet choisi porte sur les <strong>"Fuites de données"</strong>.</u> <br>
-                    <br>
-                    En effet, les fuites de données sont de plus en plus fréquentes et impactantes en France. <br>
-                    Les fuites de données arrivent tous les jours et concernent des milliers, voire des millions de personnes.
-                </p>
-            </div>
-            <div class="bubble w-8/12! max-sm:w-full! max-sm:rounded-none!">
-                <h2 class="bubble-title m-auto border-yellow-500">Qu'est-ce qu'une fuite de donnée ?</h2>
-                <p class="p-5 bg-base-800 rounded-2xl">
-                    Les fuites de données correspondent à une fuite d'informations confidentielles de clients ou salariés, provenant d'une entreprise, institution ou d'une administration. <br>
-                    <br>
-                    Par exemple, votre nom, prénom, âge, coordonnées bancaires peuvent fuiter et être disponibles gratuitement sur internet à cause d'une fuite de données provenant d'un fournisseur d'accès ou d'une banque. <br>
-                    <br>
-                    Dans la plupart des cas, les entités concernées préviennent les clients ou salariés du préjudice subi. <br>
-                    Malheureusement, ce n'est pas toujours le cas, l'entité peut décider de cacher volontairement ou non des informations. <br>
-                    Par exemple, une entreprise peut prévenir d'une attaque et d'une fuite de données concernant vos noms et prénoms en omettant la fuite de vos informations bancaires.
-                </p>
-            </div>
-            <div class="bubble w-8/12! max-sm:w-full! max-sm:rounded-none!">
-                <h2 class="bubble-title m-auto border-blue-500">Quelles sont les risques ?</h2>
-                <p class="p-5 bg-base-800 rounded-2xl">
-                    Plusieurs risques sont à prévoir en cas de fuite de données suivant les données impactées. <br>
-                    <br>
-                    Dans les scénarios d'arnaques, une situation d'urgence est créee pour éviter aux victimes d'avoir le temps de réfléchir. <br>
-                    Dans d'autres scénarios, une fausse situation intéressante est créee (gagnant d'un jeu concours, dons généreux, etc) pour inciter les victimes à tomber dans le piège. <br>
-                    Ou il peut s'agir de scénarios imprévus comme des découverts, virements suspects, etc. <br>
-                    <br>
-                    L'objectif de ces scénarios est de voler votre argent ou de récolter encore plus d'informations vous concernant pour les revendre ou les utiliser contre vous. <br>
-                    <br>
-                    Une fuite de données bancaires peut découler en attaques d'hameçonnages / arnaques par courriel ou téléphone. <br>
-                    Également, les pirates peuvent essayer d'usurper votre identité pour obtenir de l'argent ou gagner accès à vos comptes / applications. <br>
-                    <br>
-                    De nombreux scénarios d'arnaques existent. Allant des faux messages de colis reçus aux faux mails gagnants de concours, tous les scénarios sont possibles pour essayer de vous arnaquer. <br>
-                    <span class="text-base-400 hover:text-secondary float-right">Source : <a class="underline" href="https://www.cnil.fr/fr/cnil-direct/question/le-phishing-cest-quoi" target="_blank" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Le phising, c'est quoi ? - CNIL">Le phishing, c'est quoi ? - CNIL</a></span> <br>
-                </p>
-            </div>
-            <div class="bubble w-8/12! max-sm:w-full! max-sm:rounded-none!">
-                <h2 class="bubble-title m-auto border-red-500">Comment cela arrive-t-il ?</h2>
-                <p class="p-5 bg-base-800 rounded-2xl">
-                    Une fuite de données arrive de plusieurs façons. <br>
-                    <br>
-                    - Une mauvaise sécurisation des comptes employés de l'entreprise peut offrir un accès aux attaquants. <br>
-                    - Une fuite d'information provenant de l'intérieur de l'entreprise peut mener à l'obtention d'accès illégitime à l'entreprise. <br>
-                    - Un service tiers lié à l'entreprise qui offrirait les accès en échange d'argent. <br>
-                    - L'exploitation d'une brèche de sécurité dans l'entreprise qui offrirait un accès à l'intérieur de celle-ci. <br>
-                    - L'utilisation de logiciel daté et obsolète qui mène à l'exploitation de failles de sécurité. <br>
-                    - Une mauvaise sécurisation des transferts de données ou du stockage des données.
-                </p>
-            </div>
-            <div class="bubble w-8/12! max-sm:w-full! max-sm:rounded-none!">
-                <h2 class="bubble-title m-auto border-amber-500">Comment s'en protéger ?</h2>
-                <div class="p-5 bg-base-800 rounded-2xl">
-                    1. Changez vos mots de passe. <br>
-                    <p class="text-[#b2b3b4] pl-5">
-                        - Mot de passe fort et unique. (12 caractères, caractères spéciaux, chiffres et lettres majuscules/minuscules) <br>
-                        - Gestionnaire de mot de passe. (Génération et stockage de mot de passe) <br>
-                    </p>
-                    2. Activez la double authentification. (2FA) <br>
-                    <p class="text-[#b2b3b4] pl-5">
-                        - Via application. (Google Authenticator) <br>
-                        - Via un élément que seul vous avez. (application mobile, codes, empreintes digitales, etc) <br>
-                    </p>
-                    3. Surveillez vos comptes bancaires. <br>
-                    <p class="text-[#b2b3b4] pl-5">
-                        - Vérifiez les connexions récentes. <br>
-                        - Vérifiez l'historique des transactions. <br>
-                    </p>
-                    4. Vérifiez les accès et déconnectez les sessions. <br>
-                    <p class="text-[#b2b3b4] pl-5">
-                        - Vérifiez les connexions récentes. <br>
-                        - Retirer les appareils connectés à vos comptes. <br>
-                    </p>
-                    5. Méfiez-vous du phishing/arnaque via courriel. <br>
-                    <p class="text-[#b2b3b4] pl-5">
-                        - Suivez les <a class="underline" href="https://www.cnil.fr/fr/cnil-direct/question/arnaques-par-courriel-scam-phishing-quelles-precautions-prendre">recommandations de la CNIL</a>. <br>
-                        - Ne communiquez jamais vos informations personnelles ou bancaires. <br>
-                        - Repérer les erreurs d'orthographe / conjugaisons. <br>
-                        - Repérer les faux liens. (URL) <br>
-                        - Vérifier la légalité des propos. (exemple : jeux concours, bons de réduction en magasins, etc) <br>
-                    </p>
-                    6. Méfiez-vous du phishing/arnaque via SMS. <br>
-                    <p class="text-[#b2b3b4] pl-5">
-                        - Éviter de cliquer sur des liens étranges ou suspicieux. <br>
-                        - Ne communiquez jamais vos informations personnelles ou bancaires. <br>
-                        - Vérifier la légalité des propos. (exemple : jeux concours, bons de réduction en magasins, etc) <br>
-                    </p>
-                    7. Mettez en place des alertes. <br>
-                    <p class="text-[#b2b3b4] pl-5">
-                        - Tener-vous à jour des dernières fuites de données qui pourraient vous impacter. <br>
-                    </p>
-                    8. Bloquez les appels frauduleux.
-                    <p class="text-[#b2b3b4] pl-5">
-                        - Ne communiquez jamais vos informations personnelles ou bancaires. <br>
-                        - Ajouter son numéro à des listes officielles de blocage des démarchages téléphoniques. (exemple : <a class="underline" href="https://www.bloctel.gouv.fr/">bloctel</a>) <br>
-                    </p>
-                    <span class="text-base-400 hover:text-secondary float-right">Source: page <a class="underline" href="https://frenchbreaches.com/que-faire.php" target="_blank" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Page 'que faire?' - FrenchBreaches">"Que faire?"</a> du site <a class="underline" href="https://frenchbreaches.com/" target="_blank" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Site de FrenchBreaches">FrenchBreaches.com</a></span> <br>
+            <div class="flex flex-col gap-1 pt-4 border-t border-zinc-700">
+                <a href="/pdf/cv.pdf" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Mon CV format PDF" download="CV_Valentin_Hernandorena.pdf" type="application/pdf" class="group nav">
+                    <i data-lucide="download" class="group-hover:animate-bounce w-4 h-4"></i>
+                    <span>Mon CV</span>
+                </a>
+                <a href="/src/html/legal.html" hreflang="fr" lang="fr" target="_self" aria-label="Informations légales de mon Portfolio" class="nav">
+                    <i data-lucide="scale" class="w-4 h-4"></i>
+                    <span>Info. Légales</span>
+                </a>
+                <button class="nav cursor-pointer mb-4" aria-label="Formulaire de contact" type="button" onclick="document.getElementById('contact-dialog').showModal()">
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                    <span>Contact</span>
+                </button>
+                <div class="flex items-center gap-3 pt-4 px-3 py-2 text-sm border-t border-zinc-700">
+                    <span class="text-center ">Réalisé avec ❤️ par Valentin</span>
                 </div>
             </div>
-            <div class="flex flex-col items-center w-screen m-0 p-0">
-                <h2 class="m-auto mb-5 text-2xl border-b border-indigo-500 font-bold text-center">Vidéos et Sites utiles</h2>
-                <div class="flex flex-col md:flex-row items-center gap-5 mb-10">
-                    <a href="https://frenchbreaches.com" target="_blank" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Site de FrenchBreaches" data-tooltip="Site FrenchBreaches.com" data-side="bottom" data-align="center">
-                        <img alt="Logo FrenchBreaches" width="200" height="200" class="w-50 h-50 aspect-square hover:border hover:border-white" src="/image/veille/frenchbreaches_logo.webp">
-                    </a>
-                    <a href="https://bonjourlafuite.eu.org/" target="_blank" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Site de BonjourLaFuite" data-tooltip="Site BonjourLaFuite.eu.org" data-side="bottom" data-align="center">
-                        <img alt="Logo bonjourlafuite" width="200" height="200" class="w-50 h-50 aspect-square hover:border hover:border-white" src="/image/veille/bonjourlafuite_logo.webp">
-                    </a>
-                    <a href="https://haveibeenpwned.com" target="_blank" hreflang="en" lang="en" rel="noopener noreferrer" aria-label="Site de IHaveBeenPwned" data-tooltip="Site HaveIBeenPwned.com" data-side="bottom" data-align="center">
-                        <img alt="Logo HaveIBeenPwned" width="200" height="200" class="w-50 h-50 aspect-square hover:border hover:border-white" src="/image/veille/ihavebeenpwned_logo.webp">
-                    </a>
+        </aside>
+        <main class="grow text-secondary max-h-full">
+            <canvas class="canvas" id="background"></canvas>
+            <header class="header">
+                <i data-lucide="database" class="w-4 h-4"></i>
+                <p>Les fuites de données</p>
+            </header>
+            <div class="flex flex-col m-auto w-4xl my-5">
+                <div class="veille-card">
+                    <h2>1. La veille technologique ?</h2>
+                    <p>
+                        La veille technologique est une partie essentielle de notre formation en BTS SIO.
+                        L'objectif : se tenir informé sur un sujet en lien avec notre formation.
+                        <br>
+                        <br>
+                        Ici, le sujet choisi porte sur les <strong><u>« Fuites de données »</u></strong>.
+                        En effet, les fuites de données sont de plus en plus fréquentes et impactantes, surtout en France.
+                        <br>
+                        Celles-ci arrivent tous les jours et concernent des milliers, voire des millions de personnes.
+                    </p>
                 </div>
-                <div class="flex flex-col lg:flex-row items-center justify-center gap-5 w-full px-5">
-                    <iframe class= "w-full lg:w-[40%] rounded-2xl aspect-video" src="https://www.youtube-nocookie.com/embed/9wknq-Ra-KU?si=YSdjGTO4omxroF7r" title="Everything You Do in a Day That Leaks Data (And How To Fix It) - Proton" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <iframe class="w-full lg:w-[40%] rounded-2xl aspect-video" src="https://www.youtube-nocookie.com/embed/KkEMzsZG06Q?si=0vVmfbLTNuvwtaFe" title="Comment se protéger des fuites de données (avant qu'il soit trop tard) - overfl0w" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="veille-card">
+                    <h2>2. C'est quoi « une fuite de donnée » ?</h2>
+                    <p>
+                        Les fuites de données sont des fuites d'informations, souvent confidentielles, de clients ou salariés, provenant d'entreprises, d'institutions ou d'administrations.
+                        <br>
+                        <br>
+                        Par exemple, votre nom, prénom, âge, coordonnées bancaires peuvent se retrouver sur internet, suite à une fuite de données.
+                        <br>
+                        Dans la plupart des cas, les entités concernées préviennent les clients ou salariés du préjudice subi, ce qui n'est pas toujours le cas.
+                        <br>
+                    </p>
+                </div>
+                <div class="veille-card">
+                    <h2>3. Est-ce grave que mes informations aient fuité ?</h2>
+                    <p>
+                        Plusieurs risques sont à prévoir en cas de fuite de données, suivant les données impactées.
+                        Des personnes mal intentionnées pourraient chercher à arnaquer vos proches, ou toute autre entité, en usurpant votre identité.
+                        Dans d'autres cas, vos comptes pourraient être compromis et des achats ou versements involontaires pourraient être réalisés.<br>
+                        <span class="text-base-400 hover:text-secondary float-right">Source : <a class="underline" href="https://www.cnil.fr/fr/cnil-direct/question/le-phishing-cest-quoi" target="_blank" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Le phising, c'est quoi ? - CNIL">Le phishing, c'est quoi ? - CNIL</a></span> <br>
+                    </p>
+                </div>
+                <div class="veille-card">
+                    <h2>4. Comment cela arrive-t-il ?</h2>
+                    <p>
+                        Une fuite de données arrive de plusieurs façons. <br>
+                        <br>
+                        • Une mauvaise sécurisation du côté de l'entreprise pouvant alors offrir un accès aux attaquants. <br>
+                        • Une fuite d'information provenant de l'intérieur de l'entreprise peut mener à l'obtention d'accès illégitime à l'entreprise. <br>
+                        • L'exploitation d'une brèche de sécurité dans l'entreprise qui offrirait un accès à l'intérieur de celle-ci. <br>
+                        • L'utilisation de logiciel daté et obsolète qui mène à l'exploitation de failles de sécurité.
+                    </p>
+                </div>
+                <div class="veille-card">
+                    <h2>5. Que faire alors ?</h2>
+                    <p>
+                        1. Changez de mot de passe.<br>
+                        2. Activez la double authentification. (A2F)<br>
+                        3. Mettez à jour vos outils et logiciels.<br>
+                        4. Méfiez-vous du phishing/arnaque via courriel et SMS.<br>
+                        <span class="text-base-400 hover:text-secondary float-right">Source: <a class="underline" href="https://frenchbreaches.com/que-faire.php" target="_blank" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Page 'que faire?' - FrenchBreaches">"Que faire?"</a> - <a class="underline" href="https://frenchbreaches.com/" target="_blank" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Site de FrenchBreaches">FrenchBreaches.com</a></span> <br>
+                    </p>
                 </div>
             </div>
         </main>
@@ -247,14 +207,8 @@
                 </button>
             </div>
         </dialog>
-        <footer class="flex flex-col items-center w-full text-center z-10 mt-20 pb-30 pt-5 md:p-5 bg-base-800 border-t border-base-400 text-secondary">
-            <div class="flex flex-row w-[80%] justify-center gap-10 md:gap-20 pb-5 border-b border-base-400">
-                <a href="/src/html/legal.html" hreflang="fr" lang="fr" target="_self" aria-label="Informations légales de mon Portfolio">Informations Légales</a>
-                <button class="cursor-pointer" aria-label="Formulaire de contact" type="button" onclick="document.getElementById('contact-dialog').showModal()">Formulaire de Contact</button>
-            </div>
-            <p class="mt-5 text-[#f4f6fb]">© 2026 - Hernandorena Valentin. Tous droits réservés.</p>
-        </footer>
         <script type="module" src="/src/js/main.js"></script>
         <script type="module" src="/src/js/contact.js"></script>
+        <script type="module" src="/src/js/canvas.js"></script>
     </body>
 </html>

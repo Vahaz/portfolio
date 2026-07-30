@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
         <link rel="icon" href="/image/picture_128.webp" type="image/webp">
-        <title>Portfolio - Acceuil</title>
+        <title>Portfolio - 404 Not Found</title>
         <!-- Web Search Engine -->
         <meta name="robots" content="index, follow">
         <meta name="googlebot" content="index, follow">
@@ -42,7 +42,7 @@
                     <span class="text-base font-medium hover:underline">Portfolio</span>
                 </div>
                 <nav class="flex flex-col gap-1">
-                    <a href="#" class="nav-selected" hreflang="fr" lang="fr" target="_self" aria-label="Page d'accueil du site">
+                    <a href="/index.html" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page d'accueil du site">
                         <i data-lucide="home" class="w-4 h-4"></i>
                         <span>Page d'accueil</span>
                     </a>
@@ -85,12 +85,12 @@
         <main class="relative grow text-secondary max-h-full">
             <canvas class="canvas" id="background"></canvas>
             <header class="header">
-                <i data-lucide="home" class="w-4 h-4"></i>
-                <p>Page d'accueil</p>
+                <i data-lucide="globe-x" class="w-4 h-4"></i>
+                <p>Page introuvable</p>
             </header>
-            <div class="flex flex-col h-screen justify-center items-center text-2xl">
-                <p>Bienvenue sur mon Portfolio !</p>
-                <p class="text-zinc-500 mt-20">Rénovations en cours sur le site.</p>
+            <div class="relative flex h-screen justify-center items-center text-2xl">
+                <p>Désolé, la page demandée est introuvable.</p>
+                <p class="absolute text-center text-[25rem] font-cascadia text-base-800 -z-5">404</p>
             </div>
         </main>
         <dialog id="contact-dialog" class="dialog w-full sm:max-w-106.25 max-h-153" aria-labelledby="Formulaire de contact" aria-describedby="Formulaire de contact pour m'envoyer un courriel." onclick="if (event.target === this) this.close()">
