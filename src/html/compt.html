@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
         <link rel="icon" href="/image/picture_128.webp" type="image/webp">
-        <title>Portfolio - À propos</title>
+        <title>Portfolio - Compétences</title>
         <!-- Web Search Engine -->
         <meta name="robots" content="index, follow">
         <meta name="googlebot" content="all">
@@ -39,20 +39,24 @@
                     <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center">
                         <img alt="Photo de profil" class="rounded-full ring-2 ring-base-400" src="/image/picture_60.webp" width="60" height="60">
                     </div>
-                    <span class="text-base font-medium hover:underline">Portfolio</span>
+                    <span class="text-base font-medium hover:underline">Hernandorena <br> Valentin</span>
                 </div>
                 <nav class="flex flex-col gap-1">
                     <a href="/index.html" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page d'accueil du site">
                         <i data-lucide="home" class="w-4 h-4"></i>
-                        <span>Page d'accueil</span>
+                        <span>Accueil</span>
                     </a>
-                    <a href="#" class="nav-selected" hreflang="fr" lang="fr" target="_self" aria-label="Page a propos du site">
-                        <i data-lucide="user" class="w-4 h-4"></i>
-                        <span>À Propos</span>
+                    <a href="/src/html/study.html" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page a propos du site">
+                        <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                        <span>Formations</span>
                     </a>
                     <a href="/src/html/exp.html" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page expériences du site">
                         <i data-lucide="library" class="w-4 h-4"></i>
                         <span>Expériences</span>
+                    </a>
+                    <a href="#" class="nav-selected" hreflang="fr" lang="fr" target="_self" aria-label="Page expériences du site">
+                        <i data-lucide="user" class="w-4 h-4"></i>
+                        <span>Compétences</span>
                     </a>
                     <a href="/src/html/project.html" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page projets du site">
                         <i data-lucide="terminal" class="w-4 h-4"></i>
@@ -67,7 +71,7 @@
             <div class="flex flex-col gap-1 pt-4 border-t border-zinc-700">
                 <a href="/pdf/cv.pdf" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Mon CV format PDF" download="CV_Valentin_Hernandorena.pdf" type="application/pdf" class="group nav">
                     <i data-lucide="download" class="group-hover:animate-bounce w-4 h-4"></i>
-                    <span>Mon CV</span>
+                    <span>Téléchargé mon CV</span>
                 </a>
                 <a href="/src/html/legal.html" hreflang="fr" lang="fr" target="_self" aria-label="Informations légales de mon Portfolio" class="nav">
                     <i data-lucide="scale" class="w-4 h-4"></i>
@@ -78,18 +82,83 @@
                     <span>Contact</span>
                 </button>
                 <div class="flex items-center gap-3 pt-4 px-3 py-2 text-sm border-t border-zinc-700">
-                    <span class="text-center ">Réalisé avec ❤️ par Valentin</span>
+                    <span class="text-center w-full">Réalisé par Valentin</span>
                 </div>
             </div>
         </aside>
-        <main class="relative grow text-secondary max-h-full">
+        <main class="grow text-secondary max-h-full">
             <canvas class="canvas" id="background"></canvas>
             <header class="header">
                 <i data-lucide="user" class="w-4 h-4"></i>
-                <p>À propos de moi</p>
+                <p>Mes compétences</p>
             </header>
-            <div class="flex flex-col justify-center items-center text-3xl h-full">
-                <p>Cette page est en cours de construction.</p>
+            <div class="flex flex-col gap-5 items-center justify-center py-5">
+                <div class="w-200 flex flex-col bg-base-800/50 border-2 border-zinc-500/20 p-5 rounded backdrop-blur-xs flex gap-3 items-center">
+                    <div class="flex gap-5 justify-start w-full items-center">
+                        <img class="rounded lg:w-64 lg:h-24" width="128" height="48" src="/image/">
+                        <h2 class="text-sm lg:text-3xl">Titre</h2>
+                    </div>
+                    <div class="w-full">
+                        <div class="flex flex-row w-full text-font border-t-2 border-base-400 mt-3">
+                            <div class="w-[50%] mt-3">
+                                <div class="flex gap-2 items-center py-2 hover:text-white">
+                                    <i data-lucide="user" class="w-4 h-4"></i>
+                                    <p>Texte</p>
+                                </div>
+                                <div class="flex gap-2 items-center py-2 hover:text-white">
+                                    <i data-lucide="user" class="w-4 h-4"></i>
+                                    <p>Texte</p>
+                                </div>
+                            </div>
+                            <div class="w-[50%] mt-3">
+                                <div class="flex gap-2 justify-end items-center py-2 hover:text-white">
+                                    <p>Texte</p>
+                                    <i data-lucide="user" class="w-4 h-4"></i>
+                                </div>
+                                <div class="flex gap-2 justify-end items-center py-2 hover:text-white">
+                                    <p>Texte</p>
+                                    <i data-lucide="user" class="w-4 h-4"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-200 flex flex-col bg-base-800/50 border-2 border-zinc-500/20 p-5 rounded backdrop-blur-xs flex gap-3 items-center">
+                    <div class="flex gap-5 justify-start w-full items-center">
+                        <img class="rounded lg:w-64 lg:h-24" width="128" height="48" src="/image/">
+                        <h2 class="text-sm lg:text-3xl">Titre</h2>
+                    </div>
+                    <div class="w-full">
+                        <div class="flex flex-row w-full text-font border-t-2 border-base-400 mt-3">
+                            <div class="w-[50%] mt-3">
+                                <div class="flex gap-2 items-center py-2 hover:text-white">
+                                    <i data-lucide="user" class="w-4 h-4"></i>
+                                    <p>Texte</p>
+                                </div>
+                                <div class="flex gap-2 items-center py-2 hover:text-white">
+                                    <i data-lucide="user" class="w-4 h-4"></i>
+                                    <p>Texte</p>
+                                </div>
+                            </div>
+                            <div class="w-[50%] mt-3">
+                                <div class="flex gap-2 justify-end items-center py-2 hover:text-white">
+                                    <p>Texte</p>
+                                    <i data-lucide="user" class="w-4 h-4"></i>
+                                </div>
+                                <div class="flex gap-2 justify-end items-center py-2 hover:text-white">
+                                    <p>Texte</p>
+                                    <i data-lucide="user" class="w-4 h-4"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn hover:bg-white hover:text-black hover:border-base-900 border border-base-400">
+                        <i data-lucide="eye" class="w-4 h-4"></i>
+                        Tableau de compétences
+                    </button>
+                </div>
             </div>
         </main>
         <dialog id="contact-dialog" class="dialog w-full sm:max-w-106.25 max-h-153" aria-labelledby="Formulaire de contact" aria-describedby="Formulaire de contact pour m'envoyer un courriel." onclick="if (event.target === this) this.close()">

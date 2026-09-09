@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Send+Flowers&display=swap');
 @import "tailwindcss";
 @import "basecoat-css";
 @layer theme, base, components, utilities;
@@ -8,6 +8,8 @@
 @theme {
     --font-cascadia: "Cascadia Code", sans-serif;
     --font-montserrat: "Montserrat", sans-serif;
+    --font-jakarta: "Plus Jakarta Sans", sans-serif;
+    --font-send-flowers: "Send Flowers", cursive;
     --color-base-999: #0d0d0d;  /* Aside      */
     --color-base-900: #181716;  /* Background */
     --color-base-800: #2a2727;  /* Container  */
@@ -23,7 +25,7 @@
 /* Global Styles */
 
 .canvas {
-    @apply h-full w-full inset-0 -z-100 absolute;
+    @apply min-h-full w-full inset-0 -z-100 absolute;
 }
 
 .header {
@@ -31,15 +33,15 @@
 }
 
 .aside {
-    @apply w-64 h-screen bg-base-999 text-zinc-300 flex flex-col justify-between sticky top-0 shrink-0 p-4 border-r border-font/20 font-cascadia select-none;
+    @apply hidden md:flex w-64 h-screen bg-base-999 text-zinc-300 flex-col justify-between sticky top-0 shrink-0 p-4 border-r border-font/20 font-cascadia select-none;
 }
 
 .nav {
-    @apply flex items-center gap-3 px-3 py-2 rounded-md text-sm hover:bg-zinc-800/50 hover:text-zinc-200 transition-all;
+    @apply flex items-center gap-3 px-3 py-2 rounded-md text-base hover:bg-zinc-800/50 hover:text-zinc-200 transition-all;
 }
 
 .nav-selected {
-    @apply flex items-center gap-3 px-3 py-2 rounded-md text-sm bg-zinc-800/80 text-white font-medium;
+    @apply flex items-center gap-3 px-3 py-2 rounded-md text-base bg-zinc-800/80 text-white font-medium;
 }
 
 /* Project Card CSS */
@@ -50,7 +52,7 @@
 }
 
 .project {
-    @apply flex justify-center bg-slate-200/10 rounded-3xl py-5 backdrop-filter backdrop-blur-xs border border-gray-500 hover:border-white transition-all aspect-square min-w-60 max-w-60 min-h-75 max-h-75;
+    @apply flex justify-center bg-base-900/20 rounded-3xl py-5 backdrop-filter backdrop-blur-xs border border-white/20 hover:border-white transition-all aspect-square min-w-60 max-w-60 min-h-75 max-h-75;
 }
 
 .cours {
@@ -73,9 +75,6 @@
     @apply mt-5 text-2xl font-bold group-hover:text-white;
 }
 
-.project-dialog {
-    @apply w-[95%] sm:max-w-2xl max-h-[90vh] overflow-y-auto;
-}
 
 .project-dialog-content {
     @apply bg-base-800 text-secondary border-base-400 p-5 md:p-10 flex flex-col gap-y-8;

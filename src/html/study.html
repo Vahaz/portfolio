@@ -4,10 +4,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
         <link rel="icon" href="/image/picture_128.webp" type="image/webp">
-        <title>Portfolio - Acceuil</title>
+        <title>Portfolio - Formations</title>
         <!-- Web Search Engine -->
         <meta name="robots" content="index, follow">
-        <meta name="googlebot" content="index, follow">
+        <meta name="googlebot" content="all">
         <meta name="description" content="Portfolio de Valentin Hernandorena, étudiant en réseau, cybersécurité et informatique. Découvrez mes études, projets, veille technologique et compétences.">
         <script type="application/ld+json">
             {
@@ -42,11 +42,11 @@
                     <span class="text-base font-medium hover:underline">Hernandorena <br> Valentin</span>
                 </div>
                 <nav class="flex flex-col gap-1">
-                    <a href="#" class="nav-selected" hreflang="fr" lang="fr" target="_self" aria-label="Page d'accueil du site">
+                    <a href="/index.html" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page d'accueil du site">
                         <i data-lucide="home" class="w-4 h-4"></i>
                         <span>Accueil</span>
                     </a>
-                    <a href="/src/html/study.html" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page a propos du site">
+                    <a href="#" class="nav-selected" hreflang="fr" lang="fr" target="_self" aria-label="Page a propos du site">
                         <i data-lucide="graduation-cap" class="w-4 h-4"></i>
                         <span>Formations</span>
                     </a>
@@ -86,42 +86,142 @@
                 </div>
             </div>
         </aside>
-        <main class="relative grow text-secondary max-h-full">
+        <main class="grow text-secondary max-h-full">
             <canvas class="canvas" id="background"></canvas>
             <header class="header">
-                <i data-lucide="home" class="w-4 h-4"></i>
-                <p>Page d'accueil</p>
+                <i data-lucide="library" class="w-4 h-4"></i>
+                <p>Mes formations</p>
             </header>
-            <div class="h-fit gap-10 w-full flex flex-col mt-50">
-                <div class="bg-base-800 overflow-hidden rounded-b-md mx-10 xl:mx-100 border-2 border-base-400/10 font-semibold font-montserrat">
-                    <div class="flex justify-center items-center m-3 gap-3">
-                        <img src="./image/picture_128.webp" width="128" height="128" class="h-32 w-32 rounded">
-                        <div class="text-5xl">
-                            <h2>Hernandorena <br> Valentin</h2>
-                            <div class="border-b-4 border-base-400"></div>
+            <div class="flex flex-col gap-5 items-center justify-center py-5">
+                <div class="w-200 flex flex-col bg-base-800/50 border-2 border-zinc-500/20 p-5 rounded backdrop-blur-xs flex gap-3 items-center">
+                    <div class="flex gap-5 justify-start w-full items-center">
+                        <img class="rounded lg:w-64 lg:h-32" width="128" height="64" src="/image/exp/logo_lycee_theodore_aubanel.webp">
+                        <h2 class="text-sm lg:text-3xl">BTS Services Informatiques <br> aux Organisations</h2>
+                    </div>
+                    <div class="w-full">
+                        <div class="flex flex-row w-full text-font border-t-2 border-base-400 mt-3">
+                            <div class="w-[50%] mt-3">
+                                <div class="flex gap-2 items-center py-2 hover:text-white">
+                                    <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                                    <a class="underline-offset-4 hover:underline" href="https://www.site.ac-aix-marseille.fr/lyc-aubanel/spip/" hreflang="fr" aria-label="Site web du lycée" data-tooltip="Site web du lycée" data-side="bottom" data-align="center">Lycée Théodore Aubanel</a>
+                                </div>
+                                <div class="flex gap-2 items-center py-2 hover:text-white">
+                                    <i data-lucide="clock" class="w-4 h-4"></i>
+                                    <p>2025 - 2027 <span class="text-sm text-zinc-500">(2ans)</span></p>
+                                </div>
+                            </div>
+                            <div class="w-[50%] mt-3">
+                                <div class="flex gap-2 justify-end items-center py-2 hover:text-white">
+                                    <p>Option SISR</p>
+                                    <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                                </div>
+                                <div class="flex gap-2 justify-end items-center py-2 hover:text-white">
+                                    <p>Avignon</p>
+                                    <i data-lucide="pin" class="w-4 h-4"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="bg-base-800 overflow-hidden rounded mx-10 xl:mx-100 border-base-400/10 font-semibold font-montserrat">
-                    <p class="p-10 overflow-clip">
-                        <ins>Bienvenue sur mon portfolio !</ins> <br>
-                        <br>
-                        Étudiant et passioné par l'informatique, j'adore me lancer dans de nouveaux projets. <br>
-                        Actuellement, je suis en 2ème année de BTS SIO dans le réseau et la cybersécurité pour approfondir mes connaissances en informatique. <br>
-                        Dans le futur, je prévois de continuer mes études vers un BAC+3.
-
-                    </p>
-                </div>
-                <div class="bg-base-800 overflow-hidden rounded mx-10 xl:mx-100 border-base-400/10 font-semibold font-montserrat">
-                    <div class="flex justify-center gap-5 items-center p-3">
-                        <a class="btn" href="/pdf/cv.pdf" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Mon CV format PDF" download="CV_Valentin_Hernandorena.pdf" type="application/pdf">Mon CV <i data-lucide="download" class="w-4 h-4"></i></a>
-                        <a class="btn">Github <img class="w-4 h-4 ml-1 inline" src="/public/simpleicons/github.svg"></a>
-                        <a class="btn">Gitlab <img class="w-4 h-4 ml-1 inline" src="/public/simpleicons/gitlab.svg"></a>
+                <div class="w-200 flex flex-col bg-base-800/50 border-2 border-zinc-500/20 p-5 rounded backdrop-blur-xs flex gap-3 items-center">
+                    <div class="flex gap-5 justify-start w-full items-center">
+                        <img class="rounded lg:w-50 lg:h-32 p-2" width="128" height="128" src="/image/exp/logo_cned.webp">
+                        <h2 class="text-sm lg:text-3xl">BTS Services Informatiques <br> aux Organisations</h2>
+                    </div>
+                    <div class="w-full">
+                        <div class="flex flex-row w-full text-font border-t-2 border-base-400 mt-3">
+                            <div class="w-[50%] mt-3">
+                                <div class="flex gap-2 items-center py-2 hover:text-white">
+                                    <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                                    <a class="underline-offset-4 hover:underline"
+                                    href="www.cned.fr/" hreflang="fr"
+                                    aria-label="Site web du lycée" data-tooltip="Site web de la formation" data-side="bottom" data-align="center"
+                                    >Distanciel</a>
+                                </div>
+                                <div class="flex gap-2 items-center py-2 hover:text-white">
+                                    <i data-lucide="clock" class="w-4 h-4"></i>
+                                    <p>2023 - 2024 <span class="text-sm text-zinc-500">(1an)</span></p>
+                                </div>
+                            </div>
+                            <div class="w-[50%] mt-3">
+                                <div class="flex gap-2 text-red-400 justify-end items-center py-2 hover:text-white">
+                                    <p>Formation non finalisée</p>
+                                    <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                                </div>
+                                <div class="flex gap-2 justify-end items-center py-2 hover:text-white">
+                                    <p>Avignon</p>
+                                    <i data-lucide="pin" class="w-4 h-4"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="absolute bottom-5 w-full justify-center items-center text-xl md:text-2xl gap-3">
-                <p class="text-center text-5xl text-zinc-500 font-send-flowers tracking-widest">Bienvenue</p>
+                <div class="w-200 flex flex-col bg-base-800/50 border-2 border-zinc-500/20 p-5 rounded backdrop-blur-xs flex gap-3 items-center">
+                    <div class="flex gap-5 justify-start w-full items-center">
+                        <img class="rounded lg:w-32 lg:h-32 p-2" width="64" height="64" src="/image/exp/logo_universite_avignon.svg">
+                        <h2 class="text-sm lg:text-3xl">Licence Informatique</h2>
+                    </div>
+                    <div class="w-full">
+                        <div class="flex flex-row w-full text-font border-t-2 border-base-400 mt-3">
+                            <div class="w-[50%] mt-3">
+                                <div class="flex gap-2 items-center py-2 hover:text-white">
+                                    <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                                    <a class="underline-offset-4 hover:underline"
+                                    href="https://univ-avignon.fr" hreflang="fr"
+                                    aria-label="Site web du lycée" data-tooltip="Site web de l'université" data-side="bottom" data-align="center"
+                                    >Université d'Avignon</a>
+                                </div>
+                                <div class="flex gap-2 items-center py-2 hover:text-white">
+                                    <i data-lucide="clock" class="w-4 h-4"></i>
+                                    <p>2022 - 2023 <span class="text-sm text-zinc-500">(1an)</span></p>
+                                </div>
+                            </div>
+                            <div class="w-[50%] mt-3">
+                                <div class="flex gap-2 text-red-400 justify-end items-center py-2 hover:text-white">
+                                    <p>Formation non finalisée</p>
+                                    <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                                </div>
+                                <div class="flex gap-2 justify-end items-center py-2 hover:text-white">
+                                    <p>Avignon</p>
+                                    <i data-lucide="pin" class="w-4 h-4"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-200 flex flex-col bg-base-800/50 border-2 border-zinc-500/20 p-5 rounded backdrop-blur-xs flex gap-3 items-center">
+                    <div class="flex gap-5 justify-start w-full items-center">
+                        <img class="rounded lg:w-70 lg:h-32 p-2 bg-white" width="280" height="64" src="/image/exp/logo_lycee_jean_villar.svg">
+                        <h2 class="text-sm lg:text-3xl">BAC Général <br> option  Mathématique & <br> Physique-Chimie</h2>
+                    </div>
+                    <div class="w-full">
+                        <div class="flex flex-row w-full text-font border-t-2 border-base-400 mt-3">
+                            <div class="w-[50%] mt-3">
+                                <div class="flex gap-2 items-center py-2 hover:text-white">
+                                    <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                                    <a class="underline-offset-4 hover:underline"
+                                    href="https://jeanvilar.net" hreflang="fr"
+                                    aria-label="Site web du lycée" data-tooltip="Site web du lycée" data-side="bottom" data-align="center"
+                                    >Lycée Jean Villar</a>
+                                </div>
+                                <div class="flex gap-2 items-center py-2 hover:text-white">
+                                    <i data-lucide="clock" class="w-4 h-4"></i>
+                                    <p>2019 - 2022 <span class="text-sm text-zinc-500">(3ans)</span></p>
+                                </div>
+                            </div>
+                            <div class="w-[50%] mt-3">
+                                <div class="flex gap-2 justify-end items-center py-2 hover:text-white">
+                                    <p>+ Option AMC en 1ère</p>
+                                    <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                                </div>
+                                <div class="flex gap-2 justify-end items-center py-2 hover:text-white">
+                                    <p>Villeneuve-lès-Avignon</p>
+                                    <i data-lucide="pin" class="w-4 h-4"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
         <dialog id="contact-dialog" class="dialog w-full sm:max-w-106.25 max-h-153" aria-labelledby="Formulaire de contact" aria-describedby="Formulaire de contact pour m'envoyer un courriel." onclick="if (event.target === this) this.close()">

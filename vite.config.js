@@ -9,14 +9,14 @@ export default defineConfig({
         tailwindcss(),
         Sitemap({
             hostname: 'https://valentinhrnd.fr',
-            dynamicRoutes: ['/src/html/about', '/src/html/exp', '/src/html/legal', '/src/html/project', '/src/html/veille']
+            dynamicRoutes: ['/src/html/study', '/src/html/exp', '/src/html/legal', '/src/html/project', '/src/html/veille']
         })
     ],
     build: {
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
-                about: resolve(__dirname, 'src/html/about.html'),
+                study: resolve(__dirname, 'src/html/study.html'),
                 exp: resolve(__dirname, 'src/html/exp.html'),
                 legal: resolve(__dirname, 'src/html/legal.html'),
                 project: resolve(__dirname, 'src/html/project.html'),
