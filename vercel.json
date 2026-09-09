@@ -1,3 +1,11 @@
 {
-    "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/study", "destination": "/src/html/study" },
+    { "source": "/exp", "destination": "/src/html/exp" },
+    { "source": "/compt", "destination": "/src/html/compt" },
+    { "source": "/legal", "destination": "/src/html/legal" },
+    { "source": "/project", "destination": "/src/html/project" },
+    { "source": "/veille", "destination": "/src/html/veille" }
+  ]
 }
