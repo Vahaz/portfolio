@@ -4,12 +4,12 @@ import { resolve } from 'path';
 import Sitemap from 'vite-plugin-sitemap';
 
 export default defineConfig({
-    base: './',
+    base: '/',
     plugins: [
         tailwindcss(),
         Sitemap({
             hostname: 'https://valentinhrnd.fr',
-            dynamicRoutes: ['/src/html/study', '/src/html/exp', '/src/html/legal', '/src/html/project', '/src/html/veille']
+            dynamicRoutes: ['/study', '/exp', '/compt', '/legal', '/project', '/veille']
         })
     ],
     build: {
@@ -17,6 +17,7 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'index.html'),
                 study: resolve(__dirname, 'src/html/study.html'),
+                compt: resolve(__dirname, 'src/html/compt.html'),
                 exp: resolve(__dirname, 'src/html/exp.html'),
                 legal: resolve(__dirname, 'src/html/legal.html'),
                 project: resolve(__dirname, 'src/html/project.html'),
