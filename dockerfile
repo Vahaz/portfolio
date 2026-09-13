@@ -19,4 +19,4 @@ ENV VERCEL_TELEMETRY_DISABLED=1
 
 EXPOSE 3000 24678
 
-CMD npx vercel dev --listen 0.0.0.0:3000 --yes --token $VERCEL_TOKEN
+CMD ["npm", "run", "vercel"]

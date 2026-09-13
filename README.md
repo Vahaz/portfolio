@@ -19,7 +19,29 @@ Please do not reuse the design or personal content.
 ```
 - See [LICENCE](/LICENCE) for more information.
 
+## 🚨 MEMO : RUN IN LOCAL
+
+```yml
+If you want to run this project in local without admin privileges or a VM, you need :
+- [Node.js standalone binaries](https://nodejs.org/en/download/current)
+
+Then, run the following to add node standalone binaries to the environment variables :
+
+- Powershell run: $env:Path = "path_to_node_folder;" + $env:Path
+or
+- CMD run: set PATH=path_to_node_folder
+
+If the CMD tells you that unsigned scripts can not be executed then run the following to allow then in your current CMD :
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+
+Now you can install node dependencies with :
+npm install
+
+And run the project with :
+npm run dev
+```
+
 ## 📨 CONTACT
 
 - To reach me via email : [contact.valentinh@gmail.com](mailto:contact.valentinh@gmail.com) <br>
-- Portfolio link : [valentinhrnd.fr](https://valentinhrnd.fr)
+- My Portfolio : [valentinhrnd.fr](https://valentinhrnd.fr)
