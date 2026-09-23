@@ -10,7 +10,6 @@ const vercelRewrites = () => ({
             const rewrites = {
                 '/study': '/src/html/study.html',
                 '/exp': '/src/html/exp.html',
-                '/compt': '/src/html/compt.html',
                 '/legal': '/src/html/legal.html',
                 '/project': '/src/html/project.html',
                 '/veille': '/src/html/veille.html'
@@ -30,7 +29,7 @@ export default defineConfig({
         tailwindcss(),
         Sitemap({
             hostname: 'https://valentinhrnd.fr',
-            dynamicRoutes: ['/study', '/exp', '/compt', '/legal', '/project', '/veille']
+            dynamicRoutes: ['/study', '/exp', '/legal', '/project', '/veille']
         }),
         vercelRewrites()
     ],
@@ -39,7 +38,6 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'index.html'),
                 study: resolve(__dirname, 'src/html/study.html'),
-                compt: resolve(__dirname, 'src/html/compt.html'),
                 exp: resolve(__dirname, 'src/html/exp.html'),
                 legal: resolve(__dirname, 'src/html/legal.html'),
                 project: resolve(__dirname, 'src/html/project.html'),

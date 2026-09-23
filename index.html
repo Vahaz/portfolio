@@ -31,6 +31,8 @@
         <meta property="og:type" content="website">
         <!-- Twitter / X -->
         <meta name="twitter:card" content="summary_large_image">
+        <!-- Cloudflare Turnstile -->
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     </head>
     <body class="bg-base-900 min-h-screen flex max-w-screen font-cascadia">
         <aside class="aside">
@@ -54,13 +56,9 @@
                         <i data-lucide="library" class="w-4 h-4"></i>
                         <span>Expériences</span>
                     </a>
-                    <a href="/compt" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page expériences du site">
-                        <i data-lucide="user" class="w-4 h-4"></i>
-                        <span>Compétences</span>
-                    </a>
-                    <a href="/project" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page projets du site">
+                    <a href="/project" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page compétences du site">
                         <i data-lucide="terminal" class="w-4 h-4"></i>
-                        <span>Projets</span>
+                        <span>Compétences</span>
                     </a>
                     <a href="/veille" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page veille technologique du site">
                         <i data-lucide="file-search-corner" class="w-4 h-4"></i>
@@ -93,31 +91,22 @@
                 <p>Page d'accueil</p>
             </header>
             <div class="h-fit gap-10 w-full flex flex-col mt-50">
-                <div class="bg-base-800 overflow-hidden rounded-b-md mx-10 xl:mx-20 border-2 border-base-400/10 font-semibold font-montserrat">
+                <div class="overflow-hidden font-semibold font-montserrat">
                     <div class="flex justify-center items-center m-3 gap-3">
-                        <img src="./image/picture_128.webp" width="128" height="128" class="h-32 w-32 rounded">
-                        <div class="text-5xl">
-                            <h2>Hernandorena <br> Valentin</h2>
+                        <img src="./image/picture_2_128.webp" width="128" height="128" class="h-32 w-32 rounded">
+                        <div class="text-5xl/15 ml-3">
+                            <h2>Valentin <br> Hernandorena</h2>
                             <div class="border-b-4 border-base-400"></div>
                         </div>
                     </div>
                 </div>
-                <div class="bg-base-800 overflow-hidden rounded mx-10 xl:mx-20 border-base-400/10 font-semibold font-montserrat">
+                <div class="bg-base-900/20 backdrop-blur-xs overflow-hidden rounded mx-10 xl:mx-20 border-base-400/10 font-semibold font-montserrat">
                     <p class="p-10 overflow-clip">
-                        <ins>Bienvenue sur mon portfolio !</ins> <br>
-                        <br>
                         Étudiant et passioné par l'informatique, j'adore me lancer dans de nouveaux projets. <br>
                         Actuellement, je suis en 2ème année de BTS SIO dans le réseau et la cybersécurité pour approfondir mes connaissances en informatique. <br>
                         Dans le futur, je prévois de continuer mes études vers un BAC+3.
-
                     </p>
-                </div>
-                <div class="bg-base-800 overflow-hidden rounded mx-10 xl:mx-20 border-base-400/10 font-semibold font-montserrat">
-                    <div class="flex justify-center gap-5 items-center p-3">
-                        <a class="btn" href="/pdf/cv.pdf" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Mon CV format PDF" download="CV_Valentin_Hernandorena.pdf" type="application/pdf">Mon CV <i data-lucide="download" class="w-4 h-4"></i></a>
-                        <a class="btn">Github <img class="w-4 h-4 ml-1 inline" src="/simpleicons/github.svg"></a>
-                        <a class="btn">Gitlab <img class="w-4 h-4 ml-1 inline" src="/simpleicons/gitlab.svg"></a>
-                    </div>
+                    <!-- <a class="btn" href="/pdf/cv.pdf" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Mon CV format PDF" download="CV_Valentin_Hernandorena.pdf" type="application/pdf">Mon CV <i data-lucide="download" class="w-4 h-4"></i></a> -->
                 </div>
             </div>
             <div class="absolute bottom-5 w-full justify-center items-center text-xl md:text-2xl gap-3 -z-100">
@@ -159,6 +148,7 @@
                                 </p>
                             </div>
                         </div>
+                        <div class="cf-turnstile" data-sitekey="0x4AAAAAAE9FnurnPLfT4blL"></div>
                         <div>
                             <input id="hp" class="hidden" type="text" name="hp" tabindex="-1" autocomplete="off">
                         </div>

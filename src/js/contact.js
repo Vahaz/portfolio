@@ -46,11 +46,22 @@ function setButtonStatus(status) {
 const form = document.getElementById("form");
 const btn = document.getElementById("form-submit");
 const formErrorMsg = document.getElementById("form-error");
+
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    // Honeypot anti bot
-    if (document.getElementById("hp").value != "") {
+    // Honeypot anti-bot local
+    if (document.getElementById("hp").value !== "") {
+        setButtonStatus("error");
+        formErrorMsg.classList.replace("hidden", "block");
+        return;
+    }
+
+    // Turnstile token
+    const formData = new FormData(form);
+    const turnstileToken = formData.get("cf-turnstile-response");
+
+    if (!turnstileToken) {
         setButtonStatus("error");
         formErrorMsg.classList.replace("hidden", "block");
         return;
@@ -61,8 +72,9 @@ form.addEventListener("submit", async (e) => {
 
     const data = {
         email: document.getElementById("form-mail").value,
-        message: document.getElementById("form-textarea").value
-    }
+        message: document.getElementById("form-textarea").value,
+        token: turnstileToken
+    };
 
     try {
         const response = await fetch("/api/contact", {
@@ -92,6 +104,7 @@ form.addEventListener("submit", async (e) => {
             btn.disabled = false;
             formErrorMsg.classList.replace("block", "hidden");
             setButtonStatus("send");
+            if (window.turnstile) window.turnstile.reset();
         }, 5000);
     }
 });

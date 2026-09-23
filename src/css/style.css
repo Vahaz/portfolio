@@ -52,19 +52,11 @@
 }
 
 .project {
-    @apply flex justify-center bg-base-900/20 rounded-3xl py-5 backdrop-filter backdrop-blur-xs border border-white/20 hover:border-white transition-all aspect-square min-w-60 max-w-60 min-h-75 max-h-75;
-}
-
-.cours {
-    @apply border-zinc-500;
-}
-
-.personnel {
-    @apply border-slate-500;
+    @apply flex justify-center bg-base-900/20 rounded-3xl py-5 backdrop-filter backdrop-blur-xs border border-white/20 hover:border-white transition-all aspect-square min-w-60 max-w-60 min-h-60 max-h-60;
 }
 
 .project-display {
-    @apply flex flex-col items-center cursor-pointer;
+    @apply flex flex-col items-center cursor-pointer w-full;
 }
 
 .project-display-image {
@@ -75,17 +67,8 @@
     @apply mt-5 text-2xl font-bold group-hover:text-white;
 }
 
-
 .project-dialog-content {
-    @apply bg-base-800 text-secondary border-base-400 p-5 md:p-10 flex flex-col gap-y-8;
-}
-
-.project-header {
-    @apply flex flex-row items-center justify-between border-b border-base-400 pb-4;
-}
-
-.project-header-title {
-    @apply text-3xl font-bold font-montserrat;
+    @apply bg-base-900/20 backdrop-blur-sm text-secondary border-white/20 md:p-5 flex flex-col gap-y-8;
 }
 
 .project-body {
@@ -93,37 +76,21 @@
 }
 
 .project-image {
-    @apply w-full border rounded-2xl p-2 border-base-400 bg-[#121212];
+    @apply w-full border rounded p-2 border-white/20 bg-[#121212];
 }
 
-.project-bubble {
-    @apply flex flex-col gap-y-3 rounded-2xl bg-base-700 border border-base-400 w-full;
-}
-
-.project-bubble-item {
-    @apply flex items-center gap-5 p-2 odd:bg-base-500;
-}
-
-.project-bubble-title {
-    @apply w-full bg-base-900 p-2 rounded-t-2xl;
-}
-
-.project-bubble-title-p {
-    @apply text-xl font-bold mb-3 w-fit border-b m-auto;
+.project-desc {
+    @apply flex flex-col gap-y-3 rounded p-5 bg-base-700/20 border border-white/20 w-full;
 }
 
 .project-footer {
     @apply flex justify-between;
 }
 
-.project-footer-interactive {
-    @apply px-10 py-3 rounded-xl font-bold;
-}
-
 /* Basecoat Components */
 
 .badge {
-    @apply font-cascadia text-sm hover:bg-base-100 hover:text-black mt-0!;
+    @apply font-cascadia text-sm hover:bg-base-100 hover:text-black mt-0! rounded!;
 }
 
 .btn-destructive {
@@ -133,13 +100,17 @@
 /* veille.html */
 
 .veille-card {
-    @apply bg-zinc-900 wrap-break-word p-5 mt-5 border border-zinc-400/20;
+    @apply flex flex-row bg-base-800/50 rounded p-5 border border-white/20;
 }
 
-.veille-card > h2 {
-    @apply text-xl font-bold py-2 mb-3 border-b border-zinc-500;
+.veille-card a {
+    @apply bg-base-999 hover:bg-white hover:text-black flex items-center gap-2 cursor-pointer py-2 px-3 rounded w-fit;
 }
 
-.veille-card > p {
-    @apply p-5 bg-base-800;
+.veille-option {
+    @apply text-font hover:text-white py-2 px-3 rounded w-fit;
+}
+
+.veille-card > div {
+    @apply flex flex-col items-start items-center mb-3 gap-5;
 }

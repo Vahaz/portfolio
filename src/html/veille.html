@@ -54,13 +54,9 @@
                         <i data-lucide="library" class="w-4 h-4"></i>
                         <span>Expériences</span>
                     </a>
-                    <a href="/compt" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page expériences du site">
-                        <i data-lucide="user" class="w-4 h-4"></i>
-                        <span>Compétences</span>
-                    </a>
-                    <a href="/project" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page projets du site">
+                    <a href="/project" class="nav" hreflang="fr" lang="fr" target="_self" aria-label="Page compétences du site">
                         <i data-lucide="terminal" class="w-4 h-4"></i>
-                        <span>Projets</span>
+                        <span>Compétences</span>
                     </a>
                     <a href="#" class="nav-selected" hreflang="fr" lang="fr" target="_self" aria-label="Page veille technologique du site">
                         <i data-lucide="file-search-corner" class="w-4 h-4"></i>
@@ -93,61 +89,11 @@
                 <p>Les fuites de données</p>
             </header>
             <div class="flex flex-col m-auto w-4xl my-5">
-                <div class="veille-card">
-                    <h2>1. La veille technologique ?</h2>
-                    <p>
-                        La veille technologique est une partie essentielle de notre formation en BTS SIO.
-                        L'objectif : se tenir informé sur un sujet en lien avec notre formation.
-                        <br>
-                        <br>
-                        Ici, le sujet choisi porte sur les <strong><u>« Fuites de données »</u></strong>.
-                        En effet, les fuites de données sont de plus en plus fréquentes et impactantes, surtout en France.
-                        <br>
-                        Celles-ci arrivent tous les jours et concernent des milliers, voire des millions de personnes.
-                    </p>
+                <div class="flex items-center justify-center gap-3 w-full text-center text-2xl">
+                    <h2 class="w-fit">Flux RSS</h2>
+                    <img class="w-4 h-4" src="/simpleicons/rss.svg">
                 </div>
-                <div class="veille-card">
-                    <h2>2. C'est quoi « une fuite de donnée » ?</h2>
-                    <p>
-                        Les fuites de données sont des fuites d'informations, souvent confidentielles, de clients ou salariés, provenant d'entreprises, d'institutions ou d'administrations.
-                        <br>
-                        <br>
-                        Par exemple, votre nom, prénom, âge, coordonnées bancaires peuvent se retrouver sur internet, suite à une fuite de données.
-                        <br>
-                        Dans la plupart des cas, les entités concernées préviennent les clients ou salariés du préjudice subi, ce qui n'est pas toujours le cas.
-                        <br>
-                    </p>
-                </div>
-                <div class="veille-card">
-                    <h2>3. Est-ce grave que mes informations aient fuité ?</h2>
-                    <p>
-                        Plusieurs risques sont à prévoir en cas de fuite de données, suivant les données impactées.
-                        Des personnes mal intentionnées pourraient chercher à arnaquer vos proches, ou toute autre entité, en usurpant votre identité.
-                        Dans d'autres cas, vos comptes pourraient être compromis et des achats ou versements involontaires pourraient être réalisés.<br>
-                        <span class="text-base-400 hover:text-secondary float-right">Source : <a class="underline" href="https://www.cnil.fr/fr/cnil-direct/question/le-phishing-cest-quoi" target="_blank" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Le phising, c'est quoi ? - CNIL">Le phishing, c'est quoi ? - CNIL</a></span> <br>
-                    </p>
-                </div>
-                <div class="veille-card">
-                    <h2>4. Comment cela arrive-t-il ?</h2>
-                    <p>
-                        Une fuite de données arrive de plusieurs façons. <br>
-                        <br>
-                        • Une mauvaise sécurisation du côté de l'entreprise pouvant alors offrir un accès aux attaquants. <br>
-                        • Une fuite d'information provenant de l'intérieur de l'entreprise peut mener à l'obtention d'accès illégitime à l'entreprise. <br>
-                        • L'exploitation d'une brèche de sécurité dans l'entreprise qui offrirait un accès à l'intérieur de celle-ci. <br>
-                        • L'utilisation de logiciel daté et obsolète qui mène à l'exploitation de failles de sécurité.
-                    </p>
-                </div>
-                <div class="veille-card">
-                    <h2>5. Que faire alors ?</h2>
-                    <p>
-                        1. Changez de mot de passe.<br>
-                        2. Activez la double authentification. (A2F)<br>
-                        3. Mettez à jour vos outils et logiciels.<br>
-                        4. Méfiez-vous du phishing/arnaque via courriel et SMS.<br>
-                        <span class="text-base-400 hover:text-secondary float-right">Source: <a class="underline" href="https://frenchbreaches.com/que-faire.php" target="_blank" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Page 'que faire?' - FrenchBreaches">"Que faire?"</a> - <a class="underline" href="https://frenchbreaches.com/" target="_blank" hreflang="fr" lang="fr" rel="noopener noreferrer" aria-label="Site de FrenchBreaches">FrenchBreaches.com</a></span> <br>
-                    </p>
-                </div>
+                <div id="rss-list" class="bg-zinc-900/20 flex flex-col gap-5 backdrop-blur-xs p-5 mt-5 border-t border-b border-white/20"></div>
             </div>
         </main>
         <dialog id="contact-dialog" class="dialog w-full sm:max-w-106.25 max-h-153" aria-labelledby="Formulaire de contact" aria-describedby="Formulaire de contact pour m'envoyer un courriel." onclick="if (event.target === this) this.close()">
@@ -214,5 +160,6 @@
         <script type="module" src="/src/js/main.js"></script>
         <script type="module" src="/src/js/contact.js"></script>
         <script type="module" src="/src/js/canvas.js"></script>
+        <script type="module" src="/src/js/rss.js"></script>
     </body>
 </html>

@@ -15,7 +15,24 @@ function sanitize(str) {
 export default async function handler(req, res) {
     if (req.method !== "POST") return res.status(405).end();
 
-    let { email, message } = req.body;
+    let { email, message, token } = req.body;
+
+    if (!token) return res.status(400).json({ error: "Validation anti-bot manquante" });
+
+    const verifyResponse = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+            secret: process.env.TURNSTILE_SECRET_KEY,
+            response: token
+        })
+    });
+
+    const turnstileResult = await verifyResponse.json();
+
+    if (!turnstileResult.success) {
+        return res.status(400).json({ error: "Échec de la vérification anti-bot" });
+    }
 
     email = email.trim();
     message = message.trim();
@@ -23,8 +40,8 @@ export default async function handler(req, res) {
     if (!email || !message) return res.status(400).json({ error: "Champs vides, email et message sont requis" });
     if (message.length > 1024) return res.status(400).json({ error: "Message trop long" });
 
-    email = sanitize(email.trim());
-    message = sanitize(message.trim());
+    email = sanitize(email);
+    message = sanitize(message);
 
     try {
         const { data, error } = await resend.emails.send({
@@ -45,14 +62,12 @@ export default async function handler(req, res) {
             `,
         });
 
-    if (error) {
-        console.error("RESEND ERROR:", error);
-        return res.status(400).json({ error });
-    }
+        if (error) {
+            console.error("RESEND ERROR:", error);
+            return res.status(400).json({ error });
+        }
 
-    console.log(`EMAIL SENT : ${data.id}`);
-    return res.status(200).json({ success: true, id: data.id });
-
+        return res.status(200).json({ success: true, id: data.id });
     } catch (err) {
         console.error("SERVER ERROR:", err);
         return res.status(500).json({ error: "Internal server error" });
