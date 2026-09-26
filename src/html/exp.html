@@ -31,6 +31,8 @@
         <meta property="og:type" content="website">
         <!-- Twitter / X -->
         <meta name="twitter:card" content="summary_large_image">
+        <!-- Cloudflare Turnstile -->
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     </head>
     <body class="bg-base-900 min-h-screen flex max-w-screen font-cascadia">
         <aside class="aside">
@@ -89,6 +91,40 @@
                 <p>Mes expériences</p>
             </header>
             <div class="flex flex-col gap-5 items-center justify-center py-5">
+                <!-- STAGE BTS 2 -->
+                <div class="w-200 flex flex-col bg-base-800/50 border-2 border-zinc-500/20 p-5 rounded backdrop-blur-xs flex gap-3 items-center">
+                    <div class="flex gap-5 justify-start w-full items-center">
+                        <img class="rounded lg:w-64 lg:h-24" width="128" height="48" src="/image/exp/?.webp">
+                        <h2 class="text-sm lg:text-3xl">STAGE ?</h2>
+                    </div>
+                    <div class="w-full">
+                        <div class="flex flex-col w-full py-5 text-font border-t-2 border-base-400 mt-3">
+                            <p class="tracking-wide text-xl text-white">DESCRIPTION</p>
+                            <p>
+                                _
+                            </p>
+                        </div>
+                        <div class="flex flex-col w-full py-5 text-font border-t-2 border-base-400 mt-3">
+                            <p class="tracking-wide text-xl text-white">MISSIONS</p>
+                            <p>• </p>
+                        </div>
+                        <div class="flex flex-row w-full text-font border-t-2 border-base-400">
+                            <div class="w-[50%] mt-3 flex items-center">
+                                <div class="flex gap-2 items-center py-2 hover:text-white btn cursor-default! w-fit">
+                                    <i data-lucide="clock" class="w-4 h-4"></i>
+                                    <p>18/01/2027 - 19/02/2027 (5 semaines)</p>
+                                </div>
+                            </div>
+                            <div class="w-[50%] mt-3 flex justify-end items-center">
+                                <div class="flex gap-2 items-center py-2 hover:text-white btn w-fit">
+                                    <i data-lucide="square-arrow-out-up-right" class="w-4 h-4"></i>
+                                    <a class="underline-offset-4 hover:underline" href="https://www.googe.fr/" hreflang="fr" target="_blank" aria-label="Site de ?" data-tooltip="Voir le site web" data-side="bottom" data-align="center">Site de ?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- STAGE BTS 1 -->
                 <div class="w-200 flex flex-col bg-base-800/50 border-2 border-zinc-500/20 p-5 rounded backdrop-blur-xs flex gap-3 items-center">
                     <div class="flex gap-5 justify-start w-full items-center">
                         <img class="rounded lg:w-64 lg:h-24" width="128" height="48" src="/image/exp/logo_xefi_avignon.webp">
@@ -166,6 +202,7 @@
                                 </p>
                             </div>
                         </div>
+                        <div class="cf-turnstile" data-sitekey="0x4AAAAAAE9FnurnPLfT4blL"></div>
                         <div>
                             <input id="hp" class="hidden" type="text" name="hp" tabindex="-1" autocomplete="off">
                         </div>
