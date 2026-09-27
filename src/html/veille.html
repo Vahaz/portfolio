@@ -88,14 +88,20 @@
             <canvas class="canvas" id="background"></canvas>
             <header class="header">
                 <i data-lucide="database" class="w-4 h-4"></i>
-                <p>Les fuites de données</p>
+                <p>Ma veille technologique</p>
             </header>
-            <div class="flex flex-col m-auto w-4xl my-5">
+            <div class="relative w-full h-48 overflow-hidden flex items-center justify-center border-b-2 border-white/20">
+                <img class="absolute inset-0 w-full h-full object-cover -z-10" src="/image/photo-1542903660-eedba2cda473.avif" alt="Fond fuites de données">
+                <div class="absolute inset-0 bg-black/40 -z-10"></div>
+                <h2 class="text-3xl font-jakarta leading-normal text-white font-bold z-10 text-center">Les fuites de données</h2>
+            </div>
+            <div class="flex flex-col m-auto mt-10 w-4xl my-5">
                 <div class="flex items-center justify-center gap-3 w-full text-center text-2xl">
                     <h2 class="w-fit">Flux RSS</h2>
-                    <img class="w-4 h-4" src="/simpleicons/rss.svg">
+                    <img class="w-4 h-4" src="/simpleicons/rss.svg" aria-label="Logo RSS">
                 </div>
                 <div id="rss-list" class="bg-zinc-900/20 flex flex-col gap-5 backdrop-blur-xs p-5 mt-5 border-t border-b border-white/20"></div>
+                <a class="w-full text-right mt-3 text-font underline" target="_top" aria-label="Lien vers Google Alerts" href="https://www.google.fr/alerts">Via Google Alerts</a>
             </div>
         </main>
         <dialog id="contact-dialog" class="dialog w-full sm:max-w-106.25 max-h-153" aria-labelledby="Formulaire de contact" aria-describedby="Formulaire de contact pour m'envoyer un courriel." onclick="if (event.target === this) this.close()">

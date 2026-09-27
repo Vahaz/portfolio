@@ -47,12 +47,12 @@
 /* Project Card CSS */
 
 .project-container {
-    @apply grid gap-5 justify-center p-5 mx-10;
+    @apply grid gap-5 justify-center mx-10;
     grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
 }
 
 .project {
-    @apply flex justify-center bg-base-900/20 rounded-3xl py-5 backdrop-filter backdrop-blur-xs border border-white/20 hover:border-white transition-all aspect-square min-w-60 max-w-60 min-h-60 max-h-60;
+    @apply flex justify-center bg-base-900/20 rounded-3xl py-5 backdrop-filter backdrop-blur-xs border border-white/20 hover:border-white transition-all aspect-square min-w-55 max-w-55 min-h-60 max-h-60;
 }
 
 .project-display {
@@ -60,11 +60,11 @@
 }
 
 .project-display-image {
-    @apply w-24 h-24 group-hover:scale-110 transition-transform;
+    @apply w-20 h-20 group-hover:scale-110 transition-transform;
 }
 
 .project-display-title {
-    @apply mt-5 text-2xl font-bold group-hover:text-white;
+    @apply mt-5 text-2xl font-bold break-normal group-hover:text-white;
 }
 
 .project-dialog-content {
@@ -100,17 +100,13 @@
 /* veille.html */
 
 .veille-card {
-    @apply flex flex-row bg-base-800/50 rounded p-5 border border-white/20;
+    @apply flex flex-col justify-between bg-base-800/50 rounded p-5 border border-white/20 h-full;
 }
 
-.veille-card a {
-    @apply bg-base-999 hover:bg-white hover:text-black flex items-center gap-2 cursor-pointer py-2 px-3 rounded w-fit;
+.veille-btn {
+    @apply bg-base-999 hover:bg-white hover:text-black flex items-center gap-2 cursor-pointer py-2 px-3 rounded w-fit transition-colors;
 }
 
 .veille-option {
-    @apply text-font hover:text-white py-2 px-3 rounded w-fit;
-}
-
-.veille-card > div {
-    @apply flex flex-col items-start items-center mb-3 gap-5;
+    @apply text-font transition-colors;
 }
