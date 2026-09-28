@@ -43,5 +43,5 @@ npm run dev
 
 ## 📨 CONTACT
 
-- To reach me via email : [contact.valentinh@gmail.com](mailto:contact.valentinh@gmail.com) <br>
+- To reach me via email : [Mail](mailto:contact.valentinh@gmail.com) <br>
 - My Portfolio : [valentinhrnd.fr](https://valentinhrnd.fr)
