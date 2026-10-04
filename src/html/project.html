@@ -90,7 +90,7 @@
                 <i data-lucide="code" class="w-4 h-4"></i>
                 <p>Mes projets</p>
             </header>
-            <div>
+            <div class="pb-10">
                 <!-- PROJECTS : CLASS -->
                 <div class="flex items-center justify-center w-full text-center py-5 text-3xl">
                     <div class="border-b-2 px-[10%]"></div>
@@ -111,7 +111,7 @@
                                     <div class="project-desc">
                                         <p>Mise en place d'un serveur FTP sécurisé, avec des permissions utilisateur et groupe, avec FileZilla.</p>
                                     </div>
-                                    <div class="w-full">
+                                    <div class="project-badges">
                                         <div class="badge">
                                             <img class="w-4 h-4 m-1" src="/simpleicons/filezilla.svg" alt="Logo FileZilla" width="16" height="16">
                                             FileZilla
@@ -143,7 +143,7 @@
                                     <div class="project-desc">
                                         <p>Mise en place d'un Active Directory (AD) avec gestion des utilisateurs, groupes et GPO. Deployement du service de DNS / DHCP et routage.</p>
                                     </div>
-                                    <div class="w-full">
+                                    <div class="project-badges">
                                         <div class="badge">
                                             <img class="w-4 h-4 m-1" src="/simpleicons/windows.svg" alt="Logo Windows" width="16" height="16">
                                             Windows Serveur
@@ -175,7 +175,7 @@
                                     <div class="project-desc">
                                         <p>Utilisation de Docker, docker-compose et DockerHub. Création de conteneurs web, SQL et autres avec volume et réseau personnalisé.</p>
                                     </div>
-                                    <div class="w-full">
+                                    <div class="project-badges">
                                         <div class="badge">
                                             <img class="w-4 h-4 m-1" src="/simpleicons/docker.svg" alt="Logo Docker" width="16" height="16">
                                             Docker
@@ -206,7 +206,7 @@
                                     <div class="project-desc">
                                         <p>Utilisation de GNU Bash pour créé des scripts d'automatisation pour diagnostiquer des systèmes et apprendre le language.</p>
                                     </div>
-                                    <div class="w-full">
+                                    <div class="project-badges">
                                         <div class="badge">
                                             <img class="w-4 h-4 m-1" src="/simpleicons/gnubash.svg" alt="Logo GNU Bash" width="16" height="16">
                                             GNU Bash
@@ -233,7 +233,7 @@
                                     <div class="project-desc">
                                         <p>Utilisation de PowerShell pour créé des scripts d'automatisation pour diagnostiquer des systèmes et apprendre le language.</p>
                                     </div>
-                                    <div class="w-full">
+                                    <div class="project-badges">
                                         <div class="badge">
                                             <img class="w-4 h-4 m-1" src="/simpleicons/powershell.svg" alt="Logo PowerShell" width="16" height="16">
                                             PowerShell
@@ -268,7 +268,7 @@
                                     <div class="project-desc">
                                         <p>Gestion d'un tenant Microsoft, ajout d'utilisateur sur Entra ID pour les accès Microsoft Office 365. Ajout de dossier et permissions SharePoint pour des entreprises.</p>
                                     </div>
-                                    <div class="w-full">
+                                    <div class="project-badges">
                                         <div class="badge">
                                             <img class="w-4 h-4 m-1" src="/simpleicons/azure.svg" alt="Logo Azure AD" width="16" height="16">
                                             Azure
@@ -303,7 +303,7 @@
                                     <div class="project-desc">
                                         <p>Ajout d'utilisateur au VPN Sophos et mise en place/utilisation du VPN Sophos sur des postes d'employés.</p>
                                     </div>
-                                    <div class="w-full">
+                                    <div class="project-badges">
                                         <div class="badge">
                                             <img class="w-4 h-4 m-1" src="/simpleicons/sophos.svg" alt="Logo Sophos" width="16" height="16">
                                             Sophos
@@ -337,43 +337,42 @@
                                 <div class="project-body">
                                     <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_webgl.webp">
                                     <p class="project-desc">
-                                        Projet WebGL pour découvrir la géométrie informatique. Le projet est écrit en Typescript avec webpack. Tweakpane est utilisé pour l'affichage des paramètres sur la page web.</p>
-                                    <ul class="project-bubble">
-                                        <li class="flex flex-wrap gap-3">
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/typescript.svg" alt="Logo TypeScript" width="16" height="16">
-                                                TypeScript
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/webgl.svg" alt="Logo WebGL" width="16" height="16">
-                                                WebGL
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg" alt="Logo Node.js" width="16" height="16">
-                                                Node.js
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/webpack.svg" alt="Logo Webpack" width="16" height="16">
-                                                Webpack
-                                            </div>
-                                            <div class="badge">
-                                                <i class="w-4 h-4 m-1 text-highlight" data-lucide="code"></i>
-                                                Tweakpane
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
-                                                HTML
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
-                                                CSS
-                                            </div>
-                                            <div class="badge">
-                                                <i class="w-4 h-4 m-1 text-blue-500" data-lucide="spline-pointer"></i>
-                                                Matrices & Vecteurs
-                                            </div>
-                                        </li>
-                                    </ul>
+                                        Projet WebGL pour découvrir la géométrie informatique. Le projet est écrit en Typescript avec webpack. Tweakpane est utilisé pour l'affichage des paramètres sur la page web.
+                                    </p>
+                                    <div class="project-badges">
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/typescript.svg" alt="Logo TypeScript" width="16" height="16">
+                                            TypeScript
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/webgl.svg" alt="Logo WebGL" width="16" height="16">
+                                            WebGL
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg" alt="Logo Node.js" width="16" height="16">
+                                            Node.js
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/webpack.svg" alt="Logo Webpack" width="16" height="16">
+                                            Webpack
+                                        </div>
+                                        <div class="badge">
+                                            <i class="w-4 h-4 m-1 text-highlight" data-lucide="code"></i>
+                                            Tweakpane
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
+                                            HTML
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
+                                            CSS
+                                        </div>
+                                        <div class="badge">
+                                            <i class="w-4 h-4 m-1 text-blue-500" data-lucide="spline-pointer"></i>
+                                            Matrices & Vecteurs
+                                        </div>
+                                    </div>
                                 </div>
                                 <footer class="project-footer">
                                     <a class="btn " href="https://webgl.valentinhrnd.fr/" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Page web du projet" data-tooltip="Voir la page web du projet" data-side="top" data-align="center">
@@ -397,39 +396,41 @@
                             <div class="project-dialog-content">
                                 <div class="project-body">
                                     <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_portfolio.webp">
-                                    <p class="project-desc">Portfolio réalisé en HTML, CSS (Tailwind CSS / Basecoat) et Javascript (Frontend). En backend, Vite héberge le site en parrallèle de Resend qui gère l'envoie des mails. Le site est également sauvegardé sur Github et dans une image Docker.</p>
-                                    <ul class="project-bubble">
-                                        <li class="flex flex-wrap gap-3">
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
-                                                HTML
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
-                                                JavaScript
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/tailwindcss.svg" alt="Logo Tailwind CSS" width="16" height="16">
-                                                Tailwind CSS
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1 bg-[#1447e6]" src="/simpleicons/basecoat.svg" alt="Logo Basecoat" width="16" height="16">
-                                                Basecoat
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/vite.svg" alt="Logo Vite" width="16" height="16">
-                                                Vite
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/vercel.svg" alt="Logo Vercel" width="16" height="16">
-                                                Vercel
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/resend.svg" alt="Logo Resend" width="16" height="16">
-                                                Resend
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <p class="project-desc">Portfolio réalisé en HTML, CSS (Tailwind CSS / Basecoat) et Javascript (Frontend). En backend, Vite héberge le site pour gérer l'envoi des demandes de contact via un WebHook Discord et le flux RSS. Le site est également sauvegardé sur Github, GitLab et dans une image Docker.</p>
+                                    <div class="project-badges">
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
+                                            HTML
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
+                                            JavaScript
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/tailwindcss.svg" alt="Logo Tailwind CSS" width="16" height="16">
+                                            Tailwind CSS
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1 bg-[#1447e6]" src="/simpleicons/basecoat.svg" alt="Logo Basecoat" width="16" height="16">
+                                            Basecoat
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/vite.svg" alt="Logo Vite" width="16" height="16">
+                                            Vite
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/vercel.svg" alt="Logo Vercel" width="16" height="16">
+                                            Vercel
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/discord.svg" alt="Logo Discord" width="16" height="16">
+                                            Discord
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/rss.svg" alt="Logo Discord" width="16" height="16">
+                                            Flux RSS
+                                        </div>
+                                    </div>
                                 </div>
                                 <footer class="project-footer">
                                     <a class="btn " href="https://valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Page web du projet" data-tooltip="Voir la page web du projet" data-side="top" data-align="center">
@@ -456,29 +457,27 @@
                                     <p class="project-desc">
                                         Visualiseur d'aléatoire basé sur les nombres générés par un Générateur à congruence linéaire (LCG). Cet algorithme qui n'est pas sécurisé cryptographiquement est très connu dans la génération de nombres pseudo-aléatoires et était présent dans certaines versions de PHP.<br>
                                     </p>
-                                    <ul class="project-bubble">
-                                        <li class="flex flex-wrap gap-3">
-                                            <div class="badge">
-                                                <i class="w-4 h-4 m-1 text-red-500" data-lucide="shuffle"></i>
-                                                LCG
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
-                                                HTML
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
-                                                JavaScript
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
-                                                CSS
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <div class="project-badges">
+                                        <div class="badge">
+                                            <i class="w-4 h-4 m-1 text-red-500" data-lucide="shuffle"></i>
+                                            LCG
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
+                                            HTML
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
+                                            JavaScript
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
+                                            CSS
+                                        </div>
+                                    </div>
                                 </div>
                                 <footer class="project-footer">
-                                    <a class="btn " href="https://lcg.valentinhrnd.fr/" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Page web du projet" data-tooltip="Voir la page web du projet" data-side="top" data-align="center">
+                                    <a class="btn" href="https://lcg.valentinhrnd.fr/" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Page web du projet" data-tooltip="Voir la page web du projet" data-side="top" data-align="center">
                                         <i data-lucide="link-2"></i>
                                         Voir le projet
                                     </a>
@@ -502,26 +501,24 @@
                                     <p class="project-desc">
                                         Ce projet personnel est une recréation du « Jeu de la vie », en JavaScript, en utilisant la bibliothèque graphique p5.js.<br>
                                     </p>
-                                    <ul class="project-bubble">
-                                        <li class="flex flex-wrap gap-3">
-                                            <div class="badge text-sm">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/p5dotjs.svg" alt="Logo p5.js" width="16" height="16">
-                                                p5.js
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
-                                                HTML
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
-                                                CSS
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
-                                                JavaScript
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <div class="project-badges">
+                                        <div class="badge text-sm">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/p5dotjs.svg" alt="Logo p5.js" width="16" height="16">
+                                            p5.js
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
+                                            HTML
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
+                                            CSS
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
+                                            JavaScript
+                                        </div>
+                                    </div>
                                 </div>
                                 <footer class="project-footer">
                                     <a class="btn " href="https://gol.valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Page web du projet" data-tooltip="Voir la page web du projet" data-side="top" data-align="center">
@@ -548,22 +545,20 @@
                                     <p class="project-desc">
                                         Un petit site web pour s'entraîner au découpage d'adresses IPv4.<br>
                                     </p>
-                                    <ul class="project-bubble">
-                                        <li class="flex flex-wrap gap-3">
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
-                                                HTML
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
-                                                JavaScript
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
-                                                CSS
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <div class="project-badges">
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
+                                            HTML
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
+                                            JavaScript
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
+                                            CSS
+                                        </div>
+                                    </div>
                                 </div>
                                 <footer class="project-footer">
                                     <a class="btn " href="https://ip.valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Page web du projet" data-tooltip="Voir la page web du projet" data-side="top" data-align="center">
@@ -588,30 +583,28 @@
                                 <div class="project-body">
                                     <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_discordjs.webp">
                                     <p class="project-desc">Un bot Discord qui génère une page HTML avec JavaScript contenant les informations, provenant de l'API Riot Games, des joueurs d'une partie de League of Legends.</p>
-                                    <ul class="project-bubble">
-                                        <li class="flex flex-wrap gap-3 p-2">
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
-                                                JavaScript
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/discorddotjs.svg" alt="Logo discord.js" width="16" height="16">
-                                                discord.js
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/dotenv.svg" alt="Logo .ENV" width="16" height="16">
-                                                .ENV
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg" alt="Logo Node.js" width="16" height="16">
-                                                Node.js
-                                            </div>
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/riotgames.svg" alt="Logo Riot Games API" width="16" height="16">
-                                                Riot Games API
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <div class="project-badges">
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
+                                            JavaScript
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/discorddotjs.svg" alt="Logo discord.js" width="16" height="16">
+                                            discord.js
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/dotenv.svg" alt="Logo .ENV" width="16" height="16">
+                                            .ENV
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg" alt="Logo Node.js" width="16" height="16">
+                                            Node.js
+                                        </div>
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/riotgames.svg" alt="Logo Riot Games API" width="16" height="16">
+                                            Riot Games API
+                                        </div>
+                                    </div>
                                 </div>
                                 <footer class="project-footer">
                                     <a class="btn " href="https://github.com/Vahaz/match_logger_v2" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Page Github du projet" data-tooltip="Voir la page Github du projet" data-side="top" data-align="center">
@@ -635,14 +628,12 @@
                             <div class="project-dialog-content">
                                 <div class="project-body">
                                     <p class="project-desc">Découverte et mise en place d'un ordinateur sous la distribution Linux NixOS.</p>
-                                    <ul class="project-bubble">
-                                        <li class="flex flex-wrap gap-3 p-2">
-                                            <div class="badge">
-                                                <img class="w-4 h-4 m-1" src="/simpleicons/nixos.svg" alt="Logo NixOS" width="16" height="16">
-                                                NixOS
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <div class="project-badges">
+                                        <div class="badge">
+                                            <img class="w-4 h-4 m-1" src="/simpleicons/nixos.svg" alt="Logo NixOS" width="16" height="16">
+                                            NixOS
+                                        </div>
+                                    </div>
                                 </div>
                                 <footer class="project-footer">
                                     <button class="btn-destructive ml-auto" onclick="this.closest('dialog').close()">

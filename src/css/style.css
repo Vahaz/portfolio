@@ -83,6 +83,10 @@
     @apply flex flex-col gap-y-3 rounded p-5 bg-base-700/20 border border-white/20 w-full;
 }
 
+.project-badges {
+    @apply w-full;
+}
+
 .project-footer {
     @apply flex justify-between;
 }
@@ -90,7 +94,11 @@
 /* Basecoat Components */
 
 .badge {
-    @apply font-cascadia text-sm hover:bg-base-100 hover:text-black mt-0! rounded!;
+    @apply font-cascadia text-sm hover:bg-base-100 hover:text-black mt-2 rounded!;
+}
+
+.btn {
+    @apply hover:bg-white hover:text-black;
 }
 
 .btn-destructive {

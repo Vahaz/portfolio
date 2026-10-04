@@ -7,6 +7,5 @@ Dockerfile
 .gitignore
 .github
 
-node_modules
 .env
 .vercel

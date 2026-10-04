@@ -30,9 +30,7 @@ export default async function handler(req, res) {
 
     const turnstileResult = await verifyResponse.json();
 
-    if (!turnstileResult.success) {
-        return res.status(400).json({ error: "Échec de la vérification anti-bot" });
-    }
+    if (!turnstileResult.success) return res.status(400).json({ error: "Échec de la vérification anti-bot" });
 
     email = email.trim();
     message = message.trim();
@@ -44,30 +42,22 @@ export default async function handler(req, res) {
     message = sanitize(message);
 
     try {
-        const { data, error } = await resend.emails.send({
-            from: "Contact - Portfolio <contact@valentinhrnd.fr>",
-            to: "contact.valentinh@gmail.com",
-            replyTo: email,
-            subject: "<Portfolio> Demande de Contact",
-            text: message,
-            html: `
-                <div style="font-family: sans-serif; padding: 20px;">
-                    <h2 style="color: #333;">Nouvelle demande de contact</h2>
-                    <p><strong>De :</strong> ${email}</p>
-                    <p><strong>Message :</strong></p>
-                    <div style="background: #f4f4f4; padding: 15px; border-radius: 5px;">
-                        ${message.replace(/\n/g, '<br>')}
-                    </div>
-                </div>
-            `,
+        const discordResponse = await fetch(process.env.DISCORD_WEBHOOK_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                embeds: [{
+                    title: "Nouveau contact",
+                    color: 0x4d6fb7,
+                    fields: [{ name: `De : ${email}`, value: message }],
+                    timestamp: new Date().toISOString()
+                }]
+            })
         });
 
-        if (error) {
-            console.error("RESEND ERROR:", error);
-            return res.status(400).json({ error });
-        }
+        if (!discordResponse.ok) throw new Error("Erreur Webhook Discord");
 
-        return res.status(200).json({ success: true, id: data.id });
+        return res.status(200).json({ success: true });
     } catch (err) {
         console.error("SERVER ERROR:", err);
         return res.status(500).json({ error: "Internal server error" });
