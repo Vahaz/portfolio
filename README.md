@@ -16,6 +16,7 @@ A GitHub workflow uploads an image of this portfolio on Docker Hub.
 ```yml
 This repository is publicly visible for demonstration purposes only.
 Please do not reuse the design or personal content.
+All Logos are not mine, check the Legal page of my portfolio for rights. [valentinhrnd.fr](https://valentinhrnd.fr/legal)
 ```
 - See [LICENCE](/LICENCE) for more information.
 
@@ -43,5 +44,5 @@ npm run dev
 
 ## 📨 CONTACT
 
-- To reach me via email : [contact.valentinh@gmail.com](mailto:contact.valentinh@gmail.com) <br>
+- To reach me via email : [Mail](mailto:contact.valentinh@gmail.com) <br>
 - My Portfolio : [valentinhrnd.fr](https://valentinhrnd.fr)
