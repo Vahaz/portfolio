@@ -4,7 +4,7 @@
 ```yml
 Welcome to my Portfolio repository.
 
-My name is Valentin, I'm a French student in Computer Science.
+My name is Valentin, I'm a French student in Computer Science, specialised in networks and cybersecurity.
 This portfolio is made as a personal / school project.
 
 The web page is hosted by Vercel, the contact form works in pair with Vercel / Resend.
