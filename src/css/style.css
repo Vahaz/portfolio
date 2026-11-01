@@ -37,14 +37,20 @@
 }
 
 .nav {
-    @apply flex items-center gap-3 px-3 py-2 rounded-md text-base hover:bg-zinc-800/50 hover:text-zinc-200 transition-all;
+    @apply flex items-center gap-3 px-3 py-2 rounded text-base hover:bg-zinc-800/50 hover:text-zinc-200 transition-all;
 }
 
 .nav-selected {
-    @apply flex items-center gap-3 px-3 py-2 rounded-md text-base bg-zinc-800/80 text-white font-medium;
+    @apply flex items-center gap-3 px-3 py-2 rounded text-base bg-zinc-800/80 text-white font-medium;
 }
 
 /* Project Card CSS */
+
+
+
+.project-summary {
+    @apply flex items-center justify-between px-6 py-5 text-2xl cursor-pointer select-none list-none hover:text-zinc-200 transition-colors [&::-webkit-details-marker]:hidden;
+}
 
 .project-container {
     @apply grid gap-5 justify-center mx-10;
@@ -52,7 +58,7 @@
 }
 
 .project {
-    @apply flex justify-center bg-base-900/20 rounded-3xl py-5 backdrop-filter backdrop-blur-xs border border-white/20 hover:border-white transition-all aspect-square min-w-55 max-w-55 min-h-60 max-h-60;
+    @apply flex justify-center bg-base-900/20 rounded py-5 backdrop-filter  backdrop-blur-[2px] border border-white/20 hover:border-white transition-all aspect-square min-w-55 max-w-55 min-h-60 max-h-60;
 }
 
 .project-display {
@@ -91,6 +97,34 @@
     @apply flex justify-between;
 }
 
+.category {
+    @apply border border-white/20 rounded bg-black/20 mx-[10%] mb-4 backdrop-blur-[2px];
+    --dur: .5s;
+    --ease: cubic-bezier(.37, 0, .63, 1);
+}
+
+.project-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    padding-bottom: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition:
+        grid-template-rows var(--dur) var(--ease),
+        padding-bottom var(--dur) var(--ease),
+        visibility var(--dur);
+}
+
+.category > details[open] + .project-panel {
+    grid-template-rows: 1fr;
+    padding-bottom: 1.5rem;
+    visibility: visible;
+}
+
+.project-panel > .project-container {
+    min-height: 0;
+}
+
 /* Basecoat Components */
 
 .badge {
@@ -117,4 +151,62 @@
 
 .veille-option {
     @apply text-font transition-colors;
+}
+
+/* index.html */
+
+.rotator {
+    height: 4.5em;
+    line-height: 1.5em;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to bottom,
+        rgb(0 0 0 / .1) 0%, rgb(0 0 0 / .3) 25%,
+        #000 38%, #000 62%,
+        rgb(0 0 0 / .3) 75%, rgb(0 0 0 / .1) 100%);
+    mask-image: linear-gradient(to bottom,
+        rgb(0 0 0 / .1) 0%, rgb(0 0 0 / .3) 25%,
+        #000 38%, #000 62%,
+        rgb(0 0 0 / .3) 75%, rgb(0 0 0 / .1) 100%);
+}
+
+.rotator-list {
+    animation: rotator 12s cubic-bezier(.65, 0, .35, 1) infinite;
+}
+
+@keyframes rotator {
+    0%,  20% { transform: translateY(0); }
+    25%, 45% { transform: translateY(-1.5em); }
+    50%, 70% { transform: translateY(-3em); }
+    75%, 95% { transform: translateY(-4.5em); }
+    100%     { transform: translateY(-6em); }
+}
+
+/* Project.html */
+
+table {
+    @apply border-white/20 border;
+}
+
+tr {
+    @apply h-16 bg-black/20 border-white/20 border-t;
+}
+
+th {
+    @apply mx-5 py-3;
+}
+
+.skills-name {
+    @apply text-left pl-10 uppercase tracking-wide text-font hover:text-white;
+}
+
+.skills-block {
+    @apply bg-black/20;
+}
+
+.skills-cell {
+    @apply w-30 text-center group-hover:text-white;
+}
+
+.skills-date {
+    @apply text-font text-xs;
 }

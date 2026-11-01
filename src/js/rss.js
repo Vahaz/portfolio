@@ -24,7 +24,7 @@ async function loadSecurityBreaches() {
                             </svg>
                             Voir l'article
                         </a>
-                        <a href="${breach.journalLink}" aria-label="Lien vers le journal" target="_blank" class="veille-option hover:text-white shrink-0 whitespace-nowrap text-right">${breach.source}</a>
+                        <a href="${breach.journalLink}" aria-label="Lien vers le journal" target="_blank" class="veille-option hover:text-white shrink-0 whitespace-nowrap text-right uppercase">${breach.source}</a>
                     </div>
                 </div>
             `;

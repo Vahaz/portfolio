@@ -88,565 +88,903 @@
             <canvas class="canvas" id="background"></canvas>
             <header class="header">
                 <i data-lucide="code" class="w-4 h-4"></i>
-                <p>Mes projets</p>
+                <p>Mes projets et compétences </p>
             </header>
-            <div class="pb-10">
+            <div class="flex flex-col py-10 gap-5">
                 <!-- PROJECTS : CLASS -->
-                <div class="flex items-center justify-center w-full text-center py-5 text-3xl">
-                    <div class="border-b-2 px-[10%]"></div>
-                    <h2 class="px-5">Cours</h2>
-                    <div class="border-b-2 px-[10%]"></div>
-                </div>
-                <div class="project-container">
-                    <!-- FTP -->
-                    <div class="project group">
-                        <button class="project-display" type="button" onclick="document.getElementById('ftp-dialog').showModal()" aria-label="Voir les détails du cour">
-                            <img alt="Logo FileZilla" class="project-display-image" width="96" height="96" src="/simpleicons/filezilla.svg">
-                            <h2 class="project-display-title">FTP <br> FileZilla</h2>
-                        </button>
-                        <dialog id="ftp-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
-                            <div class="project-dialog-content">
-                                <div class="project-body">
-                                    <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_ftp.webp">
-                                    <div class="project-desc">
-                                        <p>Mise en place d'un serveur FTP sécurisé, avec des permissions utilisateur et groupe, avec FileZilla.</p>
-                                    </div>
-                                    <div class="project-badges">
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/filezilla.svg" alt="Logo FileZilla" width="16" height="16">
-                                            FileZilla
+                <div class="category">
+                    <details class="group/cat" open data-open name="projets">
+                        <summary class="project-summary">
+                            <h2 class="uppercase tracking-widest">
+                                Cours
+                                <span class="lowercase tracking-normal text-sm text-font">6 projets</span>
+                            </h2>
+                            <i data-lucide="chevron-down" class="w-6 h-6 transition-transform duration-300 group-open/cat:rotate-180"></i>
+                        </summary>
+                    </details>
+                    <div class="project-panel">
+                        <div class="project-container">
+                            <!-- FTP -->
+                            <div class="project group">
+                                <button class="project-display" type="button" onclick="document.getElementById('ftp-dialog').showModal()" aria-label="Voir les détails du cour">
+                                    <img alt="Logo FileZilla" class="project-display-image" width="96" height="96" src="/simpleicons/filezilla.svg">
+                                    <h2 class="project-display-title">FTP <br> FileZilla</h2>
+                                </button>
+                                <dialog id="ftp-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                                    <div class="project-dialog-content">
+                                        <div class="project-body">
+                                            <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_ftp.webp">
+                                            <div class="project-desc">
+                                                <p>Mise en place d'un serveur FTP sécurisé, avec des permissions utilisateur et groupe, avec FileZilla.</p>
+                                            </div>
+                                            <div class="project-badges">
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/filezilla.svg" alt="Logo FileZilla" width="16" height="16">
+                                                    FileZilla
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/virtualbox.svg" alt="Logo VirtualBox" width="16" height="16">
+                                                    VirtualBox
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/virtualbox.svg" alt="Logo VirtualBox" width="16" height="16">
-                                            VirtualBox
-                                        </div>
+                                        <footer class="project-footer">
+                                            <button class="btn-destructive ml-auto" onclick="this.closest('dialog').close()">
+                                                <i data-lucide="X"></i>
+                                            </button>
+                                        </footer>
                                     </div>
-                                </div>
-                                <footer class="project-footer">
-                                    <button class="btn-destructive ml-auto" onclick="this.closest('dialog').close()">
-                                        <i data-lucide="X"></i>
-                                    </button>
-                                </footer>
+                                </dialog>
                             </div>
-                        </dialog>
-                    </div>
-                    <!-- ACTIVE DIRECTORY -->
-                    <div class="project group">
-                        <button type="button" onclick="document.getElementById('ad-dialog').showModal()" aria-label="Voir les détails du cour" class="project-display">
-                            <img alt="Logo Active Directory" class="project-display-image w-48!" width="192" height="96" src="/image/icons/ad.webp">
-                            <h2 class="project-display-title">Windows <br> Serveur</h2>
-                        </button>
-                        <dialog id="ad-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
-                            <div class="project-dialog-content">
-                                <div class="project-body">
-                                    <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_ad.webp">
-                                    <div class="project-desc">
-                                        <p>Mise en place d'un Active Directory (AD) avec gestion des utilisateurs, groupes et GPO. Deployement du service de DNS / DHCP et routage.</p>
-                                    </div>
-                                    <div class="project-badges">
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/windows.svg" alt="Logo Windows" width="16" height="16">
-                                            Windows Serveur
+                            <!-- ACTIVE DIRECTORY -->
+                            <div class="project group">
+                                <button type="button" onclick="document.getElementById('ad-dialog').showModal()" aria-label="Voir les détails du cour" class="project-display">
+                                    <img alt="Logo Active Directory" class="project-display-image w-48!" width="192" height="96" src="/image/icons/ad.webp">
+                                    <h2 class="project-display-title">Windows <br> Serveur</h2>
+                                </button>
+                                <dialog id="ad-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                                    <div class="project-dialog-content">
+                                        <div class="project-body">
+                                            <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_ad.webp">
+                                            <div class="project-desc">
+                                                <p>Mise en place d'un Active Directory (AD) avec gestion des utilisateurs, groupes et GPO. Deployement du service de DNS / DHCP et routage.</p>
+                                            </div>
+                                            <div class="project-badges">
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/windows.svg" alt="Logo Windows" width="16" height="16">
+                                                    Windows Serveur
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/virtualbox.svg" alt="Logo VirtualBox" width="16" height="16">
+                                                    VirtualBox
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/virtualbox.svg" alt="Logo VirtualBox" width="16" height="16">
-                                            VirtualBox
-                                        </div>
+                                        <footer class="project-footer">
+                                            <button class="btn-destructive ml-auto " onclick="this.closest('dialog').close()">
+                                                <i data-lucide="X"></i>
+                                            </button>
+                                        </footer>
                                     </div>
-                                </div>
-                                <footer class="project-footer">
-                                    <button class="btn-destructive ml-auto " onclick="this.closest('dialog').close()">
-                                        <i data-lucide="X"></i>
-                                    </button>
-                                </footer>
+                                </dialog>
                             </div>
-                        </dialog>
-                    </div>
-                    <!-- DOCKER -->
-                    <div class="project group">
-                        <button type="button" onclick="document.getElementById('docker-dialog').showModal()" aria-label="Voir les détails du cour" class="project-display">
-                            <img alt="Logo Docker" class="project-display-image" width="96" height="96" src="/simpleicons/docker.svg">
-                            <h2 class="project-display-title">Docker</h2>
-                        </button>
-                        <dialog id="docker-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
-                            <div class="project-dialog-content">
-                                <div class="project-body">
-                                    <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_docker.webp">
-                                    <div class="project-desc">
-                                        <p>Utilisation de Docker, docker-compose et DockerHub. Création de conteneurs web, SQL et autres avec volume et réseau personnalisé.</p>
-                                    </div>
-                                    <div class="project-badges">
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/docker.svg" alt="Logo Docker" width="16" height="16">
-                                            Docker
+                            <!-- DOCKER -->
+                            <div class="project group">
+                                <button type="button" onclick="document.getElementById('docker-dialog').showModal()" aria-label="Voir les détails du cour" class="project-display">
+                                    <img alt="Logo Docker" class="project-display-image" width="96" height="96" src="/simpleicons/docker.svg">
+                                    <h2 class="project-display-title">Docker</h2>
+                                </button>
+                                <dialog id="docker-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                                    <div class="project-dialog-content">
+                                        <div class="project-body">
+                                            <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_docker.webp">
+                                            <div class="project-desc">
+                                                <p>Utilisation de Docker, docker-compose et DockerHub. Création de conteneurs web, SQL et autres avec volume et réseau personnalisé.</p>
+                                            </div>
+                                            <div class="project-badges">
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/docker.svg" alt="Logo Docker" width="16" height="16">
+                                                    Docker
+                                                </div>
+                                            </div>
                                         </div>
+                                        <footer class="project-footer">
+                                            <a class="btn hover:text-black hover:bg-white" href="https://hub.docker.com/repositories/vhernandorena" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Ma page Docker Hub" data-tooltip="Voir ma page Docker Hub" data-side="top" data-align="center">
+                                                <i data-lucide="link-2"></i>
+                                                Mon Docker Hub
+                                            </a>
+                                            <button class="btn-destructive" onclick="this.closest('dialog').close()">
+                                                <i data-lucide="X"></i>
+                                            </button>
+                                        </footer>
                                     </div>
-                                </div>
-                                <footer class="project-footer">
-                                    <a class="btn hover:text-black hover:bg-white" href="https://hub.docker.com/repositories/vhernandorena" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Ma page Docker Hub" data-tooltip="Voir ma page Docker Hub" data-side="top" data-align="center">
-                                        <i data-lucide="link-2"></i>
-                                        Mon Docker Hub
-                                    </a>
-                                    <button class="btn-destructive" onclick="this.closest('dialog').close()">
-                                        <i data-lucide="X"></i>
-                                    </button>
-                                </footer>
+                                </dialog>
                             </div>
-                        </dialog>
-                    </div>
-                    <!-- BASH -->
-                    <div class="project group">
-                        <button type="button" onclick="document.getElementById('gnubash-dialog').showModal()" aria-label="Voir les détails du cour" class="project-display">
-                            <img alt="Logo GNU Bash" class="project-display-image" width="96" height="96" src="/simpleicons/gnubash.svg">
-                            <h2 class="project-display-title">GNU Bash</h2>
-                        </button>
-                        <dialog id="gnubash-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
-                            <div class="project-dialog-content">
-                                <div class="project-body">
-                                    <div class="project-desc">
-                                        <p>Utilisation de GNU Bash pour créé des scripts d'automatisation pour diagnostiquer des systèmes et apprendre le language.</p>
-                                    </div>
-                                    <div class="project-badges">
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/gnubash.svg" alt="Logo GNU Bash" width="16" height="16">
-                                            GNU Bash
+                            <!-- BASH -->
+                            <div class="project group">
+                                <button type="button" onclick="document.getElementById('gnubash-dialog').showModal()" aria-label="Voir les détails du cour" class="project-display">
+                                    <img alt="Logo GNU Bash" class="project-display-image" width="96" height="96" src="/simpleicons/gnubash.svg">
+                                    <h2 class="project-display-title">GNU Bash</h2>
+                                </button>
+                                <dialog id="gnubash-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                                    <div class="project-dialog-content">
+                                        <div class="project-body">
+                                            <div class="project-desc">
+                                                <p>Utilisation de GNU Bash pour créé des scripts d'automatisation pour diagnostiquer des systèmes et apprendre le language.</p>
+                                            </div>
+                                            <div class="project-badges">
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/gnubash.svg" alt="Logo GNU Bash" width="16" height="16">
+                                                    GNU Bash
+                                                </div>
+                                            </div>
                                         </div>
+                                        <footer class="project-footer">
+                                            <button class="btn-destructive ml-auto" onclick="this.closest('dialog').close()">
+                                                <i data-lucide="X"></i>
+                                            </button>
+                                        </footer>
                                     </div>
-                                </div>
-                                <footer class="project-footer">
-                                    <button class="btn-destructive ml-auto" onclick="this.closest('dialog').close()">
-                                        <i data-lucide="X"></i>
-                                    </button>
-                                </footer>
+                                </dialog>
                             </div>
-                        </dialog>
-                    </div>
-                    <!-- POWERSHELL -->
-                    <div class="project group">
-                        <button type="button" onclick="document.getElementById('powershell-dialog').showModal()" aria-label="Voir les détails du cour" class="project-display">
-                            <img alt="Logo PowerShell" class="project-display-image" width="96" height="96" src="/simpleicons/powershell.svg">
-                            <h2 class="project-display-title">PowerShell</h2>
-                        </button>
-                        <dialog id="powershell-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
-                            <div class="project-dialog-content">
-                                <div class="project-body">
-                                    <div class="project-desc">
-                                        <p>Utilisation de PowerShell pour créé des scripts d'automatisation pour diagnostiquer des systèmes et apprendre le language.</p>
-                                    </div>
-                                    <div class="project-badges">
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/powershell.svg" alt="Logo PowerShell" width="16" height="16">
-                                            PowerShell
+                            <!-- POWERSHELL -->
+                            <div class="project group">
+                                <button type="button" onclick="document.getElementById('powershell-dialog').showModal()" aria-label="Voir les détails du cour" class="project-display">
+                                    <img alt="Logo PowerShell" class="project-display-image" width="96" height="96" src="/simpleicons/powershell.svg">
+                                    <h2 class="project-display-title">PowerShell</h2>
+                                </button>
+                                <dialog id="powershell-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                                    <div class="project-dialog-content">
+                                        <div class="project-body">
+                                            <div class="project-desc">
+                                                <p>Utilisation de PowerShell pour créé des scripts d'automatisation pour diagnostiquer des systèmes et apprendre le language.</p>
+                                            </div>
+                                            <div class="project-badges">
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/powershell.svg" alt="Logo PowerShell" width="16" height="16">
+                                                    PowerShell
+                                                </div>
+                                            </div>
                                         </div>
+                                        <footer class="project-footer">
+                                            <button class="btn-destructive ml-auto" onclick="this.closest('dialog').close()">
+                                                <i data-lucide="X"></i>
+                                            </button>
+                                        </footer>
                                     </div>
-                                </div>
-                                <footer class="project-footer">
-                                    <button class="btn-destructive ml-auto" onclick="this.closest('dialog').close()">
-                                        <i data-lucide="X"></i>
-                                    </button>
-                                </footer>
+                                </dialog>
                             </div>
-                        </dialog>
+                            <!-- GLPI -->
+                            <div class="project group">
+                                <button type="button" onclick="document.getElementById('glpi-dialog').showModal()" aria-label="Voir les détails du cour" class="project-display">
+                                    <img alt="Logo GLPI" class="project-display-image" width="96" height="96" src="/simpleicons/glpi.svg">
+                                    <h2 class="project-display-title">GLPI</h2>
+                                </button>
+                                <dialog id="glpi-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                                    <div class="project-dialog-content">
+                                        <div class="project-body">
+                                            <div class="project-desc">
+                                                <p>Mise en place et découverte de GLPI, des tickets et de la gestion d'inventaire.</p>
+                                            </div>
+                                            <div class="project-badges">
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/glpi.svg" alt="Logo PowerShell" width="16" height="16">
+                                                    GLPI
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <footer class="project-footer">
+                                            <button class="btn-destructive ml-auto" onclick="this.closest('dialog').close()">
+                                                <i data-lucide="X"></i>
+                                            </button>
+                                        </footer>
+                                    </div>
+                                </dialog>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- PROJECTS : STAGE -->
-                <div class="flex items-center justify-center w-full text-center py-5 text-3xl">
-                    <div class="border-b-2 px-[10%]"></div>
-                    <h2 class="px-5">Stage</h2>
-                    <div class="border-b-2 px-[10%]"></div>
-                </div>
-                <div class="project-container">
-                    <!-- TENANT -->
-                    <div class="project group">
-                        <button class="project-display" type="button" onclick="document.getElementById('azure-dialog').showModal()" aria-label="Voir les détails du projet">
-                            <img alt="Logo Azure AD" class="project-display-image" width="96" height="96" src="/simpleicons/azure.svg">
-                            <h2 class="project-display-title">Tenant Microsoft</h2>
-                        </button>
-                        <dialog id="azure-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
-                            <div class="project-dialog-content">
-                                <div class="project-body">
-                                    <div class="project-desc">
-                                        <p>Gestion d'un tenant Microsoft, ajout d'utilisateur sur Entra ID pour les accès Microsoft Office 365. Ajout de dossier et permissions SharePoint pour des entreprises.</p>
+                <div class="category">
+                    <details class="group/cat" name="projets">
+                        <summary class="project-summary">
+                            <h2 class="uppercase tracking-widest">
+                                Stage
+                                <span class="lowercase tracking-normal text-sm text-font">2 projets</span>
+                            </h2>
+                            <i data-lucide="chevron-down" class="w-6 h-6 transition-transform duration-300 group-open/cat:rotate-180"></i>
+                        </summary>
+                    </details>
+                    <div class="project-panel">
+                        <div class="project-container">
+                            <!-- TENANT -->
+                            <div class="project group">
+                                <button class="project-display" type="button" onclick="document.getElementById('azure-dialog').showModal()" aria-label="Voir les détails du projet">
+                                    <img alt="Logo Azure AD" class="project-display-image" width="96" height="96" src="/simpleicons/azure.svg">
+                                    <h2 class="project-display-title">Tenant Microsoft</h2>
+                                </button>
+                                <dialog id="azure-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                                    <div class="project-dialog-content">
+                                        <div class="project-body">
+                                            <div class="project-desc">
+                                                <p>Gestion d'un tenant Microsoft, ajout d'utilisateur sur Entra ID pour les accès Microsoft Office 365. Ajout de dossier et permissions SharePoint pour des entreprises.</p>
+                                            </div>
+                                            <div class="project-badges">
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/azure.svg" alt="Logo Azure AD" width="16" height="16">
+                                                    Azure
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/office365.svg" alt="Logo Office 365" width="16" height="16">
+                                                    Office 365
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/sharepoint.svg" alt="Logo SharePoint" width="16" height="16">
+                                                    SharePoint
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <footer class="project-footer">
+                                            <button class="btn-destructive ml-auto" onclick="this.closest('dialog').close()">
+                                                <i data-lucide="X"></i>
+                                            </button>
+                                        </footer>
                                     </div>
-                                    <div class="project-badges">
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/azure.svg" alt="Logo Azure AD" width="16" height="16">
-                                            Azure
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/office365.svg" alt="Logo Office 365" width="16" height="16">
-                                            Office 365
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/sharepoint.svg" alt="Logo SharePoint" width="16" height="16">
-                                            SharePoint
-                                        </div>
-                                    </div>
-                                </div>
-                                <footer class="project-footer">
-                                    <button class="btn-destructive ml-auto" onclick="this.closest('dialog').close()">
-                                        <i data-lucide="X"></i>
-                                    </button>
-                                </footer>
+                                </dialog>
                             </div>
-                        </dialog>
-                    </div>
-                    <!-- SOPHOS -->
-                    <div class="project group">
-                        <button class="project-display" type="button" onclick="document.getElementById('sophos-dialog').showModal()" aria-label="Voir les détails du projet">
-                            <img alt="Logo Sophos" class="project-display-image" width="96" height="96" src="/simpleicons/sophos.svg">
-                            <h2 class="project-display-title">Sophos</h2>
-                        </button>
-                        <dialog id="sophos-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
-                            <div class="project-dialog-content">
-                                <div class="project-body">
-                                    <div class="project-desc">
-                                        <p>Ajout d'utilisateur au VPN Sophos et mise en place/utilisation du VPN Sophos sur des postes d'employés.</p>
-                                    </div>
-                                    <div class="project-badges">
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/sophos.svg" alt="Logo Sophos" width="16" height="16">
-                                            Sophos
+                            <!-- SOPHOS -->
+                            <div class="project group">
+                                <button class="project-display" type="button" onclick="document.getElementById('sophos-dialog').showModal()" aria-label="Voir les détails du projet">
+                                    <img alt="Logo Sophos" class="project-display-image" width="96" height="96" src="/simpleicons/sophos.svg">
+                                    <h2 class="project-display-title">Sophos</h2>
+                                </button>
+                                <dialog id="sophos-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                                    <div class="project-dialog-content">
+                                        <div class="project-body">
+                                            <div class="project-desc">
+                                                <p>Ajout d'utilisateur au VPN Sophos et mise en place/utilisation du VPN Sophos sur des postes d'employés.</p>
+                                            </div>
+                                            <div class="project-badges">
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/sophos.svg" alt="Logo Sophos" width="16" height="16">
+                                                    Sophos
+                                                </div>
+                                            </div>
                                         </div>
+                                        <footer class="project-footer">
+                                            <button class="btn-destructive ml-auto" onclick="this.closest('dialog').close()">
+                                                <i data-lucide="X"></i>
+                                            </button>
+                                        </footer>
                                     </div>
-                                </div>
-                                <footer class="project-footer">
-                                    <button class="btn-destructive ml-auto" onclick="this.closest('dialog').close()">
-                                        <i data-lucide="X"></i>
-                                    </button>
-                                </footer>
+                                </dialog>
                             </div>
-                        </dialog>
+                        </div>
                     </div>
                 </div>
                 <!-- PROJECTS : PERSO -->
-                <div class="flex items-center justify-center w-full text-center py-5 text-3xl">
-                    <div class="border-b-2 px-[10%]"></div>
-                    <h2 class="px-5">Personnel</h2>
-                    <div class="border-b-2 px-[10%]"></div>
+                <div class="category">
+                    <details class="group/cat" name="projets">
+                        <summary class="project-summary">
+                            <h2 class="uppercase tracking-widest">
+                                Personnel
+                                <span class="lowercase tracking-normal text-sm text-font">7 projets</span>
+                            </h2>
+                            <i data-lucide="chevron-down" class="w-6 h-6 transition-transform duration-300 group-open/cat:rotate-180"></i>
+                        </summary>
+                    </details>
+                    <div class="project-panel">
+                        <div class="project-container">
+                            <!-- WEBGL -->
+                            <div class="project group">
+                                <button type="button" onclick="document.getElementById('perso-webgl-dialog').showModal()" aria-label="Voir les détails du projet" class="project-display">
+                                    <img alt="Logo WebGL" class="project-display-image" width="96" height="96" src="/simpleicons/webgl.svg">
+                                    <h2 class="project-display-title">WebGL</h2>
+                                </button>
+                                <dialog id="perso-webgl-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                                    <div class="project-dialog-content">
+                                        <div class="project-body">
+                                            <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_webgl.webp">
+                                            <p class="project-desc">
+                                                Projet WebGL pour découvrir la géométrie informatique. Le projet est écrit en Typescript avec webpack. Tweakpane est utilisé pour l'affichage des paramètres sur la page web.
+                                            </p>
+                                            <div class="project-badges">
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/typescript.svg" alt="Logo TypeScript" width="16" height="16">
+                                                    TypeScript
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/webgl.svg" alt="Logo WebGL" width="16" height="16">
+                                                    WebGL
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg" alt="Logo Node.js" width="16" height="16">
+                                                    Node.js
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/webpack.svg" alt="Logo Webpack" width="16" height="16">
+                                                    Webpack
+                                                </div>
+                                                <div class="badge">
+                                                    <i class="w-4 h-4 m-1 text-highlight" data-lucide="code"></i>
+                                                    Tweakpane
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
+                                                    HTML
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
+                                                    CSS
+                                                </div>
+                                                <div class="badge">
+                                                    <i class="w-4 h-4 m-1 text-blue-500" data-lucide="spline-pointer"></i>
+                                                    Matrices & Vecteurs
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <footer class="project-footer">
+                                            <a class="btn " href="https://webgl.valentinhrnd.fr/" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Page web du projet" data-tooltip="Voir la page web du projet" data-side="top" data-align="center">
+                                                <i data-lucide="link-2"></i>
+                                                Voir le projet
+                                            </a>
+                                            <button class="btn-destructive " onclick="this.closest('dialog').close()">
+                                                <i data-lucide="X"></i>
+                                            </button>
+                                        </footer>
+                                    </div>
+                                </dialog>
+                            </div>
+                            <!-- PORTFOLIO -->
+                            <div class="project group">
+                                <button type="button" onclick="document.getElementById('perso-portfolio-dialog').showModal()" aria-label="Voir les détails du projet" class="project-display">
+                                    <img alt="Ma photo" class="project-display-image" width="96" height="96" src="/image/picture_2_128.webp">
+                                    <h2 class="project-display-title">Portfolio</h2>
+                                </button>
+                                <dialog id="perso-portfolio-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                                    <div class="project-dialog-content">
+                                        <div class="project-body">
+                                            <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_portfolio.webp">
+                                            <p class="project-desc">
+                                                Portfolio réalisé en HTML, CSS (Tailwind CSS / Basecoat) et Javascript (Frontend).
+                                                En backend, Vite héberge le site pour gérer l'envoi des demandes de contact via un WebHook Discord et le flux RSS.
+                                                Le site est également sauvegardé sur Github, GitLab et dans une image Docker.
+                                                Pour finir, une étude du SEO du site est faite pour optimiser la navigation et le référencement.
+                                            </p>
+                                            <div class="project-badges">
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
+                                                    HTML
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
+                                                    JavaScript
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/tailwindcss.svg" alt="Logo Tailwind CSS" width="16" height="16">
+                                                    Tailwind CSS
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1 bg-[#1447e6]" src="/simpleicons/basecoat.svg" alt="Logo Basecoat" width="16" height="16">
+                                                    Basecoat
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/vite.svg" alt="Logo Vite" width="16" height="16">
+                                                    Vite
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/vercel.svg" alt="Logo Vercel" width="16" height="16">
+                                                    Vercel
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/discord.svg" alt="Logo Discord" width="16" height="16">
+                                                    Discord
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/rss.svg" alt="Logo Discord" width="16" height="16">
+                                                    Flux RSS
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <footer class="project-footer">
+                                            <a class="btn " href="https://valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Page web du projet" data-tooltip="Voir la page web du projet" data-side="top" data-align="center">
+                                                <i data-lucide="link-2"></i>
+                                                Mon portfolio
+                                            </a>
+                                            <button class="btn-destructive " onclick="this.closest('dialog').close()">
+                                                <i data-lucide="X"></i>
+                                            </button>
+                                        </footer>
+                                    </div>
+                                </dialog>
+                            </div>
+                            <!-- GCL -->
+                            <div class="project group">
+                                <button type="button" onclick="document.getElementById('perso-lcg-dialog').showModal()" aria-label="Voir les détails du projet" class="project-display">
+                                    <img alt="Logo LCG" class="project-display-image" width="96" height="96" src="/image/icons/lcg.webp">
+                                    <h2 class="project-display-title">Générateur à congruence linéaire</h2>
+                                </button>
+                                <dialog id="perso-lcg-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                                    <div class="project-dialog-content">
+                                        <div class="project-body">
+                                            <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_lcg.webp">
+                                            <p class="project-desc">
+                                                Visualiseur d'aléatoire basé sur les nombres générés par un Générateur à congruence linéaire (LCG). Cet algorithme qui n'est pas sécurisé cryptographiquement est très connu dans la génération de nombres pseudo-aléatoires et était présent dans certaines versions de PHP.<br>
+                                            </p>
+                                            <div class="project-badges">
+                                                <div class="badge">
+                                                    <i class="w-4 h-4 m-1 text-red-500" data-lucide="shuffle"></i>
+                                                    LCG
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
+                                                    HTML
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
+                                                    JavaScript
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
+                                                    CSS
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <footer class="project-footer">
+                                            <a class="btn" href="https://lcg.valentinhrnd.fr/" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Page web du projet" data-tooltip="Voir la page web du projet" data-side="top" data-align="center">
+                                                <i data-lucide="link-2"></i>
+                                                Voir le projet
+                                            </a>
+                                            <button class="btn-destructive " onclick="this.closest('dialog').close()">
+                                                <i data-lucide="X"></i>
+                                            </button>
+                                        </footer>
+                                    </div>
+                                </dialog>
+                            </div>
+                            <!-- GAME OF LIFE -->
+                            <div class="project group">
+                                <button type="button" onclick="document.getElementById('perso-gol-dialog').showModal()" aria-label="Voir les détails du projet" class="project-display">
+                                    <img alt="Logo Game of Life" class="project-display-image" width="96" height="96" src="/image/icons/gol.webp">
+                                    <h2 class="project-display-title">Game of Life</h2>
+                                </button>
+                                <dialog id="perso-gol-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                                    <div class="project-dialog-content">
+                                        <div class="project-body">
+                                            <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_gol.webp">
+                                            <p class="project-desc">
+                                                Ce projet personnel est une recréation du « Jeu de la vie », en JavaScript, en utilisant la bibliothèque graphique p5.js.<br>
+                                            </p>
+                                            <div class="project-badges">
+                                                <div class="badge text-sm">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/p5dotjs.svg" alt="Logo p5.js" width="16" height="16">
+                                                    p5.js
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
+                                                    HTML
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
+                                                    CSS
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
+                                                    JavaScript
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <footer class="project-footer">
+                                            <a class="btn " href="https://gol.valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Page web du projet" data-tooltip="Voir la page web du projet" data-side="top" data-align="center">
+                                                <i data-lucide="link-2"></i>
+                                                Voir le projet
+                                            </a>
+                                            <button class="btn-destructive " onclick="this.closest('dialog').close()">
+                                                <i data-lucide="X"></i>
+                                            </button>
+                                        </footer>
+                                    </div>
+                                </dialog>
+                            </div>
+                            <!-- DÉCOUPAGE IPV4 -->
+                            <div class="project group">
+                                <button type="button" onclick="document.getElementById('perso-ip-dialog').showModal()" aria-label="Voir les détails du projet" class="project-display">
+                                    <img alt="Logo IP Game" class="project-display-image" width="96" height="96" src="/image/icons/ip.webp">
+                                    <h2 class="project-display-title">Entraînement découpage IPv4</h2>
+                                </button>
+                                <dialog id="perso-ip-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                                    <div class="project-dialog-content">
+                                        <div class="project-body">
+                                            <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_ip.webp">
+                                            <p class="project-desc">
+                                                Un petit site web pour s'entraîner au découpage d'adresses IPv4.<br>
+                                            </p>
+                                            <div class="project-badges">
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
+                                                    HTML
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
+                                                    JavaScript
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
+                                                    CSS
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <footer class="project-footer">
+                                            <a class="btn " href="https://ip.valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Page web du projet" data-tooltip="Voir la page web du projet" data-side="top" data-align="center">
+                                                <i data-lucide="link-2"></i>
+                                                Voir le projet
+                                            </a>
+                                            <button class="btn-destructive " onclick="this.closest('dialog').close()">
+                                                <i data-lucide="X"></i>
+                                            </button>
+                                        </footer>
+                                    </div>
+                                </dialog>
+                            </div>
+                            <!-- MATCH LOGGER V3 -->
+                            <div class="project group">
+                                <button type="button" onclick="document.getElementById('perso-mlv2-dialog').showModal()" aria-label="Voir les détails du projet" class="project-display">
+                                    <img alt="Logo Discord.js" class="project-display-image" width="96" height="96" src="/simpleicons/discorddotjs.svg">
+                                    <h2 class="project-display-title">Discord.JS</h2>
+                                </button>
+                                <dialog id="perso-mlv2-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                                    <div class="project-dialog-content">
+                                        <div class="project-body">
+                                            <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_discordjs.webp">
+                                            <p class="project-desc">Un bot Discord qui génère une page HTML avec JavaScript contenant les informations, provenant de l'API Riot Games, des joueurs d'une partie de League of Legends.</p>
+                                            <div class="project-badges">
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
+                                                    JavaScript
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/discorddotjs.svg" alt="Logo discord.js" width="16" height="16">
+                                                    discord.js
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/dotenv.svg" alt="Logo .ENV" width="16" height="16">
+                                                    .ENV
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg" alt="Logo Node.js" width="16" height="16">
+                                                    Node.js
+                                                </div>
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/riotgames.svg" alt="Logo Riot Games API" width="16" height="16">
+                                                    Riot Games API
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <footer class="project-footer">
+                                            <a class="btn" href="https://github.com/Vahaz/match-logger-v3" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Page Github du projet" data-tooltip="Voir la page Github du projet" data-side="top" data-align="center">
+                                                <i data-lucide="link-2"></i>
+                                                Voir le projet
+                                            </a>
+                                            <button class="btn-destructive " onclick="this.closest('dialog').close()">
+                                                <i data-lucide="X"></i>
+                                            </button>
+                                        </footer>
+                                    </div>
+                                </dialog>
+                            </div>
+                            <!-- NIXOS -->
+                            <div class="project group">
+                                <button type="button" onclick="document.getElementById('perso-nixos-dialog').showModal()" aria-label="Voir les détails du projet" class="project-display">
+                                    <img alt="Logo NixOS" class="project-display-image rounded-2xl" width="96" height="96" src="/simpleicons/nixos.svg">
+                                    <h2 class="project-display-title">NixOS</h2>
+                                </button>
+                                <dialog id="perso-nixos-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                                    <div class="project-dialog-content">
+                                        <div class="project-body">
+                                            <p class="project-desc">Découverte et mise en place d'un ordinateur sous la distribution Linux NixOS.</p>
+                                            <div class="project-badges">
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/nixos.svg" alt="Logo NixOS" width="16" height="16">
+                                                    NixOS
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <footer class="project-footer">
+                                            <button class="btn-destructive ml-auto" onclick="this.closest('dialog').close()">
+                                                <i data-lucide="X"></i>
+                                            </button>
+                                        </footer>
+                                    </div>
+                                </dialog>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-container">
-                    <!-- WEBGL -->
-                    <div class="project group">
-                        <button type="button" onclick="document.getElementById('perso-webgl-dialog').showModal()" aria-label="Voir les détails du projet" class="project-display">
-                            <img alt="Logo WebGL" class="project-display-image" width="96" height="96" src="/simpleicons/webgl.svg">
-                            <h2 class="project-display-title">WebGL</h2>
-                        </button>
-                        <dialog id="perso-webgl-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
-                            <div class="project-dialog-content">
-                                <div class="project-body">
-                                    <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_webgl.webp">
-                                    <p class="project-desc">
-                                        Projet WebGL pour découvrir la géométrie informatique. Le projet est écrit en Typescript avec webpack. Tweakpane est utilisé pour l'affichage des paramètres sur la page web.
-                                    </p>
-                                    <div class="project-badges">
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/typescript.svg" alt="Logo TypeScript" width="16" height="16">
-                                            TypeScript
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/webgl.svg" alt="Logo WebGL" width="16" height="16">
-                                            WebGL
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg" alt="Logo Node.js" width="16" height="16">
-                                            Node.js
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/webpack.svg" alt="Logo Webpack" width="16" height="16">
-                                            Webpack
-                                        </div>
-                                        <div class="badge">
-                                            <i class="w-4 h-4 m-1 text-highlight" data-lucide="code"></i>
-                                            Tweakpane
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
-                                            HTML
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
-                                            CSS
-                                        </div>
-                                        <div class="badge">
-                                            <i class="w-4 h-4 m-1 text-blue-500" data-lucide="spline-pointer"></i>
-                                            Matrices & Vecteurs
-                                        </div>
-                                    </div>
-                                </div>
-                                <footer class="project-footer">
-                                    <a class="btn " href="https://webgl.valentinhrnd.fr/" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Page web du projet" data-tooltip="Voir la page web du projet" data-side="top" data-align="center">
-                                        <i data-lucide="link-2"></i>
-                                        Voir le projet
-                                    </a>
-                                    <button class="btn-destructive " onclick="this.closest('dialog').close()">
-                                        <i data-lucide="X"></i>
-                                    </button>
-                                </footer>
+                <div class="category">
+                    <details class="group/cat" name="projets">
+                        <summary class="project-summary">
+                            <h2 class="uppercase tracking-widest">
+                                Tableau de compétences
+                            </h2>
+                            <i data-lucide="chevron-down" class="w-6 h-6 transition-transform duration-300 group-open/cat:rotate-180"></i>
+                        </summary>
+                    </details>
+                    <div class="project-panel">
+                        <div class="project-container">
+                            <!-- TABLEAU DE SYNTHÈSE DES COMPÉTENCES (BTS SIO SISR) -->
+                            <div class="skills-wrap">
+                                <table class="border-collapse">
+                                    <caption class="sr-only">Tableau de synthèse des compétences BTS SIO SISR : cours, premier stage et second stage</caption>
+                                    <thead>
+                                        <tr class="text-2xl uppercase tracking-widest">
+                                            <th scope="col" class="text-left pl-10">Compétence</th>
+                                            <th scope="col">Cours</th>
+                                            <th scope="col">1<sup>er</sup> stage</th>
+                                            <th scope="col">2<sup>nd</sup> stage</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="colgroup" colspan="4" class="skills-block">Gérer le patrimoine informatique</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Recenser et identifier les ressources numériques</th>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</th>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Mettre en place et vérifier les niveaux d'habilitation associés à un service</th>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Vérifier les conditions de la continuité d'un service informatique</th>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Gérer des sauvegardes</th>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Vérifier le respect des règles d'utilisation des ressources numériques</th>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="colgroup" colspan="4" class="skills-block">Répondre aux incidents et aux demandes d’assistance et d’évolution</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Collecter, suivre et orienter des demandes</th>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Traiter des demandes concernant les services réseau et système, applicatifs</th>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Traiter des demandes concernant les applications</th>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="colgroup" colspan="4" class="skills-block">Développer la présence en ligne de l'organisation</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Participer à la valorisation de l'image de l'organisation sur les médias numériques en tenant compte du cadre juridique et des enjeux économiques</th>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Référencer les services en ligne de l'organisation et mesurer leur visibilité.</th>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Participer à l'évolution d'un site Web exploitant les données de l'organisation.</th>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="colgroup" colspan="4" class="skills-block">Travailler en mode projet</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Analyser les objectifs et les modalités d'organisation d'un projet</th>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Planifier les activités</th>
+                                            <td class="skills-cell">
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Évaluer les indicateurs de suivi d'un projet et analyser les écarts</th>
+                                            <td class="skills-cell">
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="colgroup" colspan="4" class="skills-block">Mettre à disposition des utilisateurs un service informatique</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Réaliser les tests d'intégration et d'acceptation d'un service</th>
+                                            <td class="skills-cell">
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Déployer un service</th>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Accompagner les utilisateurs dans la mise en place d'un service</th>
+                                            <td class="skills-cell">
+                                            </td>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="colgroup" colspan="4" class="skills-block">Organiser son développement professionnel</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Mettre en place son environnement d'apprentissage personnel</th>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Mettre en œuvre des outils et stratégies de veille informationnelle</th>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Gérer son identité professionnelle</th>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="skills-name">Développer son projet professionnel</th>
+                                            <td class="skills-cell">
+                                                <i data-lucide="check" class="w-7 h-7 text-green-400 mx-auto" aria-hidden="true"></i>
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                            <td class="skills-cell">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                        </dialog>
-                    </div>
-                    <!-- PORTFOLIO -->
-                    <div class="project group">
-                        <button type="button" onclick="document.getElementById('perso-portfolio-dialog').showModal()" aria-label="Voir les détails du projet" class="project-display">
-                            <img alt="Ma photo" class="project-display-image rounded-2xl" width="96" height="96" src="/image/picture_2_128.webp">
-                            <h2 class="project-display-title">Portfolio</h2>
-                        </button>
-                        <dialog id="perso-portfolio-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
-                            <div class="project-dialog-content">
-                                <div class="project-body">
-                                    <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_portfolio.webp">
-                                    <p class="project-desc">Portfolio réalisé en HTML, CSS (Tailwind CSS / Basecoat) et Javascript (Frontend). En backend, Vite héberge le site pour gérer l'envoi des demandes de contact via un WebHook Discord et le flux RSS. Le site est également sauvegardé sur Github, GitLab et dans une image Docker.</p>
-                                    <div class="project-badges">
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
-                                            HTML
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
-                                            JavaScript
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/tailwindcss.svg" alt="Logo Tailwind CSS" width="16" height="16">
-                                            Tailwind CSS
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1 bg-[#1447e6]" src="/simpleicons/basecoat.svg" alt="Logo Basecoat" width="16" height="16">
-                                            Basecoat
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/vite.svg" alt="Logo Vite" width="16" height="16">
-                                            Vite
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/vercel.svg" alt="Logo Vercel" width="16" height="16">
-                                            Vercel
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/discord.svg" alt="Logo Discord" width="16" height="16">
-                                            Discord
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/rss.svg" alt="Logo Discord" width="16" height="16">
-                                            Flux RSS
-                                        </div>
-                                    </div>
-                                </div>
-                                <footer class="project-footer">
-                                    <a class="btn " href="https://valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Page web du projet" data-tooltip="Voir la page web du projet" data-side="top" data-align="center">
-                                        <i data-lucide="link-2"></i>
-                                        Mon portfolio
-                                    </a>
-                                    <button class="btn-destructive " onclick="this.closest('dialog').close()">
-                                        <i data-lucide="X"></i>
-                                    </button>
-                                </footer>
-                            </div>
-                        </dialog>
-                    </div>
-                    <!-- GCL -->
-                    <div class="project group">
-                        <button type="button" onclick="document.getElementById('perso-lcg-dialog').showModal()" aria-label="Voir les détails du projet" class="project-display">
-                            <img alt="Logo LCG" class="project-display-image rounded-2xl" width="96" height="96" src="/image/icons/lcg.webp">
-                            <h2 class="project-display-title">Générateur à congruence linéaire</h2>
-                        </button>
-                        <dialog id="perso-lcg-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
-                            <div class="project-dialog-content">
-                                <div class="project-body">
-                                    <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_lcg.webp">
-                                    <p class="project-desc">
-                                        Visualiseur d'aléatoire basé sur les nombres générés par un Générateur à congruence linéaire (LCG). Cet algorithme qui n'est pas sécurisé cryptographiquement est très connu dans la génération de nombres pseudo-aléatoires et était présent dans certaines versions de PHP.<br>
-                                    </p>
-                                    <div class="project-badges">
-                                        <div class="badge">
-                                            <i class="w-4 h-4 m-1 text-red-500" data-lucide="shuffle"></i>
-                                            LCG
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
-                                            HTML
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
-                                            JavaScript
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
-                                            CSS
-                                        </div>
-                                    </div>
-                                </div>
-                                <footer class="project-footer">
-                                    <a class="btn" href="https://lcg.valentinhrnd.fr/" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Page web du projet" data-tooltip="Voir la page web du projet" data-side="top" data-align="center">
-                                        <i data-lucide="link-2"></i>
-                                        Voir le projet
-                                    </a>
-                                    <button class="btn-destructive " onclick="this.closest('dialog').close()">
-                                        <i data-lucide="X"></i>
-                                    </button>
-                                </footer>
-                            </div>
-                        </dialog>
-                    </div>
-                    <!-- GAME OF LIFE -->
-                    <div class="project group">
-                        <button type="button" onclick="document.getElementById('perso-gol-dialog').showModal()" aria-label="Voir les détails du projet" class="project-display">
-                            <img alt="Logo Game of Life" class="project-display-image rounded-2xl" width="96" height="96" src="/image/icons/gol.webp">
-                            <h2 class="project-display-title">Game of Life</h2>
-                        </button>
-                        <dialog id="perso-gol-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
-                            <div class="project-dialog-content">
-                                <div class="project-body">
-                                    <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_gol.webp">
-                                    <p class="project-desc">
-                                        Ce projet personnel est une recréation du « Jeu de la vie », en JavaScript, en utilisant la bibliothèque graphique p5.js.<br>
-                                    </p>
-                                    <div class="project-badges">
-                                        <div class="badge text-sm">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/p5dotjs.svg" alt="Logo p5.js" width="16" height="16">
-                                            p5.js
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
-                                            HTML
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
-                                            CSS
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
-                                            JavaScript
-                                        </div>
-                                    </div>
-                                </div>
-                                <footer class="project-footer">
-                                    <a class="btn " href="https://gol.valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Page web du projet" data-tooltip="Voir la page web du projet" data-side="top" data-align="center">
-                                        <i data-lucide="link-2"></i>
-                                        Voir le projet
-                                    </a>
-                                    <button class="btn-destructive " onclick="this.closest('dialog').close()">
-                                        <i data-lucide="X"></i>
-                                    </button>
-                                </footer>
-                            </div>
-                        </dialog>
-                    </div>
-                    <!-- DÉCOUPAGE IPV4 -->
-                    <div class="project group">
-                        <button type="button" onclick="document.getElementById('perso-ip-dialog').showModal()" aria-label="Voir les détails du projet" class="project-display">
-                            <img alt="Logo IP Game" class="project-display-image rounded-2xl" width="96" height="96" src="/image/icons/ip.webp">
-                            <h2 class="project-display-title">Entraînement découpage IPv4</h2>
-                        </button>
-                        <dialog id="perso-ip-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
-                            <div class="project-dialog-content">
-                                <div class="project-body">
-                                    <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_ip.webp">
-                                    <p class="project-desc">
-                                        Un petit site web pour s'entraîner au découpage d'adresses IPv4.<br>
-                                    </p>
-                                    <div class="project-badges">
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/html5.svg" alt="Logo HTML" width="16" height="16">
-                                            HTML
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
-                                            JavaScript
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/css.svg" alt="Logo CSS" width="16" height="16">
-                                            CSS
-                                        </div>
-                                    </div>
-                                </div>
-                                <footer class="project-footer">
-                                    <a class="btn " href="https://ip.valentinhrnd.fr/" hreflang="fr" lang="fr" target="_blank" rel="noopener noreferrer" aria-label="Page web du projet" data-tooltip="Voir la page web du projet" data-side="top" data-align="center">
-                                        <i data-lucide="link-2"></i>
-                                        Voir le projet
-                                    </a>
-                                    <button class="btn-destructive " onclick="this.closest('dialog').close()">
-                                        <i data-lucide="X"></i>
-                                    </button>
-                                </footer>
-                            </div>
-                        </dialog>
-                    </div>
-                    <!-- MATCH LOGGER V2 -->
-                    <div class="project group">
-                        <button type="button" onclick="document.getElementById('perso-mlv2-dialog').showModal()" aria-label="Voir les détails du projet" class="project-display">
-                            <img alt="Logo Discord.js" class="project-display-image rounded-2xl" width="96" height="96" src="/simpleicons/discorddotjs.svg">
-                            <h2 class="project-display-title">Discord.JS</h2>
-                        </button>
-                        <dialog id="perso-mlv2-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
-                            <div class="project-dialog-content">
-                                <div class="project-body">
-                                    <img alt="Image de couverture du projet" class="project-image" loading="lazy" src="/image/preview/preview_discordjs.webp">
-                                    <p class="project-desc">Un bot Discord qui génère une page HTML avec JavaScript contenant les informations, provenant de l'API Riot Games, des joueurs d'une partie de League of Legends.</p>
-                                    <div class="project-badges">
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/javascript.svg" alt="Logo JavaScript" width="16" height="16">
-                                            JavaScript
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/discorddotjs.svg" alt="Logo discord.js" width="16" height="16">
-                                            discord.js
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/dotenv.svg" alt="Logo .ENV" width="16" height="16">
-                                            .ENV
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/nodedotjs.svg" alt="Logo Node.js" width="16" height="16">
-                                            Node.js
-                                        </div>
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/riotgames.svg" alt="Logo Riot Games API" width="16" height="16">
-                                            Riot Games API
-                                        </div>
-                                    </div>
-                                </div>
-                                <footer class="project-footer">
-                                    <a class="btn " href="https://github.com/Vahaz/match_logger_v2" hreflang="en" lang="en" target="_blank" rel="noopener noreferrer" aria-label="Page Github du projet" data-tooltip="Voir la page Github du projet" data-side="top" data-align="center">
-                                        <i data-lucide="link-2"></i>
-                                        Voir le projet
-                                    </a>
-                                    <button class="btn-destructive " onclick="this.closest('dialog').close()">
-                                        <i data-lucide="X"></i>
-                                    </button>
-                                </footer>
-                            </div>
-                        </dialog>
-                    </div>
-                    <!-- NIXOS -->
-                    <div class="project group">
-                        <button type="button" onclick="document.getElementById('perso-nixos-dialog').showModal()" aria-label="Voir les détails du projet" class="project-display">
-                            <img alt="Logo NixOS" class="project-display-image rounded-2xl" width="96" height="96" src="/simpleicons/nixos.svg">
-                            <h2 class="project-display-title">NixOS</h2>
-                        </button>
-                        <dialog id="perso-nixos-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
-                            <div class="project-dialog-content">
-                                <div class="project-body">
-                                    <p class="project-desc">Découverte et mise en place d'un ordinateur sous la distribution Linux NixOS.</p>
-                                    <div class="project-badges">
-                                        <div class="badge">
-                                            <img class="w-4 h-4 m-1" src="/simpleicons/nixos.svg" alt="Logo NixOS" width="16" height="16">
-                                            NixOS
-                                        </div>
-                                    </div>
-                                </div>
-                                <footer class="project-footer">
-                                    <button class="btn-destructive ml-auto" onclick="this.closest('dialog').close()">
-                                        <i data-lucide="X"></i>
-                                    </button>
-                                </footer>
-                            </div>
-                        </dialog>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
-        <dialog id="contact-dialog" class="dialog w-full sm:max-w-106.25 max-h-153" aria-labelledby="Formulaire de contact" aria-describedby="Formulaire de contact pour m'envoyer un courriel." onclick="if (event.target === this) this.close()">
+        <dialog id="contact-dialog" class="dialog w-full sm:max-w-106.25 max-h-153" aria-labelledby="Formulaire de contact" aria-describedby="Formulaire de contact pour m'envoyer un message." onclick="if (event.target === this) this.close()">
             <div class="bg-base-800 text-secondary border-base-400">
                 <header class="text-center">
                     <h2>Formulaire de contact</h2>
