@@ -97,7 +97,7 @@
                         <summary class="project-summary">
                             <h2 class="uppercase tracking-widest">
                                 Cours
-                                <span class="lowercase tracking-normal text-sm text-font">6 projets</span>
+                                <span class="lowercase tracking-normal text-sm text-font">8 projets</span>
                             </h2>
                             <i data-lucide="chevron-down" class="w-6 h-6 transition-transform duration-300 group-open/cat:rotate-180"></i>
                         </summary>
@@ -268,8 +268,62 @@
                                             </div>
                                             <div class="project-badges">
                                                 <div class="badge">
-                                                    <img class="w-4 h-4 m-1" src="/simpleicons/glpi.svg" alt="Logo PowerShell" width="16" height="16">
+                                                    <img class="w-4 h-4 m-1" src="/simpleicons/glpi.svg" alt="Logo GLPI" width="16" height="16">
                                                     GLPI
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <footer class="project-footer">
+                                            <button class="btn-destructive ml-auto" onclick="this.closest('dialog').close()">
+                                                <i data-lucide="X"></i>
+                                            </button>
+                                        </footer>
+                                    </div>
+                                </dialog>
+                            </div>
+                            <!-- Wireshark -->
+                            <div class="project group">
+                                <button type="button" onclick="document.getElementById('wireshark-dialog').showModal()" aria-label="Voir les détails du cour" class="project-display">
+                                    <img alt="Logo Wireshark" class="project-display-image" width="96" height="96" src="/image/icons/wireshark.webp">
+                                    <h2 class="project-display-title">Wireshark</h2>
+                                </button>
+                                <dialog id="wireshark-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                                    <div class="project-dialog-content">
+                                        <div class="project-body">
+                                            <div class="project-desc">
+                                                <p>Utilisation de Wireshark pour inspecter des trames ethernet et découvrir l'encapsulation TCP/IP.</p>
+                                            </div>
+                                            <div class="project-badges">
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/image/icons/wireshark.webp" alt="Logo Wireshark" width="16" height="16">
+                                                    Wireshark
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <footer class="project-footer">
+                                            <button class="btn-destructive ml-auto" onclick="this.closest('dialog').close()">
+                                                <i data-lucide="X"></i>
+                                            </button>
+                                        </footer>
+                                    </div>
+                                </dialog>
+                            </div>
+                            <!-- Cisco Packet Tracer -->
+                            <div class="project group">
+                                <button type="button" onclick="document.getElementById('cpt-dialog').showModal()" aria-label="Voir les détails du cour" class="project-display">
+                                    <img alt="Logo Cisco Packet Tracer" class="project-display-image" width="96" height="96" src="/image/icons/cpt.webp">
+                                    <h2 class="project-display-title">Cisco Packet Tracer</h2>
+                                </button>
+                                <dialog id="cpt-dialog" class="dialog project-dialog" onclick="if (event.target === this) this.close()">
+                                    <div class="project-dialog-content">
+                                        <div class="project-body">
+                                            <div class="project-desc">
+                                                <p>Utilisation Cisco Packet Tracer pour simuler des réseaux et leurs communications PING avec le protocole SMTP.</p>
+                                            </div>
+                                            <div class="project-badges">
+                                                <div class="badge">
+                                                    <img class="w-4 h-4 m-1" src="/image/icons/cpt.webp" alt="Logo Cisco Packet Tracer" width="16" height="16">
+                                                    Cisco Packet Tracer
                                                 </div>
                                             </div>
                                         </div>
